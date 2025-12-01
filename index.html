@@ -193,9 +193,15 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       box-sizing: border-box;
     }
-    .logo {
+    .logo-link {
       font-size: 26px;
       font-weight: 700;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .logo-link:hover {
+      color: #ddd;
     }
     .nav-wrapper {
       display: flex;
@@ -283,7 +289,7 @@
         flex-direction: column;
         padding: 15px 0;
       }
-      .logo {
+      .logo-link {
         margin-bottom: 10px;
       }
       .nav-right {
@@ -373,7 +379,7 @@
       height: 100%;
       transition: all .3s;
       cursor: pointer;
-      pointer-events: auto; /* Ensure clicks register */
+      pointer-events: auto;
     }
     .additional-submenu li:hover,
     .service-areas-submenu li:hover {
@@ -869,12 +875,28 @@
     footer strong {
       color: #fff;
     }
+    .footer-links {
+      margin: 20px 0;
+    }
+    .footer-links a {
+      color: var(--blue);
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0 15px;
+      transition: color .3s;
+    }
+    .footer-links a:hover {
+      color: var(--red);
+    }
+    .footer-links a:active {
+      color: white;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container nav-wrapper">
-      <div class="logo">LG Appliance Repair Bergen County</div>
+      <a href="https://lgbergencounty.com/" class="logo-link" aria-label="Return to LG Appliance Repair Bergen County Homepage">LG Appliance Repair Bergen County</a>
       <div class="nav-right">
         <div class="services-menu" id="servicesMenu">
           <div class="services-btn" id="servicesToggle">Services</div>
@@ -1093,7 +1115,11 @@
     <div class="container">
       <p style="font-size:18px; margin-bottom:20px;"><strong>LG Appliance Repair Bergen County NJ</strong></p>
       <p>100 Corporate Drive, Mahwah, NJ 07430<br><strong>Open 7 Days a Week • 7:00 AM – 9:00 PM</strong></p>
-      <p style="margin-top:40px; color:#777;">© 2025 LG Appliance Repair Bergen County. All Rights Reserved.</p>
+      <p class="footer-links">
+        <a href="https://lgbergencounty.com/nj/" aria-label="View LG Appliance Repair Service Areas">Service Areas</a>
+        <a href="https://lgbergencounty.com/" aria-label="Return to LG Appliance Repair Homepage">Home</a>
+      </p>
+      <p style="margin-top:20px; color:#777;">© 2025 LG Appliance Repair Bergen County. All Rights Reserved.</p>
     </div>
   </footer>
   <script>
@@ -1110,7 +1136,7 @@
       {name: "Demarest", zip: "07627", url: "https://lgbergencounty.com/nj/demarest/"},
       {name: "Dumont", zip: "07628", url: "https://lgbergencounty.com/nj/dumont/"},
       {name: "East Rutherford", zip: "07073", url: "https://lgbergencounty.com/nj/east-rutherford/"},
-      {name: "Edgewater", zip: "07620", url: "https://lgbergencounty.com/nj/edgewater/"},
+      {name: "Edgewater", zip: "07020", url: "https://lgbergencounty.com/nj/edgewater/"},
       {name: "Elmwood Park", zip: "07407", url: "https://lgbergencounty.com/nj/elmwood-park/"},
       {name: "Emerson", zip: "07630", url: "https://lgbergencounty.com/nj/emerson/"},
       {name: "Englewood", zip: "07631", url: "https://lgbergencounty.com/nj/englewood/"},
@@ -1176,6 +1202,14 @@
     document.addEventListener('DOMContentLoaded', () => {
       console.log('DOM loaded at', new Date().toLocaleString());
 
+      // Logo click logging
+      const logoLink = document.querySelector('.logo-link');
+      if (logoLink) {
+        logoLink.addEventListener('click', () => {
+          console.log('Logo clicked, navigating to: https://lgbergencounty.com/');
+        });
+      }
+
       // Services Dropdown
       const servicesMenu = document.getElementById('servicesMenu');
       const servicesToggle = document.getElementById('servicesToggle');
@@ -1204,8 +1238,8 @@
         console.log('Populating service areas submenu...');
         console.log('Towns array length:', bergenTowns.length);
         serviceAreasSubmenu.innerHTML = bergenTowns.map(t => {
-          console.log(`Generating link for ${t.name}: ${t.url}`);
-          return `<li><a href="${t.url}" class="service-area-link">${t.name}</a></li>`;
+          console.log(`Generating submenu link for ${t.name}: ${t.url}`);
+          return `<li><a href="${t.url}" class="service-area-link" aria-label="LG Appliance Repair in ${t.name}">${t.name}</a></li>`;
         }).join('');
         console.log('Service areas submenu populated with towns:', bergenTowns.map(t => ({name: t.name, url: t.url})));
         console.log('Service areas submenu height:', serviceAreasSubmenu.scrollHeight + 'px');
@@ -1237,7 +1271,6 @@
       });
 
       servicesDropdown.addEventListener('click', (e) => {
-        // Only stop propagation for non-link clicks to allow link navigation
         if (!e.target.classList.contains('service-area-link')) {
           e.stopPropagation();
           console.log('Services dropdown clicked (prevent close, mobile:', window.innerWidth <= 768, ')');
@@ -1317,14 +1350,20 @@
       const setupCallButton = (btn) => {
         if (btn) {
           btn.addEventListener('click', function() {
+            console.log(`Call Now button clicked: ${this.id} (mobile: ${window.innerWidth <= 768})`);
             if (this.dataset.revealed) return;
             const digits = [2,0,1,2,9,8,3,4,9,9];
-            const num = digits.map(d => String.fromCharCode(48 + d)).join('');
+            const num = digits.join('');
             const formatted = `+1 (${num.slice(0,3)}) ${num.slice(3,6)}-${num.slice(6)}`;
             this.innerHTML = formatted;
             this.dataset.revealed = 'true';
-            this.onclick = () => window.location.href = 'tel:+1' + num;
+            this.onclick = () => {
+              console.log(`Initiating call to: tel:+1${num}`);
+              window.location.href = `tel:+1${num}`;
+            };
           });
+        } else {
+          console.error(`Call Now button not found: ${btn ? btn.id : 'null'}`);
         }
       };
 
@@ -1340,6 +1379,7 @@
           const email = this.user_email.value.trim();
           emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
             .then(() => {
+              console.log('Form submission successful, email:', email);
               this.reset();
               document.getElementById('cfContactFormSection').classList.remove('active');
               document.getElementById('successMessage').innerHTML = `
@@ -1351,7 +1391,10 @@
               document.getElementById('cfSuccessModal').classList.add('active');
               document.getElementById('cfModalOverlay').classList.add('active');
             })
-            .catch(() => alert('Failed to send. Please try again or call us.'));
+            .catch((error) => {
+              console.error('Form submission failed:', error);
+              alert('Failed to send. Please try again or call us.');
+            });
         });
       }
 
@@ -1369,7 +1412,15 @@
       if (cfModalOverlay) {
         cfModalOverlay.onclick = () => cfCloseModal && cfCloseModal.click();
       }
+
+      // Footer links logging
+      document.querySelectorAll('.footer-links a').forEach(link => {
+        link.addEventListener('click', () => {
+          console.log(`Footer link clicked: ${link.href}`);
+        });
+      });
     });
   </script>
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"df4eaee1f863452385fca24b1c8a3813","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
