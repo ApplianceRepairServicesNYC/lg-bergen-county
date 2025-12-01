@@ -372,6 +372,8 @@
       width: 100%;
       height: 100%;
       transition: all .3s;
+      cursor: pointer;
+      pointer-events: auto; /* Ensure clicks register */
     }
     .additional-submenu li:hover,
     .service-areas-submenu li:hover {
@@ -1108,7 +1110,7 @@
       {name: "Demarest", zip: "07627", url: "https://lgbergencounty.com/nj/demarest/"},
       {name: "Dumont", zip: "07628", url: "https://lgbergencounty.com/nj/dumont/"},
       {name: "East Rutherford", zip: "07073", url: "https://lgbergencounty.com/nj/east-rutherford/"},
-      {name: "Edgewater", zip: "07020", url: "https://lgbergencounty.com/nj/edgewater/"},
+      {name: "Edgewater", zip: "07620", url: "https://lgbergencounty.com/nj/edgewater/"},
       {name: "Elmwood Park", zip: "07407", url: "https://lgbergencounty.com/nj/elmwood-park/"},
       {name: "Emerson", zip: "07630", url: "https://lgbergencounty.com/nj/emerson/"},
       {name: "Englewood", zip: "07631", url: "https://lgbergencounty.com/nj/englewood/"},
@@ -1235,10 +1237,12 @@
       });
 
       servicesDropdown.addEventListener('click', (e) => {
-        e.stopPropagation();
-        console.log('Services dropdown clicked (prevent close, mobile:', window.innerWidth <= 768, ')');
-        if (e.target.classList.contains('service-area-link')) {
-          console.log('Service area link clicked:', e.target.href);
+        // Only stop propagation for non-link clicks to allow link navigation
+        if (!e.target.classList.contains('service-area-link')) {
+          e.stopPropagation();
+          console.log('Services dropdown clicked (prevent close, mobile:', window.innerWidth <= 768, ')');
+        } else {
+          console.log('Service area link clicked:', e.target.href, '(mobile:', window.innerWidth <= 768, ')');
         }
       });
 
