@@ -38,7 +38,7 @@
       }
     })();
   </script>
-  <!-- LocalBusiness Schema (ALL 70 towns + GeoCoordinates) -->
+  <!-- LocalBusiness Schema -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,24 +63,78 @@
         "longitude": -74.1529
       },
       "areaServed": [
-        {"@type": "City", "name": "Allendale"}, {"@type": "City", "name": "Alpine"}, {"@type": "City", "name": "Bergenfield"}, {"@type": "City", "name": "Bogota"},
-        {"@type": "City", "name": "Carlstadt"}, {"@type": "City", "name": "Cliffside Park"}, {"@type": "City", "name": "Closter"}, {"@type": "City", "name": "Cresskill"},
-        {"@type": "City", "name": "Demarest"}, {"@type": "City", "name": "Dumont"}, {"@type": "City", "name": "East Rutherford"}, {"@type": "City", "name": "Edgewater"},
-        {"@type": "City", "name": "Elmwood Park"}, {"@type": "City", "name": "Emerson"}, {"@type": "City", "name": "Englewood"}, {"@type": "City", "name": "Englewood Cliffs"},
-        {"@type": "City", "name": "Fair Lawn"}, {"@type": "City", "name": "Fairview"}, {"@type": "City", "name": "Fort Lee"}, {"@type": "City", "name": "Franklin Lakes"},
-        {"@type": "City", "name": "Garfield"}, {"@type": "City", "name": "Glen Rock"}, {"@type": "City", "name": "Hackensack"}, {"@type": "City", "name": "Harrington Park"},
-        {"@type": "City", "name": "Hasbrouck Heights"}, {"@type": "City", "name": "Haworth"}, {"@type": "City", "name": "Hillsdale"}, {"@type": "City", "name": "Ho-Ho-Kus"},
-        {"@type": "City", "name": "Leonia"}, {"@type": "City", "name": "Little Ferry"}, {"@type": "City", "name": "Lodi"}, {"@type": "City", "name": "Lyndhurst"},
-        {"@type": "City", "name": "Mahwah"}, {"@type": "City", "name": "Maywood"}, {"@type": "City", "name": "Midland Park"}, {"@type": "City", "name": "Montvale"},
-        {"@type": "City", "name": "Moonachie"}, {"@type": "City", "name": "New Milford"}, {"@type": "City", "name": "North Arlington"}, {"@type": "City", "name": "Northvale"},
-        {"@type": "City", "name": "Norwood"}, {"@type": "City", "name": "Oakland"}, {"@type": "City", "name": "Old Tappan"}, {"@type": "City", "name": "Oradell"},
-        {"@type": "City", "name": "Palisades Park"}, {"@type": "City", "name": "Paramus"}, {"@type": "City", "name": "Park Ridge"}, {"@type": "City", "name": "Ramsey"},
-        {"@type": "City", "name": "Ridgefield"}, {"@type": "City", "name": "Ridgefield Park"}, {"@type": "City", "name": "Ridgewood"}, {"@type": "City", "name": "River Edge"},
-        {"@type": "City", "name": "River Vale"}, {"@type": "City", "name": "Rochelle Park"}, {"@type": "City", "name": "Rockleigh"}, {"@type": "City", "name": "Rutherford"},
-        {"@type": "City", "name": "Saddle Brook"}, {"@type": "City", "name": "Saddle River"}, {"@type": "City", "name": "South Hackensack"}, {"@type": "City", "name": "Teaneck"},
-        {"@type": "City", "name": "Tenafly"}, {"@type": "City", "name": "Teterboro"}, {"@type": "City", "name": "Upper Saddle River"}, {"@type": "City", "name": "Waldwick"},
-        {"@type": "City", "name": "Wallington"}, {"@type": "City", "name": "Washington Township"}, {"@type": "City", "name": "Westwood"}, {"@type": "City", "name": "Woodcliff Lake"},
-        {"@type": "City", "name": "Wood-Ridge"}, {"@type": "City", "name": "Wyckoff"}
+        {"@type": "City", "name": "Allendale"},
+        {"@type": "City", "name": "Alpine"},
+        {"@type": "City", "name": "Bergenfield"},
+        {"@type": "City", "name": "Bogota"},
+        {"@type": "City", "name": "Carlstadt"},
+        {"@type": "City", "name": "Cliffside Park"},
+        {"@type": "City", "name": "Closter"},
+        {"@type": "City", "name": "Cresskill"},
+        {"@type": "City", "name": "Demarest"},
+        {"@type": "City", "name": "Dumont"},
+        {"@type": "City", "name": "East Rutherford"},
+        {"@type": "City", "name": "Edgewater"},
+        {"@type": "City", "name": "Elmwood Park"},
+        {"@type": "City", "name": "Emerson"},
+        {"@type": "City", "name": "Englewood"},
+        {"@type": "City", "name": "Englewood Cliffs"},
+        {"@type": "City", "name": "Fair Lawn"},
+        {"@type": "City", "name": "Fairview"},
+        {"@type": "City", "name": "Fort Lee"},
+        {"@type": "City", "name": "Franklin Lakes"},
+        {"@type": "City", "name": "Garfield"},
+        {"@type": "City", "name": "Glen Rock"},
+        {"@type": "City", "name": "Hackensack"},
+        {"@type": "City", "name": "Harrington Park"},
+        {"@type": "City", "name": "Hasbrouck Heights"},
+        {"@type": "City", "name": "Haworth"},
+        {"@type": "City", "name": "Hillsdale"},
+        {"@type": "City", "name": "Ho-Ho-Kus"},
+        {"@type": "City", "name": "Jersey City"},
+        {"@type": "City", "name": "Leonia"},
+        {"@type": "City", "name": "Little Ferry"},
+        {"@type": "City", "name": "Lodi"},
+        {"@type": "City", "name": "Lyndhurst"},
+        {"@type": "City", "name": "Mahwah"},
+        {"@type": "City", "name": "Maywood"},
+        {"@type": "City", "name": "Midland Park"},
+        {"@type": "City", "name": "Montvale"},
+        {"@type": "City", "name": "Moonachie"},
+        {"@type": "City", "name": "New Milford"},
+        {"@type": "City", "name": "Newark"},
+        {"@type": "City", "name": "North Arlington"},
+        {"@type": "City", "name": "Northvale"},
+        {"@type": "City", "name": "Norwood"},
+        {"@type": "City", "name": "Oakland"},
+        {"@type": "City", "name": "Old Tappan"},
+        {"@type": "City", "name": "Oradell"},
+        {"@type": "City", "name": "Palisades Park"},
+        {"@type": "City", "name": "Paramus"},
+        {"@type": "City", "name": "Park Ridge"},
+        {"@type": "City", "name": "Ramsey"},
+        {"@type": "City", "name": "Ridgefield"},
+        {"@type": "City", "name": "Ridgefield Park"},
+        {"@type": "City", "name": "Ridgewood"},
+        {"@type": "City", "name": "River Edge"},
+        {"@type": "City", "name": "River Vale"},
+        {"@type": "City", "name": "Rochelle Park"},
+        {"@type": "City", "name": "Rockleigh"},
+        {"@type": "City", "name": "Rutherford"},
+        {"@type": "City", "name": "Saddle Brook"},
+        {"@type": "City", "name": "Saddle River"},
+        {"@type": "City", "name": "South Hackensack"},
+        {"@type": "City", "name": "Teaneck"},
+        {"@type": "City", "name": "Tenafly"},
+        {"@type": "City", "name": "Teterboro"},
+        {"@type": "City", "name": "Upper Saddle River"},
+        {"@type": "City", "name": "Waldwick"},
+        {"@type": "City", "name": "Wallington"},
+        {"@type": "City", "name": "Washington Township"},
+        {"@type": "City", "name": "Westwood"},
+        {"@type": "City", "name": "Woodcliff Lake"},
+        {"@type": "City", "name": "Wood-Ridge"},
+        {"@type": "City", "name": "Wyckoff"}
       ],
       "openingHoursSpecification": [{
         "@type": "OpeningHoursSpecification",
@@ -104,107 +158,702 @@
     }
   </script>
   <style>
-    :root { --blue: #003087; --red: #e41e26; --gray: #f8f9fa; }
-    body { font-family: 'Inter', sans-serif; margin:0; color:#333; background:#fff; line-height:1.6; }
-    h1,h2,h3 { font-family: 'Montserrat', sans-serif; color:var(--blue); }
-    .container { max-width:1200px; margin:0 auto; padding:0 20px; }
-    header { background:var(--blue); color:white; padding:20px 0; position:fixed; width:100%; top:0; z-index:1000; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
-    .logo { font-size:26px; font-weight:700; }
-    .nav-wrapper { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; }
-    .nav-right { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
-    .services-menu { position:relative; }
-    .services-btn { color:white; font-weight:600; cursor:pointer; padding:12px 20px; border-radius:6px; transition:all .3s; background:rgba(255,255,255,0.1); white-space:nowrap; }
-    .services-btn:hover { background:rgba(255,255,255,0.2); }
-    .nav-call-btn { background:var(--red); color:white; padding:12px 28px; border-radius:6px; font-weight:700; text-decoration:none; font-size:17px; transition:all .3s; cursor:pointer; }
-    .nav-call-btn:hover { background:#c41b20; transform:translateY(-2px); }
-    .services-dropdown { display:none; position:fixed; left:50%; top:90px; transform:translateX(-50%); width:90%; max-width:420px; background:var(--blue); border-radius:12px; box-shadow:0 15px 40px rgba(0,0,0,0.5); padding:15px 0; z-index:999; max-height:78vh; overflow-y:auto; }
-    .services-menu.active .services-dropdown { display:block; }
-    .services-dropdown li { padding:14px 28px; color:#eee; font-size:15px; transition:all .3s; cursor:pointer; }
-    .services-dropdown li:hover { background:var(--red); color:white; padding-left:38px; }
-    .submenu-toggle { display:flex; justify-content:space-between; align-items:center; font-weight:700; background:rgba(255,255,255,0.15); margin:10px 20px; border-radius:8px; padding:14px 20px; cursor:pointer; }
-    .submenu-toggle i { transition:transform .3s; font-size:18px; }
-    .submenu-toggle.active i { transform:rotate(90deg); }
-    .additional-submenu { max-height:0; overflow:hidden; transition:max-height .5s ease; background:rgba(0,0,0,0.2); margin:0 20px 10px; border-radius:8px; }
-    .additional-submenu.active { max-height:1200px; padding:10px 0; }
-    .additional-submenu li { padding:12px 38px; color:#eee; font-size:15px; transition:all .3s; }
-    .additional-submenu li:hover { background:var(--red); color:white; padding-left:48px; }
-    .hero { position: relative; color: white; text-align: center; padding: 160px 20px 120px; margin-top: 80px; background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)), url('https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png') center/cover no-repeat; background-attachment: scroll; min-height: 70vh; display: flex; align-items: center; justify-content: center; }
-    .hero h1 { font-size: 52px; margin-bottom: 16px; text-shadow: 3px 3px 12px rgba(0,0,0,0.9); line-height: 1.2; }
-    .hero p { font-size: 24px; max-width: 900px; margin: 0 auto 35px; text-shadow: 2px 2px 8px rgba(0,0,0,0.9); }
-    .btn { background:var(--red); color:white; padding:16px 40px; border-radius:8px; font-weight:700; text-decoration:none; display:inline-block; font-size:20px; transition:all .3s; }
-    .btn:hover { background:#c41b20; transform:translateY(-3px); box-shadow:0 10px 30px rgba(228,30,38,0.5); }
+    :root {
+      --blue: #003087;
+      --red: #e41e26;
+      --gray: #f8f9fa;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      color: #333;
+      background: #fff;
+      line-height: 1.6;
+      box-sizing: border-box;
+      overscroll-behavior: none;
+    }
+    h1, h2, h3 {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--blue);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+    header {
+      background: var(--blue);
+      color: white;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-sizing: border-box;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+    }
+    .nav-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .nav-right {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .services-menu {
+      position: relative;
+    }
+    .services-btn {
+      color: white;
+      font-weight: 600;
+      cursor: pointer;
+      padding: 12px 20px;
+      border-radius: 6px;
+      transition: all .3s;
+      background: rgba(255,255,255,0.1);
+      white-space: nowrap;
+      box-sizing: border-box;
+    }
+    .services-btn:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .nav-call-btn {
+      background: var(--red);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 700;
+      text-decoration: none;
+      font-size: 17px;
+      transition: all .3s;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    .nav-call-btn:hover {
+      background: #c41b20;
+      transform: translateY(-2px);
+    }
+    .services-dropdown {
+      display: none;
+      position: fixed;
+      top: 80px;
+      width: 420px;
+      min-width: 360px;
+      max-width: 95%;
+      background: var(--blue);
+      border-radius: 12px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+      padding: 32px 0;
+      z-index: 1000;
+      max-height: 80vh; /* Constrain to viewport for scrolling */
+      overflow-y: auto; /* Enable scrolling */
+      box-sizing: border-box;
+      overflow-wrap: break-word;
+      white-space: nowrap;
+      overscroll-behavior: contain;
+    }
+    .services-menu.active .services-dropdown {
+      display: block !important;
+    }
+    #servicesMenu .services-dropdown {
+      right: 20px;
+    }
     @media (max-width: 768px) {
-      .hero { padding:130px 15px 90px; min-height:65vh; background-position:center 35%; }
-      .hero h1 { font-size:42px; }
-      .hero p { font-size:20px; }
-      .nav-wrapper { flex-direction:column; padding:15px 0; }
-      .logo { margin-bottom:10px; }
-      .nav-right { width:100%; justify-content:center; gap:15px; }
-      .services-dropdown { top:100px; }
-      .sa-responsive-columns { display: flex; flex-direction: column; gap: 8px; }
+      .services-dropdown {
+        width: 95%;
+        max-width: 420px;
+        min-width: 320px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+      }
+      .nav-wrapper {
+        flex-direction: column;
+        padding: 15px 0;
+      }
+      .logo {
+        margin-bottom: 10px;
+      }
+      .nav-right {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+      }
     }
     @media (max-width: 480px) {
-      .hero { padding:110px 15px 70px; min-height:60vh; }
-      .hero h1 { font-size:34px; }
-      .hero p { font-size:18px; }
-      .sa-responsive-columns { display: flex; flex-direction: column; gap: 8px; }
+      .services-dropdown {
+        width: 95%;
+        max-width: 380px;
+        min-width: 300px;
+        top: 90px;
+      }
     }
-    section { padding:90px 0; }
-    .alt { background:var(--gray); }
-    .services-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:30px; }
-    .service { background:white; padding:40px 35px; border-radius:12px; box-shadow:0 5px 20px rgba(0,0,0,0.08); text-align:center; transition:all .4s ease; position:relative; cursor:pointer; }
-    .service:hover { transform:translateY(-12px); box-shadow:0 20px 40px rgba(0,0,0,0.15); }
-    .service i { font-size:52px; margin-bottom:20px; color:var(--blue); transition:color .3s; }
-    .service:hover i { color:var(--red); }
-    .service-types { margin-top:20px; padding:20px; background:rgba(0,48,135,0.05); border-radius:10px; max-height:0; overflow:hidden; transition:max-height .5s ease, opacity .5s ease; opacity:0; }
-    .service.active .service-types { max-height:1000px; opacity:1; }
-    .service-types h4 { margin:0 0 15px; color:var(--blue); font-size:18px; font-weight:600; }
-    .service-types ul { list-style:none; padding:0; margin:0; }
-    .service-types li { padding:12px 20px; margin:6px 0; background:rgba(255,255,255,0.8); border-radius:8px; transition:all .3s; color:#333; font-size:15px; }
-    .service-types li:hover, .service-types li:active { background:var(--red); color:white; padding-left:30px; transform:translateX(5px); }
-    #sa-service-areas { font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif; background:transparent; border:2px solid #808080; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,.2); margin:0 auto 3rem; padding:20px; position:relative; animation:fadeIn .8s ease-out forwards; }
-    #sa-service-areas h2 { font-size:34px; text-align:center; color:inherit; margin-bottom:5px; text-shadow:0 2px 4px rgba(0,0,0,.3); transition:transform .3s,color .3s; }
-    #sa-service-areas h2:hover { color:#ffd700; transform:scale(1.05); }
-    #sa-service-areas p { font-size:16px; text-align:center; margin-bottom:20px; text-shadow:0 1px 3px rgba(0,0,0,.2); }
-    .sa-dropdown-container { text-align:center; margin-bottom:20px; }
-    .sa-dropdown-button { padding:14px 32px; border:none; background:linear-gradient(45deg,#003087,#0052cc); color:#fff; font-weight:600; font-size:18px; border-radius:10px; cursor:pointer; transition:all .3s; box-shadow:0 4px 15px rgba(0,48,135,.4); display:inline-flex; align-items:center; gap:10px; }
-    .sa-dropdown-button:hover { background:linear-gradient(45deg,#002266,#003f99); transform:translateY(-3px); box-shadow:0 6px 20px rgba(0,48,135,.6); }
-    .sa-dropdown-content { opacity:0; height:0; overflow:hidden; transition:opacity .5s,height .5s,transform .5s; transform:translateY(-10px); background:transparent; }
-    .sa-dropdown-content.active { opacity:1; height:auto; transform:translateY(0); padding:20px 0; }
-    .sa-slide h2 { font-size:28px; text-align:center; margin-bottom:15px; text-shadow:0 1px 3px rgba(0,0,0,.2); }
-    .sa-slide ul { background:rgba(255,255,255,.95); border-radius:12px; padding:25px; box-shadow:0 4px 20px rgba(0,0,0,.1); transition:transform .3s; }
-    .sa-slide ul:hover { transform:translateY(-5px); }
-    .sa-responsive-columns { list-style:none; padding:0; margin:0; column-gap:30px; columns:3; }
-    .sa-responsive-columns li { padding:12px 15px; margin:8px 0; border-radius:10px; background:rgba(240,244,255,.9); transition:all .3s; cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,.08); }
-    .sa-responsive-columns li:hover { background:#d4e4ff; transform:scale(1.03); box-shadow:0 4px 12px rgba(0,0,0,.15); }
-    .sa-responsive-columns h3 { margin:0 0 6px; font-size:17px; color:#1e3c72; font-weight:600; }
-    .sa-zip-dropdown { font-size:14px; color:#003087; font-weight:600; max-height:0; overflow:hidden; opacity:0; transition:all .4s ease; transform:translateY(-10px); }
-    .sa-zip-dropdown.active { max-height:40px; opacity:1; transform:translateY(0); padding-top:4px; }
-    @keyframes fadeIn { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
-    #cf-schedule-container { background:transparent; border:2px solid #808080; border-radius:12px; box-shadow:0 4px 16px rgba(0,0,0,.2); padding:20px; margin:3rem auto 0; max-width:1200px; }
-    .cf-schedule-text { font-family:'Montserrat',sans-serif; font-size:1.5rem; color:#2A2A2A; font-weight:600; text-align:center; margin-bottom:15px; }
-    .cf-book-button { display:block; padding:12px 20px; background:linear-gradient(45deg,#003087,#00205B); color:#fff; font-weight:600; border-radius:8px; border:none; cursor:pointer; margin:10px auto; width:100%; max-width:220px; height:60px; display:flex; align-items:center; justify-content:center; transition:all .3s; }
-    .cf-book-button:hover { background:linear-gradient(45deg,#00205B,#001A45); transform:translateY(-3px); }
-    .form-call-now { display:block; padding:12px 28px; background:var(--red); color:white; font-weight:700; border-radius:6px; font-size:17px; cursor:pointer; margin:15px auto 0; width:100%; max-width:220px; height:60px; display:flex; align-items:center; justify-content:center; transition:all .3s; }
-    .form-call-now:hover { background:#c41b20; transform:translateY(-3px); }
-    .cf-contact-form-section { max-height:0; overflow:hidden; opacity:0; transition:all .6s ease; padding:0; background:linear-gradient(135deg,#003087 0%,#00205B 50%,#001A45 100%); border-radius:12px; margin-top:15px; }
-    .cf-contact-form-section.active { max-height:1600px; opacity:1; padding:20px; }
-    .expect-text { font-size:.95rem; color:#fff; text-align:center; margin-bottom:15px; }
-    .cf-contact-form { background:rgba(255,255,255,.95); border-radius:12px; padding:20px; display:flex; flex-direction:column; gap:15px; }
-    .cf-form-group { display:flex; flex-direction:column; }
-    .cf-form-group label { font-size:1rem; font-weight:600; color:#000; margin-bottom:5px; }
-    .cf-form-group input, .cf-form-group textarea { padding:12px; font-size:16px; border:1px solid #ccc; border-radius:8px; background:#fff; }
-    .cf-form-group textarea { resize:vertical; min-height:100px; }
-    .cf-form-button { background:linear-gradient(45deg,#003087,#00205B); color:#fff; font-weight:600; border:none; border-radius:8px; cursor:pointer; width:220px; height:60px; margin:20px auto 0; display:flex; align-items:center; justify-content:center; transition:all .3s; }
-    .cf-form-button:hover { background:linear-gradient(45deg,#00205B,#001A45); transform:translateY(-3px); }
-    .cf-success-modal { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:2000; align-items:center; justify-content:center; }
-    .cf-success-modal.active { display:flex; }
-    .cf-success-content { background:white; padding:40px 30px; border-radius:12px; text-align:center; max-width:90%; box-shadow:0 10px 30px rgba(0,0,0,0.3); }
-    .cf-success-content p { font-size:20px; font-weight:600; color:#003087; margin:0 0 25px; line-height:1.6; }
-    .cf-close-modal { background:var(--red); color:white; border:none; padding:12px 32px; border-radius:8px; font-size:16px; font-weight:700; cursor:pointer; }
-    footer { background:#111; color:#ccc; padding:60px 0 30px; text-align:center; }
-    footer p { margin:10px 0; }
-    footer strong { color:#fff; }
+    .services-dropdown li {
+      padding: 22px 36px;
+      margin: 14px 0;
+      color: #eee;
+      font-size: 18px;
+      line-height: 2.3;
+      transition: all .3s;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    .services-dropdown li:hover {
+      background: var(--red);
+      color: white;
+      padding-left: 46px;
+    }
+    .submenu-toggle {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      background: rgba(255,255,255,0.15);
+      margin: 14px 20px;
+      border-radius: 8px;
+      padding: 22px 24px;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    .submenu-toggle i {
+      transition: transform .3s;
+      font-size: 18px;
+    }
+    .submenu-toggle.active i {
+      transform: rotate(90deg);
+    }
+    .additional-submenu,
+    .service-areas-submenu {
+      max-height: 0;
+      overflow-y: auto;
+      transition: max-height 0.8s ease;
+      background: rgba(0,0,0,0.2);
+      margin: 0 20px 14px;
+      border-radius: 8px;
+      box-sizing: border-box;
+      white-space: normal;
+      visibility: hidden; /* Hide by default */
+      opacity: 0;
+    }
+    .additional-submenu.active,
+    .service-areas-submenu.active {
+      max-height: none; /* Unlimited height for scrolling */
+      padding: 16px 0;
+      visibility: visible;
+      opacity: 1;
+      display: block;
+    }
+    .additional-submenu li,
+    .service-areas-submenu li {
+      padding: 20px 44px;
+      color: #eee;
+      font-size: 17px;
+      line-height: 2.1;
+      margin: 12px 0;
+      transition: all .3s;
+      box-sizing: border-box;
+    }
+    .additional-submenu li:hover,
+    .service-areas-submenu li:hover {
+      background: var(--red);
+      color: white;
+      padding-left: 54px;
+    }
+    .hero {
+      position: relative;
+      color: white;
+      text-align: center;
+      padding: 160px 20px 120px;
+      margin-top: 80px;
+      background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)), url('https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png') center/cover no-repeat;
+      background-attachment: scroll;
+      min-height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .hero h1 {
+      font-size: 52px;
+      margin-bottom: 16px;
+      text-shadow: 3px 3px 12px rgba(0,0,0,0.9);
+      line-height: 1.2;
+    }
+    .hero p {
+      font-size: 24px;
+      max-width: 900px;
+      margin: 0 auto 35px;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
+    }
+    .btn {
+      background: var(--red);
+      color: white;
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 20px;
+      transition: all .3s;
+      box-sizing: border-box;
+    }
+    .btn:hover {
+      background: #c41b20;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(228,30,38,0.5);
+    }
+    @media (max-width: 768px) {
+      .hero {
+        padding: 130px 15px 90px;
+        min-height: 65vh;
+        background-position: center 35%;
+      }
+      .hero h1 {
+        font-size: 42px;
+      }
+      .hero p {
+        font-size: 20px;
+      }
+      .sa-responsive-columns {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero {
+        padding: 110px 15px 70px;
+        min-height: 60vh;
+      }
+      .hero h1 {
+        font-size: 34px;
+      }
+      .hero p {
+        font-size: 18px;
+      }
+      .sa-responsive-columns {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+    section {
+      padding: 90px 0;
+      box-sizing: border-box;
+    }
+    .alt {
+      background: var(--gray);
+    }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+    .service {
+      background: white;
+      padding: 40px 35px;
+      border-radius: 12px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      transition: all .4s ease;
+      position: relative;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    .service:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .service i {
+      font-size: 52px;
+      margin-bottom: 20px;
+      color: var(--blue);
+      transition: color .3s;
+    }
+    .service:hover i {
+      color: var(--red);
+    }
+    .service-types {
+      margin-top: 20px;
+      padding: 20px;
+      background: rgba(0,48,135,0.05);
+      border-radius: 10px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .5s ease, opacity .5s ease;
+      opacity: 0;
+      box-sizing: border-box;
+    }
+    .service.active .service-types {
+      max-height: 1000px;
+      opacity: 1;
+    }
+    .service-types h4 {
+      margin: 0 0 15px;
+      color: var(--blue);
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .service-types ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .service-types li {
+      padding: 12px 20px;
+      margin: 6px 0;
+      background: rgba(255,255,255,0.8);
+      border-radius: 8px;
+      transition: all .3s;
+      color: #333;
+      font-size: 15px;
+      box-sizing: border-box;
+    }
+    .service-types li:hover, .service-types li:active {
+      background: var(--red);
+      color: white;
+      padding-left: 30px;
+      transform: translateX(5px);
+    }
+    #sa-service-areas {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: transparent;
+      border: 2px solid #808080;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      margin: 0 auto 3rem;
+      padding: 20px;
+      position: relative;
+      animation: fadeIn .8s ease-out forwards;
+      box-sizing: border-box;
+    }
+    #sa-service-areas h2 {
+      font-size: 34px;
+      text-align: center;
+      color: inherit;
+      margin-bottom: 5px;
+      text-shadow: 0 2px 4px rgba(0,0,0,.3);
+      transition: transform .3s, color .3s;
+    }
+    #sa-service-areas h2:hover {
+      color: #ffd700;
+      transform: scale(1.05);
+    }
+    #sa-service-areas p {
+      font-size: 16px;
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 0 1px 3px rgba(0,0,0,.2);
+    }
+    .sa-dropdown-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .sa-dropdown-button {
+      padding: 14px 32px;
+      border: none;
+      background: linear-gradient(45deg, #003087, #0052cc);
+      color: #fff;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all .3s;
+      box-shadow: 0 4px 15px rgba(0,48,135,.4);
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-sizing: border-box;
+    }
+    .sa-dropdown-button:hover {
+      background: linear-gradient(45deg, #002266, #003f99);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,48,135,.6);
+    }
+    .sa-dropdown-content {
+      opacity: 0;
+      height: 0;
+      overflow: hidden;
+      transition: opacity .5s, height .5s, transform .5s;
+      transform: translateY(-10px);
+      background: transparent;
+      box-sizing: border-box;
+    }
+    .sa-dropdown-content.active {
+      opacity: 1;
+      height: auto;
+      transform: translateY(0);
+      padding: 20px 0;
+    }
+    .sa-slide h2 {
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 15px;
+      text-shadow: 0 1px 3px rgba(0,0,0,.2);
+    }
+    .sa-slide ul {
+      background: rgba(255,255,255,.95);
+      border-radius: 12px;
+      padding: 25px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.1);
+      transition: transform .3s;
+      box-sizing: border-box;
+    }
+    .sa-slide ul:hover {
+      transform: translateY(-5px);
+    }
+    .sa-responsive-columns {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      column-gap: 30px;
+      columns: 3;
+    }
+    .sa-responsive-columns li {
+      padding: 12px 15px;
+      margin: 8px 0;
+      border-radius: 10px;
+      background: rgba(240,244,255,.9);
+      transition: all .3s;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,.08);
+      box-sizing: border-box;
+    }
+    .sa-responsive-columns li:hover {
+      background: #d4e4ff;
+      transform: scale(1.03);
+      box-shadow: 0 4px 12px rgba(0,0,0,.15);
+    }
+    .sa-responsive-columns h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+      color: #1e3c72;
+      font-weight: 600;
+    }
+    .sa-zip-dropdown {
+      font-size: 14px;
+      color: #003087;
+      font-weight: 600;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all .4s ease;
+      transform: translateY(-10px);
+      box-sizing: border-box;
+    }
+    .sa-zip-dropdown.active {
+      max-height: 40px;
+      opacity: 1;
+      transform: translateY(0);
+      padding-top: 4px;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    #cf-schedule-container {
+      background: transparent;
+      border: 2px solid #808080;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.2);
+      padding: 20px;
+      margin: 3rem auto 0;
+      max-width: 1200px;
+      box-sizing: border-box;
+    }
+    .cf-schedule-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      color: #2A2A2A;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .cf-book-button {
+      display: block;
+      padding: 12px 20px;
+      background: linear-gradient(45deg, #003087, #00205B);
+      color: #fff;
+      font-weight: 600;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      margin: 10px auto;
+      width: 100%;
+      max-width: 220px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s;
+      box-sizing: border-box;
+    }
+    .cf-book-button:hover {
+      background: linear-gradient(45deg, #00205B, #001A45);
+      transform: translateY(-3px);
+    }
+    .form-call-now {
+      display: block;
+      padding: 12px 28px;
+      background: var(--red);
+      color: white;
+      font-weight: 700;
+      border-radius: 6px;
+      font-size: 17px;
+      cursor: pointer;
+      margin: 15px auto 0;
+      width: 100%;
+      max-width: 220px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s;
+      box-sizing: border-box;
+    }
+    .form-call-now:hover {
+      background: #c41b20;
+      transform: translateY(-3px);
+    }
+    .cf-contact-form-section {
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: all .6s ease;
+      padding: 0;
+      background: linear-gradient(135deg, #003087 0%, #00205B 50%, #001A45 100%);
+      border-radius: 12px;
+      margin-top: 15px;
+      box-sizing: border-box;
+    }
+    .cf-contact-form-section.active {
+      max-height: 1600px;
+      opacity: 1;
+      padding: 20px;
+    }
+    .expect-text {
+      font-size: .95rem;
+      color: #fff;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+    .cf-contact-form {
+      background: rgba(255,255,255,.95);
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      box-sizing: border-box;
+    }
+    .cf-form-group {
+      display: flex;
+      flex-direction: column;
+    }
+    .cf-form-group label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      margin-bottom: 5px;
+    }
+    .cf-form-group input, .cf-form-group textarea {
+      padding: 12px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background: #fff;
+      box-sizing: border-box;
+    }
+    .cf-form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+    .cf-form-button {
+      background: linear-gradient(45deg, #003087, #00205B);
+      color: #fff;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 220px;
+      height: 60px;
+      margin: 20px auto 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all .3s;
+      box-sizing: border-box;
+    }
+    .cf-form-button:hover {
+      background: linear-gradient(45deg, #00205B, #001A45);
+      transform: translateY(-3px);
+    }
+    .cf-success-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 2000;
+      align-items: center;
+      justify-content: center;
+      box-sizing: border-box;
+    }
+    .cf-success-modal.active {
+      display: flex;
+    }
+    .cf-success-content {
+      background: white;
+      padding: 40px 30px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 90%;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      box-sizing: border-box;
+    }
+    .cf-success-content p {
+      font-size: 20px;
+      font-weight: 600;
+      color: #003087;
+      margin: 0 0 25px;
+      line-height: 1.6;
+    }
+    .cf-close-modal {
+      background: var(--red);
+      color: white;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 60px 0 30px;
+      text-align: center;
+      box-sizing: border-box;
+    }
+    footer p {
+      margin: 10px 0;
+    }
+    footer strong {
+      color: #fff;
+    }
   </style>
 </head>
 <body>
@@ -224,7 +873,7 @@
             <li>LG Microwave Repair</li>
             <li>LG Wine Cooler Repair</li>
             <li>All LG Appliances</li>
-            <li class="submenu-toggle" id="additionalToggle"> Additional Services <i class="fas fa-chevron-right"></i> </li>
+            <li class="submenu-toggle" id="additionalToggle">Additional Services <i class="fas fa-chevron-right"></i></li>
             <div class="additional-submenu" id="additionalSubmenu">
               <li>Installation, Repair & Maintenance</li>
               <li>Refrigerator Compressor & Refrigerant Service</li>
@@ -239,6 +888,8 @@
               <li>EPA Section 608 Certification</li>
               <li>Appliance Warranty & Extended Service Plans</li>
             </div>
+            <li class="submenu-toggle" id="serviceAreasToggle">Service Areas <i class="fas fa-chevron-right"></i></li>
+            <div class="service-areas-submenu" id="serviceAreasSubmenu"></div>
           </ul>
         </div>
         <div class="nav-call-btn" id="navCallNow">Call Now</div>
@@ -431,33 +1082,175 @@
     </div>
   </footer>
   <script>
-    // Full Bergen County towns list
+    // Towns list
     const bergenTowns = [
-      {name:"Allendale",zip:"07401"},{name:"Alpine",zip:"07620"},{name:"Bergenfield",zip:"07621"},{name:"Bogota",zip:"07603"},
-      {name:"Carlstadt",zip:"07072"},{name:"Cliffside Park",zip:"07010"},{name:"Closter",zip:"07624"},{name:"Cresskill",zip:"07626"},
-      {name:"Demarest",zip:"07627"},{name:"Dumont",zip:"07628"},{name:"East Rutherford",zip:"07073"},{name:"Edgewater",zip:"07020"},
-      {name:"Elmwood Park",zip:"07407"},{name:"Emerson",zip:"07630"},{name:"Englewood",zip:"07631"},{name:"Englewood Cliffs",zip:"07632"},
-      {name:"Fair Lawn",zip:"07410"},{name:"Fairview",zip:"07022"},{name:"Fort Lee",zip:"07024"},{name:"Franklin Lakes",zip:"07417"},
-      {name:"Garfield",zip:"07026"},{name:"Glen Rock",zip:"07452"},{name:"Hackensack",zip:"07601"},{name:"Harrington Park",zip:"07640"},
-      {name:"Hasbrouck Heights",zip:"07604"},{name:"Haworth",zip:"07641"},{name:"Hillsdale",zip:"07642"},{name:"Ho-Ho-Kus",zip:"07423"},
-      {name:"Leonia",zip:"07605"},{name:"Little Ferry",zip:"07643"},{name:"Lodi",zip:"07644"},{name:"Lyndhurst",zip:"07071"},
-      {name:"Mahwah",zip:"07430"},{name:"Maywood",zip:"07607"},{name:"Midland Park",zip:"07432"},{name:"Montvale",zip:"07645"},
-      {name:"Moonachie",zip:"07074"},{name:"New Milford",zip:"07646"},{name:"North Arlington",zip:"07031"},{name:"Northvale",zip:"07647"},
-      {name:"Norwood",zip:"07648"},{name:"Oakland",zip:"07436"},{name:"Old Tappan",zip:"07675"},{name:"Oradell",zip:"07649"},
-      {name:"Palisades Park",zip:"07650"},{name:"Paramus",zip:"07652"},{name:"Park Ridge",zip:"07656"},{name:"Ramsey",zip:"07446"},
-      {name:"Ridgefield",zip:"07657"},{name:"Ridgefield Park",zip:"07660"},{name:"Ridgewood",zip:"07450"},{name:"River Edge",zip:"07661"},
-      {name:"River Vale",zip:"07675"},{name:"Rochelle Park",zip:"07662"},{name:"Rockleigh",zip:"07647"},{name:"Rutherford",zip:"07070"},
-      {name:"Saddle Brook",zip:"07663"},{name:"Saddle River",zip:"07458"},{name:"South Hackensack",zip:"07606"},{name:"Teaneck",zip:"07666"},
-      {name:"Tenafly",zip:"07670"},{name:"Teterboro",zip:"07608"},{name:"Upper Saddle River",zip:"07458"},{name:"Waldwick",zip:"07463"},
-      {name:"Wallington",zip:"07057"},{name:"Washington Township",zip:"07676"},{name:"Westwood",zip:"07675"},{name:"Woodcliff Lake",zip:"07677"},
-      {name:"Wood-Ridge",zip:"07075"},{name:"Wyckoff",zip:"07481"}
-    ].sort((a,b)=>a.name.localeCompare(b.name));
+      {name: "Allendale", zip: "07401"},
+      {name: "Alpine", zip: "07620"},
+      {name: "Bergenfield", zip: "07621"},
+      {name: "Bogota", zip: "07603"},
+      {name: "Carlstadt", zip: "07072"},
+      {name: "Cliffside Park", zip: "07010"},
+      {name: "Closter", zip: "07624"},
+      {name: "Cresskill", zip: "07626"},
+      {name: "Demarest", zip: "07627"},
+      {name: "Dumont", zip: "07628"},
+      {name: "East Rutherford", zip: "07073"},
+      {name: "Edgewater", zip: "07020"},
+      {name: "Elmwood Park", zip: "07407"},
+      {name: "Emerson", zip: "07630"},
+      {name: "Englewood", zip: "07631"},
+      {name: "Englewood Cliffs", zip: "07632"},
+      {name: "Fair Lawn", zip: "07410"},
+      {name: "Fairview", zip: "07022"},
+      {name: "Fort Lee", zip: "07024"},
+      {name: "Franklin Lakes", zip: "07417"},
+      {name: "Garfield", zip: "07026"},
+      {name: "Glen Rock", zip: "07452"},
+      {name: "Hackensack", zip: "07601"},
+      {name: "Harrington Park", zip: "07640"},
+      {name: "Hasbrouck Heights", zip: "07604"},
+      {name: "Haworth", zip: "07641"},
+      {name: "Hillsdale", zip: "07642"},
+      {name: "Ho-Ho-Kus", zip: "07423"},
+      {name: "Jersey City", zip: "07302"},
+      {name: "Leonia", zip: "07605"},
+      {name: "Little Ferry", zip: "07643"},
+      {name: "Lodi", zip: "07644"},
+      {name: "Lyndhurst", zip: "07071"},
+      {name: "Mahwah", zip: "07430"},
+      {name: "Maywood", zip: "07607"},
+      {name: "Midland Park", zip: "07432"},
+      {name: "Montvale", zip: "07645"},
+      {name: "Moonachie", zip: "07074"},
+      {name: "New Milford", zip: "07646"},
+      {name: "Newark", zip: "07102"},
+      {name: "North Arlington", zip: "07031"},
+      {name: "Northvale", zip: "07647"},
+      {name: "Norwood", zip: "07648"},
+      {name: "Oakland", zip: "07436"},
+      {name: "Old Tappan", zip: "07675"},
+      {name: "Oradell", zip: "07649"},
+      {name: "Palisades Park", zip: "07650"},
+      {name: "Paramus", zip: "07652"},
+      {name: "Park Ridge", zip: "07656"},
+      {name: "Ramsey", zip: "07446"},
+      {name: "Ridgefield", zip: "07657"},
+      {name: "Ridgefield Park", zip: "07660"},
+      {name: "Ridgewood", zip: "07450"},
+      {name: "River Edge", zip: "07661"},
+      {name: "River Vale", zip: "07675"},
+      {name: "Rochelle Park", zip: "07662"},
+      {name: "Rockleigh", zip: "07647"},
+      {name: "Rutherford", zip: "07070"},
+      {name: "Saddle Brook", zip: "07663"},
+      {name: "Saddle River", zip: "07458"},
+      {name: "South Hackensack", zip: "07606"},
+      {name: "Teaneck", zip: "07666"},
+      {name: "Tenafly", zip: "07670"},
+      {name: "Teterboro", zip: "07608"},
+      {name: "Upper Saddle River", zip: "07458"},
+      {name: "Waldwick", zip: "07463"},
+      {name: "Wallington", zip: "07057"},
+      {name: "Washington Township", zip: "07676"},
+      {name: "Westwood", zip: "07675"},
+      {name: "Woodcliff Lake", zip: "07677"},
+      {name: "Wood-Ridge", zip: "07075"},
+      {name: "Wyckoff", zip: "07481"}
+    ].sort((a, b) => a.name.localeCompare(b.name));
 
     document.addEventListener('DOMContentLoaded', () => {
-      // Service Areas
+      console.log('DOM loaded at', new Date().toLocaleString());
+
+      // Services Dropdown
+      const servicesMenu = document.getElementById('servicesMenu');
+      const servicesToggle = document.getElementById('servicesToggle');
+      const servicesDropdown = document.getElementById('servicesDropdown');
+      const additionalToggle = document.getElementById('additionalToggle');
+      const additionalSubmenu = document.getElementById('additionalSubmenu');
+      const serviceAreasToggle = document.getElementById('serviceAreasToggle');
+      const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
+
+      if (!servicesMenu || !servicesToggle || !servicesDropdown || !additionalToggle || !additionalSubmenu || !serviceAreasToggle || !serviceAreasSubmenu) {
+        console.error('Services dropdown elements missing:', {
+          servicesMenu: !!servicesMenu,
+          servicesToggle: !!servicesToggle,
+          servicesDropdown: !!servicesDropdown,
+          additionalToggle: !!additionalToggle,
+          additionalSubmenu: !!additionalSubmenu,
+          serviceAreasToggle: !!serviceAreasToggle,
+          serviceAreasSubmenu: !!serviceAreasSubmenu
+        });
+        return;
+      }
+
+      console.log('Services dropdown elements found');
+
+      function populateServiceAreasSubmenu() {
+        console.log('Populating service areas submenu...');
+        console.log('Towns array length:', bergenTowns.length);
+        serviceAreasSubmenu.innerHTML = bergenTowns.map(t => `
+          <li>${t.name}</li>
+        `).join('');
+        console.log('Service areas submenu populated with towns:', bergenTowns.map(t => t.name));
+        console.log('Service areas submenu height:', serviceAreasSubmenu.scrollHeight + 'px');
+        console.log('Service areas submenu scrollable:', serviceAreasSubmenu.scrollHeight > serviceAreasSubmenu.clientHeight);
+      }
+
+      populateServiceAreasSubmenu();
+
+      servicesToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Services toggle clicked');
+        servicesMenu.classList.toggle('active');
+      });
+
+      additionalToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Additional services toggle clicked');
+        additionalToggle.classList.toggle('active');
+        additionalSubmenu.classList.toggle('active');
+        console.log('Additional submenu visibility:', additionalSubmenu.classList.contains('active') ? 'Visible' : 'Hidden');
+      });
+
+      serviceAreasToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Service areas toggle clicked');
+        serviceAreasToggle.classList.toggle('active');
+        serviceAreasSubmenu.classList.toggle('active');
+        console.log('Service areas submenu visibility:', serviceAreasSubmenu.classList.contains('active') ? 'Visible' : 'Hidden');
+      });
+
+      servicesDropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Services dropdown clicked (prevent close)');
+      });
+
+      // Prevent page scrolling when interacting with dropdown on touch devices
+      servicesDropdown.addEventListener('touchstart', (e) => {
+        console.log('Touch start on dropdown');
+        e.stopPropagation();
+      }, { passive: false });
+
+      servicesDropdown.addEventListener('touchmove', (e) => {
+        console.log('Touch move on dropdown');
+        e.preventDefault();
+      }, { passive: false });
+
+      // Close dropdowns on outside click
+      document.addEventListener('click', () => {
+        console.log('Outside click detected');
+        servicesMenu.classList.remove('active');
+        additionalToggle.classList.remove('active');
+        additionalSubmenu.classList.remove('active');
+        serviceAreasToggle.classList.remove('active');
+        serviceAreasSubmenu.classList.remove('active');
+      });
+
+      // Service Areas (Section Dropdown)
       const saToggle = document.getElementById('saToggleBtn');
       const saContent = document.getElementById('saDropdownContent');
       const townsList = document.getElementById('townsList');
+
       function populateTowns() {
         if (townsList.innerHTML) return;
         townsList.innerHTML = bergenTowns.map(t => `
@@ -467,34 +1260,17 @@
           </li>
         `).join('');
       }
-      saToggle.addEventListener('click', () => {
-        const expanded = saContent.classList.toggle('active');
-        saToggle.setAttribute('aria-expanded', expanded);
-        if (expanded) populateTowns();
-      });
 
-      // Navigation + Additional Services Dropdown
-      const servicesMenu = document.getElementById('servicesMenu');
-      const toggle = document.getElementById('servicesToggle');
-      const subToggle = document.getElementById('additionalToggle');
-      const subMenu = document.getElementById('additionalSubmenu');
-      toggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        servicesMenu.classList.toggle('active');
-      });
-      subToggle.addEventListener('click', (e) => {
-        e.stopPropagation();
-        subToggle.classList.toggle('active');
-        subMenu.classList.toggle('active');
-      });
-      document.addEventListener('click', () => {
-        servicesMenu.classList.remove('active');
-        subToggle.classList.remove('active');
-        subMenu.classList.remove('active');
-      });
-      document.getElementById('servicesDropdown').addEventListener('click', e => e.stopPropagation());
+      if (saToggle && saContent) {
+        saToggle.addEventListener('click', () => {
+          console.log('Section Service Areas toggle clicked');
+          const expanded = saContent.classList.toggle('active');
+          saToggle.setAttribute('aria-expanded', expanded);
+          if (expanded) populateTowns();
+        });
+      }
 
-      // APPLIANCE CARDS – MOBILE: DROPDOWN STAYS OPEN ON SUBTYPE TAP
+      // Appliance Cards
       document.querySelectorAll('.service').forEach(service => {
         service.addEventListener('click', function(e) {
           if (!e.target.closest('.service-types')) {
@@ -504,53 +1280,72 @@
       });
 
       // Book Online
-      document.getElementById('cfBookButton').addEventListener('click', () => {
-        document.getElementById('cfContactFormSection').classList.toggle('active');
-      });
-
-      // CALL NOW – BOTH BUTTONS
-      const setupCallButton = (btn) => {
-        btn.addEventListener('click', function() {
-          if (this.dataset.revealed) return;
-          const digits = [2,0,1,2,9,8,3,4,9,9];
-          const num = digits.map(d => String.fromCharCode(48 + d)).join('');
-          const formatted = `+1 (${num.slice(0,3)}) ${num.slice(3,6)}-${num.slice(6)}`;
-          this.innerHTML = formatted;
-          this.dataset.revealed = 'true';
-          this.onclick = () => window.location.href = 'tel:+1' + num;
+      const cfBookButton = document.getElementById('cfBookButton');
+      if (cfBookButton) {
+        cfBookButton.addEventListener('click', () => {
+          console.log('Book Online button clicked');
+          document.getElementById('cfContactFormSection').classList.toggle('active');
         });
+      }
+
+      // Call Now
+      const setupCallButton = (btn) => {
+        if (btn) {
+          btn.addEventListener('click', function() {
+            if (this.dataset.revealed) return;
+            const digits = [2,0,1,2,9,8,3,4,9,9];
+            const num = digits.map(d => String.fromCharCode(48 + d)).join('');
+            const formatted = `+1 (${num.slice(0,3)}) ${num.slice(3,6)}-${num.slice(6)}`;
+            this.innerHTML = formatted;
+            this.dataset.revealed = 'true';
+            this.onclick = () => window.location.href = 'tel:+1' + num;
+          });
+        }
       };
+
       setupCallButton(document.getElementById('navCallNow'));
       setupCallButton(document.getElementById('formCallNow'));
 
       // Form Submit
-      document.getElementById('cfContactForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const email = this.user_email.value.trim();
-        emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
-          .then(() => {
-            this.reset();
-            document.getElementById('cfContactFormSection').classList.remove('active');
-            document.getElementById('successMessage').innerHTML = `
-              <strong>Thank you!</strong><br><br>
-              Your request has been sent.<br><br>
-              We will contact you at<br><strong>${email}</strong><br>
-              within the next 30 minutes.
-            `;
-            document.getElementById('cfSuccessModal').classList.add('active');
-            document.getElementById('cfModalOverlay').classList.add('active');
-          })
-          .catch(() => alert('Failed to send. Please try again or call us.'));
-      });
+      const cfContactForm = document.getElementById('cfContactForm');
+      if (cfContactForm) {
+        cfContactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          console.log('Form submitted');
+          const email = this.user_email.value.trim();
+          emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
+            .then(() => {
+              this.reset();
+              document.getElementById('cfContactFormSection').classList.remove('active');
+              document.getElementById('successMessage').innerHTML = `
+                <strong>Thank you!</strong><br><br>
+                Your request has been sent.<br><br>
+                We will contact you at<br><strong>${email}</strong><br>
+                within the next 30 minutes.
+              `;
+              document.getElementById('cfSuccessModal').classList.add('active');
+              document.getElementById('cfModalOverlay').classList.add('active');
+            })
+            .catch(() => alert('Failed to send. Please try again or call us.'));
+        });
+      }
 
       // Modal Close
-      document.getElementById('cfCloseModal').onclick = () => {
-        document.getElementById('cfSuccessModal').classList.remove('active');
-        document.getElementById('cfModalOverlay').classList.remove('active');
-      };
-      document.getElementById('cfModalOverlay').onclick = () => document.getElementById('cfCloseModal').click();
+      const cfCloseModal = document.getElementById('cfCloseModal');
+      if (cfCloseModal) {
+        cfCloseModal.onclick = () => {
+          console.log('Close modal clicked');
+          document.getElementById('cfSuccessModal').classList.remove('active');
+          document.getElementById('cfModalOverlay').classList.remove('active');
+        };
+      }
+
+      const cfModalOverlay = document.getElementById('cfModalOverlay');
+      if (cfModalOverlay) {
+        cfModalOverlay.onclick = () => cfCloseModal && cfCloseModal.click();
+      }
     });
   </script>
-  <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"49c9df0c0d144546a6aa116c3ace8252","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+  <!-- Removed Cloudflare scripts for testing -->
 </body>
 </html>
