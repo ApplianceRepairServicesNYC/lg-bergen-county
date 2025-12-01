@@ -249,17 +249,19 @@
       width: 420px;
       min-width: 360px;
       max-width: 95%;
+      min-height: 100px; /* Ensure initial visibility */
       background: var(--blue);
       border-radius: 12px;
       box-shadow: 0 15px 40px rgba(0,0,0,0.5);
       padding: 32px 0;
       z-index: 1000;
-      max-height: 80vh; /* Constrain to viewport for scrolling */
-      overflow-y: auto; /* Enable scrolling */
+      max-height: 80vh;
+      overflow-y: auto;
       box-sizing: border-box;
       overflow-wrap: break-word;
       white-space: nowrap;
       overscroll-behavior: contain;
+      -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
     }
     .services-menu.active .services-dropdown {
       display: block !important;
@@ -275,7 +277,7 @@
         right: auto;
         left: 50%;
         transform: translateX(-50%);
-        top: 100px;
+        top: 80px; /* Consistent with desktop */
       }
       .nav-wrapper {
         flex-direction: column;
@@ -295,7 +297,6 @@
         width: 95%;
         max-width: 380px;
         min-width: 300px;
-        top: 90px;
       }
     }
     .services-dropdown li {
@@ -336,18 +337,19 @@
     .service-areas-submenu {
       max-height: 0;
       overflow-y: auto;
-      transition: max-height 0.8s ease;
+      transition: max-height 0.8s ease, opacity 0.3s ease, visibility 0.3s ease;
       background: rgba(0,0,0,0.2);
       margin: 0 20px 14px;
       border-radius: 8px;
       box-sizing: border-box;
       white-space: normal;
-      visibility: hidden; /* Hide by default */
+      visibility: hidden;
       opacity: 0;
+      -webkit-overflow-scrolling: touch;
     }
     .additional-submenu.active,
     .service-areas-submenu.active {
-      max-height: none; /* Unlimited height for scrolling */
+      max-height: none;
       padding: 16px 0;
       visibility: visible;
       opacity: 1;
@@ -1200,13 +1202,13 @@
 
       servicesToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        console.log('Services toggle clicked');
+        console.log('Services toggle clicked (mobile:', window.innerWidth <= 768, ')');
         servicesMenu.classList.toggle('active');
       });
 
       additionalToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        console.log('Additional services toggle clicked');
+        console.log('Additional services toggle clicked (mobile:', window.innerWidth <= 768, ')');
         additionalToggle.classList.toggle('active');
         additionalSubmenu.classList.toggle('active');
         console.log('Additional submenu visibility:', additionalSubmenu.classList.contains('active') ? 'Visible' : 'Hidden');
@@ -1214,7 +1216,7 @@
 
       serviceAreasToggle.addEventListener('click', (e) => {
         e.stopPropagation();
-        console.log('Service areas toggle clicked');
+        console.log('Service areas toggle clicked (mobile:', window.innerWidth <= 768, ')');
         serviceAreasToggle.classList.toggle('active');
         serviceAreasSubmenu.classList.toggle('active');
         console.log('Service areas submenu visibility:', serviceAreasSubmenu.classList.contains('active') ? 'Visible' : 'Hidden');
@@ -1222,23 +1224,28 @@
 
       servicesDropdown.addEventListener('click', (e) => {
         e.stopPropagation();
-        console.log('Services dropdown clicked (prevent close)');
+        console.log('Services dropdown clicked (prevent close, mobile:', window.innerWidth <= 768, ')');
       });
 
-      // Prevent page scrolling when interacting with dropdown on touch devices
+      // Touch events for mobile
       servicesDropdown.addEventListener('touchstart', (e) => {
-        console.log('Touch start on dropdown');
+        console.log('Touch start on dropdown (mobile:', window.innerWidth <= 768, ')');
         e.stopPropagation();
-      }, { passive: false });
+      }, { passive: true });
 
       servicesDropdown.addEventListener('touchmove', (e) => {
-        console.log('Touch move on dropdown');
-        e.preventDefault();
-      }, { passive: false });
+        console.log('Touch move on dropdown (mobile:', window.innerWidth <= 768, ')');
+        // Allow scrolling within dropdown/submenus
+      }, { passive: true });
 
-      // Close dropdowns on outside click
+      servicesDropdown.addEventListener('touchend', (e) => {
+        console.log('Touch end on dropdown (mobile:', window.innerWidth <= 768, ')');
+        e.stopPropagation();
+      }, { passive: true });
+
+      // Close dropdowns on outside click/tap
       document.addEventListener('click', () => {
-        console.log('Outside click detected');
+        console.log('Outside click detected (mobile:', window.innerWidth <= 768, ')');
         servicesMenu.classList.remove('active');
         additionalToggle.classList.remove('active');
         additionalSubmenu.classList.remove('active');
@@ -1263,7 +1270,7 @@
 
       if (saToggle && saContent) {
         saToggle.addEventListener('click', () => {
-          console.log('Section Service Areas toggle clicked');
+          console.log('Section Service Areas toggle clicked (mobile:', window.innerWidth <= 768, ')');
           const expanded = saContent.classList.toggle('active');
           saToggle.setAttribute('aria-expanded', expanded);
           if (expanded) populateTowns();
@@ -1283,7 +1290,7 @@
       const cfBookButton = document.getElementById('cfBookButton');
       if (cfBookButton) {
         cfBookButton.addEventListener('click', () => {
-          console.log('Book Online button clicked');
+          console.log('Book Online button clicked (mobile:', window.innerWidth <= 768, ')');
           document.getElementById('cfContactFormSection').classList.toggle('active');
         });
       }
@@ -1311,7 +1318,7 @@
       if (cfContactForm) {
         cfContactForm.addEventListener('submit', function(e) {
           e.preventDefault();
-          console.log('Form submitted');
+          console.log('Form submitted (mobile:', window.innerWidth <= 768, ')');
           const email = this.user_email.value.trim();
           emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
             .then(() => {
@@ -1334,7 +1341,7 @@
       const cfCloseModal = document.getElementById('cfCloseModal');
       if (cfCloseModal) {
         cfCloseModal.onclick = () => {
-          console.log('Close modal clicked');
+          console.log('Close modal clicked (mobile:', window.innerWidth <= 768, ')');
           document.getElementById('cfSuccessModal').classList.remove('active');
           document.getElementById('cfModalOverlay').classList.remove('active');
         };
@@ -1346,6 +1353,5 @@
       }
     });
   </script>
-  <!-- Removed Cloudflare scripts for testing -->
 </body>
 </html>
