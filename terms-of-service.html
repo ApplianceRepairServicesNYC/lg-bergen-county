@@ -710,7 +710,7 @@
             });
 
             // Touch events for mobile
-            servicesDropdown.addEventListener(' ■■■■', (e) => {
+            servicesDropdown.addEventListener('touchstart', (e) => {
                 console.log('Touch start on dropdown (mobile:', window.innerWidth <= 768, ')');
                 e.stopPropagation();
             }, { passive: true });
