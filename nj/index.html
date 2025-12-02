@@ -193,9 +193,15 @@
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       box-sizing: border-box;
     }
-    .logo {
+    .logo-link {
       font-size: 26px;
       font-weight: 700;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .logo-link:hover {
+      color: #ddd;
     }
     .nav-wrapper {
       display: flex;
@@ -269,6 +275,30 @@
     #servicesMenu .services-dropdown {
       right: 20px;
     }
+    
+    .dropdown-close-btn {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      transition: all .3s;
+      z-index: 10;
+    }
+    .dropdown-close-btn:hover {
+      background: var(--red);
+      transform: rotate(90deg);
+    }
+    
     @media (max-width: 768px) {
       .services-dropdown {
         width: 95%;
@@ -283,7 +313,7 @@
         flex-direction: column;
         padding: 15px 0;
       }
-      .logo {
+      .logo-link {
         margin-bottom: 10px;
       }
       .nav-right {
@@ -313,6 +343,16 @@
       background: var(--red);
       color: white;
       padding-left: 46px;
+    }
+    .services-dropdown a {
+      color: #eee;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .services-dropdown li:hover a {
+      color: white;
     }
     .submenu-toggle {
       display: flex;
@@ -718,18 +758,182 @@
       box-sizing: border-box;
     }
     footer {
-      background: #111;
-      color: #ccc;
-      padding: 60px 0 30px;
-      text-align: center;
+      background: #1a1a1a;
+      color: #b0b0b0;
+      padding: 0;
       box-sizing: border-box;
     }
-    footer p {
-      margin: 10px 0;
+    
+    .footer-main {
+      background: #1a1a1a;
+      padding: 60px 0 40px;
+      border-bottom: 1px solid #333;
     }
-    footer strong {
+    
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 50px;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .footer-column h3 {
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 20px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .footer-column p {
+      margin: 8px 0;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+    
+    .footer-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    
+    .footer-column ul li {
+      margin: 12px 0;
+    }
+    
+    .footer-column ul li a {
+      color: #b0b0b0;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color .3s;
+      display: inline-block;
+    }
+    
+    .footer-column ul li a:hover {
+      color: var(--red);
+      padding-left: 5px;
+    }
+    
+    .footer-brand {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .footer-brand h2 {
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .footer-hours {
+      background: rgba(0, 48, 135, 0.1);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border-left: 4px solid var(--blue);
+    }
+    
+    .footer-hours p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    
+    .footer-hours strong {
       color: #fff;
     }
+    
+    .footer-bottom {
+      background: #0d0d0d;
+      padding: 25px 0;
+    }
+    
+    .footer-bottom-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .footer-bottom p {
+      margin: 8px 0;
+      font-size: 13px;
+      color: #888;
+      text-align: center;
+    }
+    
+    .footer-bottom-links {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0 20px 0;
+      flex-wrap: wrap;
+      gap: 15px;
+      padding: 20px 0;
+      border-bottom: 1px solid #222;
+    }
+    
+    .footer-bottom-links a {
+      color: #b0b0b0;
+      text-decoration: none;
+      font-size: 14px;
+      transition: color .3s;
+      white-space: nowrap;
+    }
+    
+    .footer-bottom-links a:hover {
+      color: var(--blue);
+    }
+    
+    @media (max-width: 992px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
+      
+      .footer-bottom-links {
+        justify-content: center;
+        gap: 20px 30px;
+      }
+    }
+    
+    @media (max-width: 768px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+      
+      .footer-main {
+        padding: 40px 0 30px;
+      }
+      
+      .footer-column {
+        text-align: center;
+      }
+      
+      .footer-brand {
+        align-items: center;
+      }
+      
+      .footer-bottom-links {
+        gap: 15px 25px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .footer-bottom-links {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 0;
+      }
+      
+      .footer-bottom-links a {
+        font-size: 13px;
+      }
+    }
+    
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -739,20 +943,24 @@
 <body>
   <header>
     <div class="container nav-wrapper">
-      <div class="logo">LG Appliance Repair Bergen County</div>
+      <a href="https://lgbergencounty.com/" class="logo-link">LG Appliance Repair Bergen County</a>
       <div class="nav-right">
         <div class="services-menu" id="servicesMenu">
           <div class="services-btn" id="servicesToggle">Services</div>
           <ul class="services-dropdown" id="servicesDropdown">
-            <li>LG Washer Repair</li>
-            <li>LG Dryer Repair</li>
-            <li>LG Refrigerator Repair</li>
-            <li>LG Dishwasher Repair</li>
-            <li>LG Oven & Range Repair</li>
-            <li>LG Cooktop Repair</li>
-            <li>LG Microwave Repair</li>
-            <li>LG Wine Cooler Repair</li>
-            <li>All LG Appliances</li>
+            <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">
+              <i class="fas fa-times"></i>
+            </button>
+            <li><a href="https://lgbergencounty.com/appliances/washer-repair/">LG Washer Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/dryer-repair/">LG Dryer Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/refrigerator-repair/">LG Refrigerator Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/dishwasher-repair/">LG Dishwasher Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/oven-repair/">LG Oven & Range Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/cooktop-repair/">LG Cooktop Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/microwave-repair/">LG Microwave Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/wine-cooler-repair/">LG Wine Cooler Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/installation-maintenance/">Installation & Maintenance</a></li>
+            <li><a href="https://lgbergencounty.com/">All LG Appliances</a></li>
             <li class="submenu-toggle" id="additionalToggle">Additional Services <i class="fas fa-chevron-right"></i></li>
             <div class="additional-submenu" id="additionalSubmenu">
               <li>Installation, Repair & Maintenance</li>
@@ -816,10 +1024,67 @@
     </div>
   </section>
   <footer>
-    <div class="container">
-      <p style="font-size:18px; margin-bottom:20px;"><strong>LG Appliance Repair Bergen County NJ</strong></p>
-      <p>100 Corporate Drive, Mahwah, NJ 07430<br><strong>Open 7 Days a Week • 7:00 AM – 9:00 PM</strong></p>
-      <p style="margin-top:40px; color:#777;">© 2025 LG Appliance Repair Bergen County. All Rights Reserved.</p>
+    <div class="footer-main">
+      <div class="footer-grid">
+        <div class="footer-column footer-brand">
+          <h2>LG Appliance Repair</h2>
+          <p><strong>Bergen County, New Jersey</strong></p>
+          <p>100 Corporate Drive<br>Mahwah, NJ 07430</p>
+          <p style="margin-top: 15px;">Certified LG appliance repair serving all of Bergen County. Same-day service available for washers, dryers, dishwashers, ovens, microwaves, cooktops, and refrigerators.</p>
+          <div class="footer-hours">
+            <p><strong>Business Hours</strong></p>
+            <p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="https://lgbergencounty.com/appliances/washer-repair/">Washer Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/dryer-repair/">Dryer Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/oven-repair/">Oven Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/microwave-repair/">Microwave Repair</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>More Services</h3>
+          <ul>
+            <li><a href="https://lgbergencounty.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
+            <li><a href="https://lgbergencounty.com/appliances/installation-maintenance/">Installation & Maintenance</a></li>
+            <li><a href="https://lgbergencounty.com/">All Appliances</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="https://lgbergencounty.com/">Home</a></li>
+            <li><a href="https://lgbergencounty.com/nj/">Service Areas</a></li>
+            <li><a href="#contact">Schedule Service</a></li>
+            <li><a href="https://lgbergencounty.com/privacy-policy">Privacy Policy</a></li>
+            <li><a href="https://lgbergencounty.com/terms-of-service">Terms of Service</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <div class="footer-bottom-content">
+        <div class="footer-bottom-links">
+          <a href="https://lgbergencounty.com/">Home</a>
+          <a href="https://lgbergencounty.com/nj/">Service Areas</a>
+          <a href="#contact">Schedule Service</a>
+          <a href="https://lgbergencounty.com/privacy-policy">Privacy Policy</a>
+          <a href="https://lgbergencounty.com/terms-of-service">Terms of Service</a>
+        </div>
+        <p>© 2025 LG Appliance Repair Bergen County. All Rights Reserved.</p>
+        <p>Licensed & Insured • Factory Certified Technicians • Same-Day Service Available</p>
+      </div>
     </div>
   </footer>
   <script>
@@ -906,16 +1171,18 @@
       const servicesMenu = document.getElementById('servicesMenu');
       const servicesToggle = document.getElementById('servicesToggle');
       const servicesDropdown = document.getElementById('servicesDropdown');
+      const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
       const additionalToggle = document.getElementById('additionalToggle');
       const additionalSubmenu = document.getElementById('additionalSubmenu');
       const serviceAreasToggle = document.getElementById('serviceAreasToggle');
       const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
 
-      if (!servicesMenu || !servicesToggle || !servicesDropdown || !additionalToggle || !additionalSubmenu || !serviceAreasToggle || !serviceAreasSubmenu) {
+      if (!servicesMenu || !servicesToggle || !servicesDropdown || !dropdownCloseBtn || !additionalToggle || !additionalSubmenu || !serviceAreasToggle || !serviceAreasSubmenu) {
         console.error('Services dropdown elements missing:', {
           servicesMenu: !!servicesMenu,
           servicesToggle: !!servicesToggle,
           servicesDropdown: !!servicesDropdown,
+          dropdownCloseBtn: !!dropdownCloseBtn,
           additionalToggle: !!additionalToggle,
           additionalSubmenu: !!additionalSubmenu,
           serviceAreasToggle: !!serviceAreasToggle,
@@ -956,11 +1223,25 @@
 
       populateServiceAreasSubmenu();
       populateServiceAreasSection();
+      
+      function closeDropdown() {
+        servicesMenu.classList.remove('active');
+        additionalToggle.classList.remove('active');
+        additionalSubmenu.classList.remove('active');
+        serviceAreasToggle.classList.remove('active');
+        serviceAreasSubmenu.classList.remove('active');
+      }
 
       servicesToggle.addEventListener('click', (e) => {
         e.stopPropagation();
         console.log('Services toggle clicked (mobile:', window.innerWidth <= 768, ')');
         servicesMenu.classList.toggle('active');
+      });
+      
+      dropdownCloseBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        console.log('Close button clicked (mobile:', window.innerWidth <= 768, ')');
+        closeDropdown();
       });
 
       additionalToggle.addEventListener('click', (e) => {
@@ -980,10 +1261,10 @@
       });
 
       servicesDropdown.addEventListener('click', (e) => {
-        if (!e.target.classList.contains('service-area-link')) {
+        if (!e.target.closest('.service-area-link') && !e.target.closest('.submenu-toggle') && !e.target.closest('.dropdown-close-btn')) {
           e.stopPropagation();
           console.log('Services dropdown clicked (prevent close, mobile:', window.innerWidth <= 768, ')');
-        } else {
+        } else if (e.target.closest('.service-area-link')) {
           console.log('Service area link clicked:', e.target.href, '(mobile:', window.innerWidth <= 768, ')');
         }
       });
@@ -1006,11 +1287,7 @@
       // Close dropdowns on outside click/tap
       document.addEventListener('click', () => {
         console.log('Outside click detected (mobile:', window.innerWidth <= 768, ')');
-        servicesMenu.classList.remove('active');
-        additionalToggle.classList.remove('active');
-        additionalSubmenu.classList.remove('active');
-        serviceAreasToggle.classList.remove('active');
-        serviceAreasSubmenu.classList.remove('active');
+        closeDropdown();
       });
 
       // Call Now
