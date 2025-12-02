@@ -1140,74 +1140,175 @@
             box-sizing: border-box;
         }
         footer {
-            background: #111;
-            color: #ccc;
-            padding: 60px 0 30px;
-            text-align: center;
+            background: #1a1a1a;
+            color: #b0b0b0;
+            padding: 0;
             box-sizing: border-box;
         }
-        footer p {
-            margin: 10px 0;
+        
+        .footer-main {
+            background: #1a1a1a;
+            padding: 60px 0 40px;
+            border-bottom: 1px solid #333;
         }
-        footer strong {
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-column h3 {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .footer-column p {
+            margin: 8px 0;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-column ul li {
+            margin: 12px 0;
+        }
+        
+        .footer-column ul li a {
+            color: #b0b0b0;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color .3s;
+            display: inline-block;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--red);
+            padding-left: 5px;
+        }
+        
+        .footer-brand {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .footer-brand h2 {
+            color: #fff;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .footer-hours {
+            background: rgba(0, 48, 135, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid var(--blue);
+        }
+        
+        .footer-hours p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+        
+        .footer-hours strong {
             color: #fff;
         }
-        .footer-links {
-            margin: 20px 0;
+        
+        .footer-bottom {
+            background: #0d0d0d;
+            padding: 25px 0;
+        }
+        
+        .footer-bottom-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .footer-bottom p {
+            margin: 8px 0;
+            font-size: 13px;
+            color: #888;
+            text-align: center;
+        }
+        
+        .footer-bottom-links {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            gap: 10px 30px;
+            margin: 0 0 20px 0;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 0;
+            border-bottom: 1px solid #222;
         }
-        .footer-links a {
-            color: var(--blue);
+        
+        .footer-bottom-links a {
+            color: #b0b0b0;
             text-decoration: none;
-            font-size: 16px;
+            font-size: 14px;
             transition: color .3s;
+            white-space: nowrap;
         }
-        .footer-links a:hover {
-            color: var(--red);
+        
+        .footer-bottom-links a:hover {
+            color: var(--blue);
         }
-        .footer-links a:active {
-            color: white;
+        
+        @media (max-width: 992px) {
+            .footer-bottom-links {
+                justify-content: center;
+                gap: 20px 30px;
+            }
         }
         
         @media (max-width: 768px) {
-            .footer-links {
-                gap: 15px 20px;
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 35px;
             }
-            .footer-links a {
-                font-size: 15px;
+            
+            .footer-main {
+                padding: 40px 0 30px;
+            }
+            
+            .footer-column {
+                text-align: center;
+            }
+            
+            .footer-brand {
+                align-items: center;
+            }
+            
+            .footer-bottom-links {
+                gap: 15px 25px;
             }
         }
         
         @media (max-width: 480px) {
-            .footer-links {
+            .footer-bottom-links {
                 flex-direction: column;
                 gap: 12px;
+                padding: 15px 0;
             }
-            .footer-links a {
-                font-size: 15px;
-                padding: 8px 0;
+            
+            .footer-bottom-links a {
+                font-size: 13px;
             }
-        }
-
-        .footer-appliances a {
-            color: #ccc;
-            text-decoration: none;
-            margin: 0 5px;
-            white-space: nowrap;
-            display: inline-block;
-            transition: color .3s;
-        }
-
-        .footer-appliances a:hover {
-            color: var(--red);
-        }
-
-        .footer-appliances span {
-            color: #777;
         }
     </style>
 </head>
@@ -1442,31 +1543,64 @@
         </div>
     </section>
     <footer>
-        <div class="container">
-            <p style="font-size:18px; margin-bottom:20px;"><strong>LG Appliance Repair Bergen County NJ</strong></p>
-            <p>100 Corporate Drive, Mahwah, NJ 07430<br><strong>Open 7 Days a Week • 7:00 AM – 9:00 PM</strong></p>
-
-            <div style="margin-top: 30px; margin-bottom: 30px;">
-                <p style="font-size:16px; font-weight:700; color:#fff; margin-bottom: 10px;">LG Appliance Services:</p>
-                <p class="footer-appliances">
-                    <a href="https://lgbergencounty.com/appliances/washer-repair/">LG Washer Repair</a><span> | </span>
-                    <a href="https://lgbergencounty.com/appliances/dryer-repair/">LG Dryer Repair</a><span> | </span>
-                    <a href="https://lgbergencounty.com/appliances/refrigerator-repair/">LG Refrigerator Repair</a><span> | </span>
-                    <a href="https://lgbergencounty.com/appliances/oven-repair/">LG Oven Repair</a><span> | </span>
-                    <a href="https://lgbergencounty.com/appliances/microwave-repair/">LG Microwave Repair</a><span> | </span>
-                    <a href="https://lgbergencounty.com/appliances/dishwasher-repair/">LG Dishwasher Repair</a><span> | </span>
-                    <a href="https://lgbergencounty.com/appliances/cooktop-repair/">LG Cooktop Repair</a><span> | </span>
-                    <a href="https://lgbergencounty.com/appliances/wine-cooler-repair/">LG Wine Cooler Repair</a><span> | </span>
-                    <a href="https://lgbergencounty.com/appliances/vent-hood-repair/">LG Vent Hood Repair</a>
-                </p>
+        <div class="footer-main">
+            <div class="footer-grid">
+                <div class="footer-column footer-brand">
+                    <h2>LG Appliance Repair</h2>
+                    <p><strong>Bergen County, New Jersey</strong></p>
+                    <p>100 Corporate Drive<br>Mahwah, NJ 07430</p>
+                    <p style="margin-top: 15px;">Certified LG appliance repair serving all of Bergen County. Same-day service available for washers, dryers, dishwashers, ovens, microwaves, cooktops, and refrigerators.</p>
+                    <div class="footer-hours">
+                        <p><strong>Business Hours</strong></p>
+                        <p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="https://lgbergencounty.com/appliances/washer-repair/">Washer Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/dryer-repair/">Dryer Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/oven-repair/">Oven Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/microwave-repair/">Microwave Repair</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>More Services</h3>
+                    <ul>
+                        <li><a href="https://lgbergencounty.com/appliances/cooktop-repair/">Cooktop Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/">All Appliances</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="https://lgbergencounty.com/">Home</a></li>
+                        <li><a href="https://lgbergencounty.com/nj/">Service Areas</a></li>
+                        <li><a href="#contact">Schedule Service</a></li>
+                        <li><a href="https://lgbergencounty.com/privacy-policy">Privacy Policy</a></li>
+                        <li><a href="https://lgbergencounty.com/terms-of-service">Terms of Service</a></li>
+                    </ul>
+                </div>
             </div>
-            <p class="footer-links">
-                <a href="https://lgbergencounty.com/nj/" aria-label="View LG Appliance Repair Service Areas">Service Areas</a>
-                <a href="https://lgbergencounty.com/" aria-label="Return to LG Appliance Repair Homepage">Home</a>
-                <a href="https://lgbergencounty.com/privacy-policy" aria-label="View LG Appliance Repair Privacy Policy">Privacy Policy</a>
-                <a href="https://lgbergencounty.com/terms-of-service" aria-label="View LG Appliance Repair Terms of Service">Terms of Service</a>
-            </p>
-            <p style="margin-top:20px; color:#777;">© 2025 LG Appliance Repair Bergen County. All Rights Reserved.</p>
+        </div>
+        
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-links">
+                    <a href="https://lgbergencounty.com/privacy-policy">Privacy Policy</a>
+                    <a href="https://lgbergencounty.com/terms-of-service">Terms of Service</a>
+                    <a href="https://lgbergencounty.com/nj/">Service Areas</a>
+                </div>
+                <p>© 2025 LG Appliance Repair Bergen County. All Rights Reserved.</p>
+                <p>Licensed & Insured • Factory Certified Technicians • Same-Day Service Available</p>
+            </div>
         </div>
     </footer>
     <script>
