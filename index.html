@@ -1,5 +1,3 @@
-My site code template
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
@@ -493,6 +491,31 @@ My site code template
         #servicesMenu .services-dropdown {
             right: 20px;
         }
+        
+        /* Close button styles */
+        .dropdown-close-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: rgba(255, 255, 255, 0.15);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all .3s;
+            z-index: 10;
+        }
+        .dropdown-close-btn:hover {
+            background: var(--red);
+            transform: rotate(90deg);
+        }
+        
         @media (max-width: 768px) {
             .services-dropdown {
                 width: 95%;
@@ -1172,6 +1195,9 @@ My site code template
                 <div class="services-menu" id="servicesMenu">
                     <div class="services-btn" id="servicesToggle">Services</div>
                     <ul class="services-dropdown" id="servicesDropdown">
+                        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">
+                            <i class="fas fa-times"></i>
+                        </button>
                         <li><a href="https://lgbergencounty.com/appliances/washer-repair/" aria-label="Washer Repair">Washer Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/dryer-repair/" aria-label="Dryer Repair">Dryer Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/refrigerator-repair/" aria-label="Refrigerator Repair">Refrigerator Repair</a></li>
@@ -1413,8 +1439,8 @@ My site code template
             <p class="footer-links">
                 <a href="https://lgbergencounty.com/nj/" aria-label="View LG Appliance Repair Service Areas">Service Areas</a>
                 <a href="https://lgbergencounty.com/" aria-label="Return to LG Appliance Repair Homepage">Home</a>
-                <a href="https://lgbergencounty.com/privacy-policy/" aria-label="View LG Appliance Repair Privacy Policy">Privacy Policy</a>
-                <a href="https://lgbergencounty.com/terms-of-service/" aria-label="View LG Appliance Repair Terms of Service">Terms of Service</a>
+                <a href="https://lgbergencounty.com/privacy-policy" aria-label="View LG Appliance Repair Privacy Policy">Privacy Policy</a>
+                <a href="https://lgbergencounty.com/terms-of-service" aria-label="View LG Appliance Repair Terms of Service">Terms of Service</a>
             </p>
             <p style="margin-top:20px; color:#777;">© 2025 LG Appliance Repair Bergen County. All Rights Reserved.</p>
         </div>
@@ -1796,15 +1822,17 @@ My site code template
             const servicesMenu = document.getElementById('servicesMenu');
             const servicesToggle = document.getElementById('servicesToggle');
             const servicesDropdown = document.getElementById('servicesDropdown');
+            const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
             const additionalToggle = document.getElementById('additionalToggle');
             const additionalSubmenu = document.getElementById('additionalSubmenu');
             const serviceAreasToggle = document.getElementById('serviceAreasToggle');
             const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
-            if (!servicesMenu || !servicesToggle || !servicesDropdown || !additionalToggle || !additionalSubmenu || !serviceAreasToggle || !serviceAreasSubmenu) {
+            if (!servicesMenu || !servicesToggle || !servicesDropdown || !dropdownCloseBtn || !additionalToggle || !additionalSubmenu || !serviceAreasToggle || !serviceAreasSubmenu) {
                 console.error('Services dropdown elements missing:', {
                     servicesMenu: !!servicesMenu,
                     servicesToggle: !!servicesToggle,
                     servicesDropdown: !!servicesDropdown,
+                    dropdownCloseBtn: !!dropdownCloseBtn,
                     additionalToggle: !!additionalToggle,
                     additionalSubmenu: !!additionalSubmenu,
                     serviceAreasToggle: !!serviceAreasToggle,
@@ -1828,11 +1856,29 @@ My site code template
                 console.log('Service areas submenu scrollable:', serviceAreasSubmenu.scrollHeight > serviceAreasSubmenu.clientHeight);
             }
             populateServiceAreasSubmenu();
+            
+            // Function to close the dropdown
+            function closeDropdown() {
+                servicesMenu.classList.remove('active');
+                additionalToggle.classList.remove('active');
+                additionalSubmenu.classList.remove('active');
+                serviceAreasToggle.classList.remove('active');
+                serviceAreasSubmenu.classList.remove('active');
+            }
+            
             servicesToggle.addEventListener('click', (e) => {
                 e.stopPropagation();
                 console.log('Services toggle clicked (mobile:', window.innerWidth <= 768, ')');
                 servicesMenu.classList.toggle('active');
             });
+            
+            // Close button functionality
+            dropdownCloseBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                console.log('Close button clicked (mobile:', window.innerWidth <= 768, ')');
+                closeDropdown();
+            });
+            
             additionalToggle.addEventListener('click', (e) => {
                 e.stopPropagation();
                 console.log('Additional services toggle clicked (mobile:', window.innerWidth <= 768, ')');
@@ -1848,14 +1894,11 @@ My site code template
                 console.log('Service areas submenu visibility:', serviceAreasSubmenu.classList.contains('active') ? 'Visible' : 'Hidden');
             });
             servicesDropdown.addEventListener('click', (e) => {
-                if (!e.target.closest('.service-area-link') && !e.target.closest('.submenu-toggle')) {
-                    // Clicks on the new <a> tags in the main dropdown will now navigate
-                    // We only stop propagation if it's not a link inside a dropdown item or a submenu toggle
+                if (!e.target.closest('.service-area-link') && !e.target.closest('.submenu-toggle') && !e.target.closest('.dropdown-close-btn')) {
                     e.stopPropagation();
                     console.log('Services dropdown clicked (prevent close, mobile:', window.innerWidth <= 768, ')');
-                } else {
+                } else if (e.target.closest('.service-area-link')) {
                     console.log('Service area or appliance link clicked (mobile:', window.innerWidth <= 768, ')');
-                    // Allow link clicks to propagate and navigate
                 }
             });
             // Touch events for mobile
@@ -1879,11 +1922,7 @@ My site code template
             // Close dropdowns on outside click/tap
             document.addEventListener('click', () => {
                 console.log('Outside click detected (mobile:', window.innerWidth <= 768, ')');
-                servicesMenu.classList.remove('active');
-                additionalToggle.classList.remove('active');
-                additionalSubmenu.classList.remove('active');
-                serviceAreasToggle.classList.remove('active');
-                serviceAreasSubmenu.classList.remove('active');
+                closeDropdown();
             });
             // Service Areas (Section Dropdown)
             const saToggle = document.getElementById('saToggleBtn');
