@@ -755,10 +755,16 @@
             padding: 20px;
             background: rgba(0, 48, 135, 0.05);
             border-radius: 10px;
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+            box-sizing: border-box;
+        }
+        .service.active .service-types {
             max-height: 2000px;
             overflow: visible;
             opacity: 1;
-            box-sizing: border-box;
         }
         .service-types h4 {
             margin: 0 0 15px;
@@ -776,7 +782,7 @@
             margin: 6px 0;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
-            transition: all .3s;
+            transition: background .3s, color .3s;
             color: #333;
             font-size: 15px;
             box-sizing: border-box;
@@ -785,8 +791,6 @@
         .service-types li:active {
             background: var(--red);
             color: white;
-            padding-left: 30px;
-            transform: translateX(5px);
         }
         #sa-service-areas {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -1981,9 +1985,10 @@
             const services = document.querySelectorAll('.service');
             services.forEach(function(service) {
                 service.addEventListener('click', function(e) {
-                    if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
+                    if (e.target.tagName === 'BUTTON' || e.target.closest('button') || e.target.tagName === 'LI' || e.target.closest('.service-types ul')) {
                         return;
                     }
+                    this.classList.toggle('active');
                 });
             });
             
@@ -2055,11 +2060,15 @@
             var btn = document.getElementById('expandable-btn-' + id);
             var fade = document.getElementById('expandable-fade-' + id);
             var isCollapsed = !text.classList.contains('expanded');
-            var expandedHeight = (id === '1') ? '400px' : '200px';
             if (isCollapsed) {
-                text.style.maxHeight = expandedHeight;
-                text.style.overflowY = 'auto';
-                text.style.paddingRight = '10px';
+                if (id === '1') {
+                    text.style.maxHeight = text.scrollHeight + 'px';
+                    text.style.overflowY = 'visible';
+                } else {
+                    text.style.maxHeight = '200px';
+                    text.style.overflowY = 'auto';
+                    text.style.paddingRight = '10px';
+                }
                 text.classList.add('expanded');
                 btn.innerHTML = '− Show Less';
                 btn.setAttribute('aria-expanded', 'true');
