@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LG Microwave Repair Bergen County NJ - Authorized</title>
-    <meta name="description" content="LG Microwave Repair in Bergen County NJ. Electric, Gas, Commercial, Residential, Compact, Ventless, Steam, Stackable Microwave Repair.">
-    <meta name="keywords" content="LG microwave repair Bergen County, LG electric dryer repair, LG gas dryer repair, LG commercial dryer repair, LG ventless dryer repair, same day LG microwave repair NJ">
+    <meta name="description" content="LG Microwave Repair in Bergen County NJ. Countertop, Over-the-Range, Built-In, Drawer, Convection, Smart ThinQ Microwave Repair.">
+    <meta name="keywords" content="LG microwave repair Bergen County, LG countertop microwave repair, LG over-the-range microwave repair, LG built-in microwave repair, LG convection microwave repair, same day LG microwave repair NJ">
     <meta name="author" content="LG Appliance Repair Bergen County NJ">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://lgbergencounty.com/appliances/microwave-repair/">
@@ -92,7 +92,7 @@
             --gray: #f8f9fa;
         }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             margin: 0;
             color: #333;
             background: #fff;
@@ -103,7 +103,8 @@
         h1,
         h2,
         h3 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-weight: 700;
             color: var(--blue);
         }
         .container {
@@ -173,6 +174,7 @@
             transition: all .3s;
             cursor: pointer;
             box-sizing: border-box;
+            border: none;
         }
         .nav-call-btn:hover {
             background: #c41b20;
@@ -197,10 +199,14 @@
             overflow-wrap: break-word;
             white-space: nowrap;
             overscroll-behavior: contain;
-            -webkit-overflow-scrolling: touch;
         }
         .services-menu.active .services-dropdown {
-            display: block !important;
+            display: block;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .services-menu:hover .services-dropdown {
+                display: block;
+            }
         }
         #servicesMenu .services-dropdown {
             right: 20px;
@@ -296,34 +302,25 @@
             cursor: pointer;
             box-sizing: border-box;
         }
-        .submenu-toggle i {
+        .submenu-toggle:after {
+            content: "›";
             transition: transform .3s;
             font-size: 18px;
         }
-        .submenu-toggle.active i {
+        .submenu-toggle:hover:after {
             transform: rotate(90deg);
         }
         .additional-submenu,
         .service-areas-submenu {
             max-height: 0;
             overflow-y: auto;
-            transition: max-height 0.8s ease, opacity 0.3s ease, visibility 0.3s ease;
+            transition: max-height 0.8s ease;
             background: rgba(0, 0, 0, 0.2);
             margin: 0 20px 14px;
             border-radius: 8px;
             box-sizing: border-box;
             white-space: normal;
-            visibility: hidden;
-            opacity: 0;
             -webkit-overflow-scrolling: touch;
-        }
-        .additional-submenu.active,
-        .service-areas-submenu.active {
-            max-height: none;
-            padding: 16px 0;
-            visibility: visible;
-            opacity: 1;
-            display: block;
         }
         .additional-submenu li,
         .service-areas-submenu li {
@@ -334,6 +331,15 @@
             margin: 12px 0;
             transition: all .3s;
             box-sizing: border-box;
+            cursor: pointer;
+        }
+        .additional-submenu li:hover,
+        .additional-submenu li:active,
+        .service-areas-submenu li:hover,
+        .service-areas-submenu li:active {
+            background: var(--red);
+            color: white;
+            padding-left: 54px;
         }
         .service-areas-submenu li a {
             color: #eee;
@@ -345,13 +351,8 @@
             cursor: pointer;
             pointer-events: auto;
         }
-        .additional-submenu li:hover,
-        .service-areas-submenu li:hover {
-            background: var(--red);
-            color: white;
-            padding-left: 54px;
-        }
-        .service-areas-submenu li:hover a {
+        .service-areas-submenu li:hover a,
+        .service-areas-submenu li:active a {
             color: white;
         }
         .hero {
@@ -360,7 +361,7 @@
             text-align: center;
             padding: 160px 20px 120px;
             margin-top: 80px;
-            background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png') center center/cover no-repeat;
             background-attachment: scroll;
             min-height: 70vh;
             display: flex;
@@ -373,6 +374,7 @@
             margin-bottom: 16px;
             text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
             line-height: 1.2;
+            color: white;
         }
         .hero p {
             font-size: 24px;
@@ -391,63 +393,49 @@
             font-size: 20px;
             transition: all .3s;
             box-sizing: border-box;
+            border: none;
+            cursor: pointer;
         }
         .btn:hover {
             background: #c41b20;
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(228, 30, 38, 0.5);
         }
-        #heroCallNow {
-            background: var(--red);
-            color: white;
-            padding: 16px 40px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            transition: all .3s;
-            border: none;
-            cursor: pointer;
-        }
-        #heroCallNow:hover {
-            background: #c41b20;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(228, 30, 38, 0.5);
-        }
         @media (max-width: 768px) {
             .hero {
-                padding: 130px 15px 90px;
-                min-height: 65vh;
-                background-position: center 35%;
+                padding: 160px 15px 90px;
+                min-height: 55vh;
+                background-position: center center;
+                background-size: cover;
             }
             .hero h1 {
-                font-size: 42px;
+                font-size: 32px;
+                line-height: 1.3;
             }
             .hero p {
-                font-size: 20px;
+                font-size: 18px;
+                padding: 0 10px;
             }
-            .sa-responsive-columns {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
+            .btn {
+                padding: 14px 30px;
+                font-size: 18px;
             }
         }
         @media (max-width: 480px) {
             .hero {
-                padding: 110px 15px 70px;
-                min-height: 60vh;
+                padding: 150px 15px 60px;
+                min-height: 50vh;
             }
             .hero h1 {
-                font-size: 34px;
+                font-size: 26px;
+                line-height: 1.3;
             }
             .hero p {
-                font-size: 18px;
+                font-size: 16px;
             }
-            .sa-responsive-columns {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
+            .btn {
+                padding: 12px 24px;
+                font-size: 16px;
             }
         }
         section {
@@ -461,6 +449,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            align-items: start;
         }
         .service {
             background: white;
@@ -472,18 +461,28 @@
             position: relative;
             cursor: pointer;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-types {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-types > div[id^="expandable-content-"] {
+            margin-top: auto;
         }
         .service:hover {
             transform: translateY(-12px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        .service i {
+        .service-icon {
             font-size: 52px;
             margin-bottom: 20px;
             color: var(--blue);
             transition: color .3s;
         }
-        .service:hover i {
+        .service:hover .service-icon {
             color: var(--red);
         }
         .service-types {
@@ -493,12 +492,13 @@
             border-radius: 10px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height .5s ease, opacity .5s ease;
             opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
             box-sizing: border-box;
         }
         .service.active .service-types {
             max-height: 2000px;
+            overflow: visible;
             opacity: 1;
         }
         .service-types h4 {
@@ -517,7 +517,7 @@
             margin: 6px 0;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
-            transition: all .3s;
+            transition: background .3s, color .3s;
             color: #333;
             font-size: 15px;
             box-sizing: border-box;
@@ -526,8 +526,6 @@
         .service-types li:active {
             background: var(--red);
             color: white;
-            padding-left: 30px;
-            transform: translateX(5px);
         }
         #sa-service-areas {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -538,7 +536,6 @@
             margin: 0 auto 3rem;
             padding: 20px;
             position: relative;
-            animation: fadeIn .8s ease-out forwards;
             box-sizing: border-box;
         }
         #sa-service-areas h2 {
@@ -548,10 +545,6 @@
             margin-bottom: 5px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
             transition: transform .3s, color .3s;
-        }
-        #sa-service-areas h2:hover {
-            color: #ffd700;
-            transform: scale(1.05);
         }
         #sa-service-areas p {
             font-size: 16px;
@@ -574,9 +567,6 @@
             cursor: pointer;
             transition: all .3s;
             box-shadow: 0 4px 15px rgba(0, 48, 135, .4);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
             box-sizing: border-box;
         }
         .sa-dropdown-button:hover {
@@ -585,25 +575,11 @@
             box-shadow: 0 6px 20px rgba(0, 48, 135, .6);
         }
         .sa-dropdown-content {
-            opacity: 0;
-            height: 0;
+            max-height: 0;
             overflow: hidden;
-            transition: opacity .5s, height .5s, transform .5s;
-            transform: translateY(-10px);
+            transition: max-height .5s;
             background: transparent;
             box-sizing: border-box;
-        }
-        .sa-dropdown-content.active {
-            opacity: 1;
-            height: auto;
-            transform: translateY(0);
-            padding: 20px 0;
-        }
-        .sa-slide h2 {
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 15px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
         }
         .sa-slide ul {
             background: rgba(255, 255, 255, .95);
@@ -612,18 +588,12 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
             transition: transform .3s;
             box-sizing: border-box;
-        }
-        .sa-slide ul:hover {
-            transform: translateY(-5px);
-        }
-        .sa-responsive-columns {
             list-style: none;
-            padding: 0;
             margin: 0;
             column-gap: 30px;
             columns: 3;
         }
-        .sa-responsive-columns li {
+        .sa-slide ul li {
             padding: 12px 15px;
             margin: 8px 0;
             border-radius: 10px;
@@ -633,43 +603,16 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
             box-sizing: border-box;
         }
-        .sa-responsive-columns li:hover {
+        .sa-slide ul li:hover {
             background: #d4e4ff;
             transform: scale(1.03);
             box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
         }
-        .sa-responsive-columns h3 {
-            margin: 0 0 6px;
+        .sa-slide ul li h3 {
+            margin: 0;
             font-size: 17px;
             color: #1e3c72;
             font-weight: 600;
-        }
-        .sa-zip-dropdown {
-            font-size: 14px;
-            color: #003087;
-            font-weight: 600;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all .4s ease;
-            transform: translateY(-10px);
-            box-sizing: border-box;
-        }
-        .sa-zip-dropdown.active {
-            max-height: 40px;
-            opacity: 1;
-            transform: translateY(0);
-            padding-top: 4px;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         #cf-schedule-container {
             background: transparent;
@@ -682,7 +625,7 @@
             box-sizing: border-box;
         }
         .cf-schedule-text {
-            font-family: 'Montserrat', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             font-size: 1.5rem;
             color: #2A2A2A;
             font-weight: 600;
@@ -730,6 +673,7 @@
             justify-content: center;
             transition: all .3s;
             box-sizing: border-box;
+            border: none;
         }
         .form-call-now:hover {
             background: #c41b20;
@@ -852,6 +796,19 @@
             cursor: pointer;
             box-sizing: border-box;
         }
+        .cf-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1999;
+        }
+        .cf-modal-overlay.active {
+            display: block;
+        }
         footer {
             background: #1a1a1a;
             color: #b0b0b0;
@@ -879,7 +836,6 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .footer-column p {
@@ -921,7 +877,6 @@
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 15px;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .footer-hours {
@@ -992,6 +947,10 @@
                 justify-content: center;
                 gap: 20px 30px;
             }
+            
+            .sa-slide ul {
+                columns: 2;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1014,6 +973,10 @@
             
             .footer-bottom-links {
                 gap: 15px 25px;
+            }
+            
+            .sa-slide ul {
+                columns: 1;
             }
         }
         
@@ -1038,9 +1001,7 @@
                 <div class="services-menu" id="servicesMenu">
                     <div class="services-btn" id="servicesToggle">Services</div>
                     <ul class="services-dropdown" id="servicesDropdown">
-                        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">
-                            <i class="fas fa-times"></i>
-                        </button>
+                        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">×</button>
                         <li><a href="https://lgbergencounty.com/appliances/washer-repair/" aria-label="Washer Repair">Washer Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/microwave-repair/" aria-label="Microwave Repair">Microwave Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/refrigerator-repair/" aria-label="Refrigerator Repair">Refrigerator Repair</a></li>
@@ -1051,7 +1012,7 @@
                         <li><a href="https://lgbergencounty.com/appliances/wine-cooler-repair/" aria-label="Wine Cooler Repair">Wine Cooler Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/installation-maintenance/" aria-label="Installation & Maintenance">Installation & Maintenance</a></li>
                         <li><a href="https://lgbergencounty.com/" aria-label="All Appliances Repair">All Appliances</a></li>
-                        <li class="submenu-toggle" id="additionalToggle">Additional Services <i class="fas fa-chevron-right"></i></li>
+                        <li class="submenu-toggle" id="additionalToggle">Additional Services</li>
                         <div class="additional-submenu" id="additionalSubmenu">
                             <li>Installation, Repair & Maintenance</li>
                             <li>Refrigerator Compressor & Refrigerant Service</li>
@@ -1066,243 +1027,721 @@
                             <li>EPA Section 608 Certification</li>
                             <li>Appliance Warranty & Extended Service Plans</li>
                         </div>
-                        <li class="submenu-toggle" id="serviceAreasToggle">Service Areas <i class="fas fa-chevron-right"></i></li>
-                        <div class="service-areas-submenu" id="serviceAreasSubmenu"></div>
+                        <li class="submenu-toggle" id="serviceAreasToggle">Service Areas</li>
+                        <div class="service-areas-submenu" id="serviceAreasSubmenu">
+                            <li><a href="https://lgbergencounty.com/nj/allendale/">Allendale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/alpine/">Alpine</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/bergenfield/">Bergenfield</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/bogota/">Bogota</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/carlstadt/">Carlstadt</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/cliffside-park/">Cliffside Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/closter/">Closter</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/cresskill/">Cresskill</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/demarest/">Demarest</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/dumont/">Dumont</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/east-rutherford/">East Rutherford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/edgewater/">Edgewater</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/elmwood-park/">Elmwood Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/emerson/">Emerson</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/englewood/">Englewood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/englewood-cliffs/">Englewood Cliffs</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fair-lawn/">Fair Lawn</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fairview/">Fairview</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fort-lee/">Fort Lee</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/franklin-lakes/">Franklin Lakes</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/garfield/">Garfield</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/glen-rock/">Glen Rock</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hackensack/">Hackensack</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/harrington-park/">Harrington Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hasbrouck-heights/">Hasbrouck Heights</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/haworth/">Haworth</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hillsdale/">Hillsdale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ho-ho-kus/">Ho-Ho-Kus</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/jersey-city/">Jersey City</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/leonia/">Leonia</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/little-ferry/">Little Ferry</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/lodi/">Lodi</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/lyndhurst/">Lyndhurst</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/mahwah/">Mahwah</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/maywood/">Maywood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/midland-park/">Midland Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/montvale/">Montvale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/moonachie/">Moonachie</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/new-milford/">New Milford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/newark/">Newark</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/north-arlington/">North Arlington</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/northvale/">Northvale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/norwood/">Norwood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/oakland/">Oakland</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/old-tappan/">Old Tappan</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/oradell/">Oradell</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/palisades-park/">Palisades Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/paramus/">Paramus</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/park-ridge/">Park Ridge</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ramsey/">Ramsey</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ridgefield/">Ridgefield</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ridgefield-park/">Ridgefield Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ridgewood/">Ridgewood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/river-edge/">River Edge</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/river-vale/">River Vale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/rochelle-park/">Rochelle Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/rockleigh/">Rockleigh</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/rutherford/">Rutherford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/saddle-brook/">Saddle Brook</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/saddle-river/">Saddle River</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/south-hackensack/">South Hackensack</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/teaneck/">Teaneck</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/tenafly/">Tenafly</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/teterboro/">Teterboro</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/upper-saddle-river/">Upper Saddle River</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/waldwick/">Waldwick</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/wallington/">Wallington</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/washington-township/">Washington Township</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/westwood/">Westwood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/woodcliff-lake/">Woodcliff Lake</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/wood-ridge/">Wood-Ridge</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/wyckoff/">Wyckoff</a></li>
+                        </div>
                     </ul>
                 </div>
-                <div class="nav-call-btn" id="navCallNow">Call Now</div>
+                <button class="nav-call-btn" id="navCallNow">Call Now</button>
             </div>
         </div>
     </header>
+    <main>
     <section class="hero">
         <div class="container">
-            <h1>LG Microwave Repair<br>Bergen County, New Jersey</h1>
-            <p>Same-Day Service • Factory-Trained Technicians • All Microwave Types</p>
-            <button class="btn" id="heroCallNow">Request Microwave Repair Today</button>
+            <h1>Authorized LG Microwave Repair<br>Bergen County, New Jersey</h1>
+            <p>Same-Day Service • Factory-Trained Technicians • All Bergen County</p>
+            <button class="btn" id="heroCallNow">Request Service Today</button>
         </div>
     </section>
+    <section style="padding: 60px 0; background: #fff;" aria-labelledby="about-section-heading">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <article itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="serviceType" content="LG Microwave Repair">
+                <meta itemprop="areaServed" content="Bergen County, New Jersey">
+                <h2 id="about-section-heading" itemprop="name" style="text-align:center; font-size:32px; margin-bottom:30px; color: var(--blue);">Expert LG Microwave Repair in Bergen County</h2>
+                <div id="expandable-content-1" style="position: relative;">
+                    <div id="expandable-text-1" itemprop="description" style="max-height: 110px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444; font-size: 16px;">
+                        <p style="margin-bottom: 15px;">When your <strong>LG microwave</strong> stops working, you deserve a repair service that delivers results. Our <strong>factory-certified technicians</strong> focus exclusively on LG microwaves, bringing specialized expertise to every service call across <strong>Bergen County, New Jersey</strong>. We know how frustrating a broken washer can be to your household—piles of laundry waiting, disrupted routines, and the stress of finding reliable help.</p>
+                        <p style="margin-bottom: 15px;">Our technicians complete <strong>annual training programs</strong> to stay current with evolving LG microwave technologies including TurboSteam™, Steam technology, and Smart ThinQ connectivity. They also have access to <strong>round-the-clock technical support</strong>, ensuring even the most challenging washer repairs are resolved quickly and correctly.</p>
+                        <h3 style="font-size: 20px; color: var(--blue); margin: 25px 0 15px;">The LG Microwave Repair Advantage</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0;">
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Authorized Bergen County Coverage:</strong> Our skilled technicians are strategically positioned throughout Bergen County, ready to address your repair needs with speed and precision.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Reliable & Prompt Service:</strong> With technicians dispatched from locations across Bergen County, we guarantee swift response times for every appointment.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Fully Equipped Service Vehicles:</strong> Each vehicle carries a comprehensive parts inventory, paired with intelligent dispatch software for maximum efficiency.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Same-Day Repair Solutions:</strong> We stock commonly needed parts to complete the majority of repairs during your first appointment.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Complete Repair Warranty:</strong> Every repair is backed by our comprehensive warranty. If any issues occur, we'll return to resolve them at no extra cost.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Diagnostic Fee Applied to Repair:</strong> Your diagnostic fee is credited toward the total repair cost, reducing your overall expense.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Certified Repair Specialists:</strong> Our technicians hold industry certifications and participate in continuous education to master the latest LG repair methods.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Upfront, Honest Pricing:</strong> No surprises or hidden charges—we provide clear pricing before any work begins.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>24/7 Emergency Repairs:</strong> Appliance emergencies don't follow a schedule—neither do we. Urgent service is available when you need it most.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Genuine LG Parts Only:</strong> We exclusively use authentic, manufacturer-approved parts to ensure lasting repairs that meet factory specifications.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Dedicated Support Team:</strong> Our friendly customer service representatives are here to answer questions and schedule appointments at your convenience.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Weekend & Flexible Appointments:</strong> We accommodate your schedule with availability seven days a week, including evenings.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Best Price Guarantee:</strong> Found a lower quote? We'll match any competitor's price to deliver exceptional value.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Money Back Guarantee:</strong> If we're unable to repair your appliance, you owe us nothing. It's that simple.</span>
+                            </li>
+                            <li style="padding: 12px 0; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Fully Insured Service:</strong> We carry comprehensive property damage insurance for your protection. For New Jersey residences, we provide certificates of insurance upon request to meet building requirements and ensure seamless access.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="expandable-fade-1" style="position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: linear-gradient(transparent, #fff); pointer-events: none;" aria-hidden="true"></div>
+                </div>
+                <button id="expandable-btn-1" onclick="toggleExpand('1')" aria-expanded="false" aria-controls="expandable-text-1" style="display: block; margin: 20px auto 0; background: none; border: none; color: var(--blue); font-size: 16px; font-weight: 600; cursor: pointer; padding: 10px 20px; transition: color 0.3s;">+ Show More</button>
+            </article>
+        </div>
     <section class="alt">
         <div class="container">
             <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified LG Microwave Repair</h2>
             <div class="services-grid">
                 <div class="service">
-                    <i class="fas fa-microwave"></i>
-                    <h3>Countertop Microwave Repair</h3>
+                    <div class="service-icon">🔌</div>
+                    <h3>Electric Microwave Repair</h3>
                     <div class="service-types">
-                        <h4>Benefits of Countertop Microwaves:</h4>
+                        <h4>Common Issues We Fix:</h4>
                         <ul>
-                            <li>Most affordable microwave type</li>
-                            <li>No installation required</li>
-                            <li>Easy to move and relocate</li>
-                            <li>Wide variety of sizes available</li>
-                            <li>Simple plug-and-play setup</li>
-                            <li>Easy to replace when needed</li>
+                            <li>Heating element burnout</li>
+                            <li>Thermal fuse failure</li>
+                            <li>High-limit thermostat trips</li>
+                            <li>Timer motor failures</li>
+                            <li>Belt breakage</li>
+                            <li>Drum roller wear</li>
+                            <li>Door switch problems</li>
+                            <li>Control board issues</li>
+                            <li>Motor failures</li>
+                            <li>Terminal block damage</li>
+                            <li>240V connection issues</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
-                        <ul>
-                            <li>Takes up valuable counter space</li>
-                            <li>Door latch wear from frequent use</li>
-                            <li>Magnetron failures after 5-7 years</li>
-                            <li>Turntable motor stops rotating</li>
-                            <li>Control panel button failures</li>
-                            <li>Power cord damage from moving</li>
-                        </ul>
+                        <div id="expandable-content-electric" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-electric" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Heating Element Burnout</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave heating element repair</strong> addresses the most common cause of no-heat complaints. The heating element consists of coiled wire that glows red-hot when electricity passes through it. Over time, these coils can break from thermal stress or develop shorts to the housing. When the element fails, your microwave tumbles but produces no heat. Our technicians test element continuity, inspect for visible breaks, and install genuine LG replacement elements rated for your specific model throughout Hackensack, Paramus, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Thermal Fuse Failure</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave thermal fuse repair</strong> resolves a common safety device failure that stops microwave operation completely. The thermal fuse is a one-time safety device that blows when the microwave overheats—once blown, it cannot be reset. Common causes include clogged vents restricting airflow, failed thermostats, and cycling thermostat issues. Our technicians replace blown thermal fuses AND diagnose why overheating occurred to prevent repeat failures. Thermal fuse service throughout Teaneck, Fort Lee, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">High-Limit Thermostat Trips</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave high-limit thermostat repair</strong> addresses the safety device that cuts power when temperatures exceed safe levels. Unlike the thermal fuse, the high-limit thermostat can reset—but repeated trips indicate underlying problems. Restricted airflow from clogged vents, failed cycling thermostats, or heating element issues cause overheating. Our technicians test thermostat function, identify the overheating cause, and repair all contributing factors throughout Ridgewood, Englewood, and Bergen County homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Timer Motor Failures</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave timer repair</strong> fixes the mechanical or electronic timers that sequence dry cycles. Timer problems cause cycles to stop mid-dry, run continuously without advancing, or skip portions of the program. Mechanical timers have internal motors and contact points that wear over time. Electronic timers on control boards can have component failures. Our technicians diagnose timer issues and replace failed components, restoring proper cycle sequencing throughout Glen Rock, Bergenfield, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Belt Breakage</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave belt replacement</strong> restores drum rotation when the drive belt breaks. The drum belt wraps around the drum and connects to the motor via an idler pulley. Belts wear, crack, and eventually break from normal use. When the belt breaks, the motor runs but the drum doesn't turn. Belt replacement is a common repair our technicians complete quickly, typically including idler pulley inspection since worn pulleys accelerate belt wear. Belt service throughout Dumont, New Milford, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Drum Roller Wear</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave drum roller repair</strong> eliminates the thumping, squeaking, or rumbling sounds caused by worn drum support rollers. Most microwaves use two to four rollers supporting the drum's rear and sometimes front. When roller bearings wear or flat spots develop, you'll hear rhythmic noise during tumbling. Our technicians replace drum rollers as a set, ensuring balanced support and quiet operation. Drum roller service throughout Mahwah, Ramsey, and Bergen County electric microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Door Switch Problems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave door switch repair</strong> fixes the safety mechanism that prevents operation when the door is open. The door switch signals the control board that the door is closed—if it fails, the microwave won't start even with the door shut. Switch contacts wear from repeated door opening and closing. Our technicians test switch continuity and replace failed switches, restoring safe operation throughout Tenafly, Cresskill, and Bergen County homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Control Board Issues</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave control board repair</strong> addresses electronic failures affecting microwave operation. The main control board manages all functions—accepting user inputs, controlling heating, monitoring sensors, and timing cycles. Board failures cause erratic behavior, error codes, cycles not completing, or complete failure to operate. Power surges and component failures are common causes. Our technicians diagnose board problems accurately, replacing boards when necessary throughout Wyckoff, Franklin Lakes, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Motor Failures</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave motor repair</strong> fixes the drive motor that rotates the drum and powers the blower wheel. Motor failures cause the microwave not to run at all, run intermittently, or make humming noises without turning. Motors can fail from bearing wear, winding shorts, or start switch problems. Our technicians diagnose motor issues, determining whether the motor itself has failed or if other components like the belt or idler are binding the motor. Motor service throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Terminal Block Damage</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave terminal block repair</strong> addresses the connection point where the power cord attaches to the microwave. Terminal blocks can become damaged from loose connections causing arcing and burning, improper cord installation, or physical damage. Damaged terminal blocks are a fire hazard requiring immediate repair. Our technicians inspect connections, replace damaged blocks, and ensure secure, proper power cord installation throughout Hackensack, Paramus, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">240V Connection Issues</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric microwave 240V troubleshooting</strong> diagnoses power supply problems affecting microwave operation. Electric microwaves require 240-volt power—if only 120 volts reaches the microwave, it will run but not heat. Causes include tripped breakers, blown fuses, outlet problems, and cord damage. Our technicians test voltage at the outlet and throughout the microwave circuit, identifying power supply issues that may require electrician service or microwave repairs we can complete throughout Bergen County.</p>
+
+                            </div>
+                            <div id="expandable-fade-electric" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-electric" onclick="toggleExpand('electric')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-microwave"></i>
-                    <h3>Over-the-Range Microwave Repair</h3>
+                    <div class="service-icon">🔥</div>
+                    <h3>Gas Microwave Repair</h3>
                     <div class="service-types">
-                        <h4>Benefits of Over-the-Range Microwaves:</h4>
+                        <h4>Common Issues We Fix:</h4>
                         <ul>
-                            <li>Saves counter space completely</li>
-                            <li>Built-in ventilation system</li>
-                            <li>Replaces range hood function</li>
-                            <li>Integrated lighting for cooktop</li>
-                            <li>Streamlined kitchen appearance</li>
-                            <li>Two appliances in one space</li>
+                            <li>Gas valve solenoid failures</li>
+                            <li>Igniter problems</li>
+                            <li>Flame sensor malfunctions</li>
+                            <li>Burner assembly clogs</li>
+                            <li>Gas line issues</li>
+                            <li>Safety thermostat trips</li>
+                            <li>No heat complaints</li>
+                            <li>Intermittent heating</li>
+                            <li>Gas smell concerns</li>
+                            <li>Combustion testing</li>
+                            <li>Pilot light issues</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
-                        <ul>
-                            <li>Ventilation fan motor failures common</li>
-                            <li>Grease buildup affects performance</li>
-                            <li>Difficult installation above range</li>
-                            <li>Heavy unit requires two people</li>
-                            <li>Charcoal filter needs regular replacement</li>
-                            <li>Light bulb access challenging</li>
-                        </ul>
+                        <div id="expandable-content-gas" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-gas" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Gas Valve Solenoid Failures</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave valve solenoid repair</strong> addresses one of the most common gas microwave failures. Gas valve solenoids are electromagnetic coils that open the gas valve when the igniter gets hot enough. Most LG gas microwaves have two solenoids—one for the main valve and one for the secondary. These solenoids can fail intermittently, working when cold but failing when hot. Our technicians diagnose solenoid failures using amp draw testing and replace failed coils throughout Hackensack, Paramus, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Igniter Problems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave igniter repair</strong> fixes the component that lights the gas burner. The igniter glows orange-hot, reaching temperatures high enough to ignite gas. When igniters weaken, they glow but don't get hot enough to open the gas valve or ignite the gas. Completely failed igniters don't glow at all. Our technicians test igniter amp draw—weak igniters draw less current even while glowing. Igniter replacement restores reliable heating throughout Teaneck, Fort Lee, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Flame Sensor Malfunctions</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave flame sensor repair</strong> addresses the safety device that monitors burner operation. The flame sensor detects heat from the burner flame—if it doesn't sense heat, it shuts off gas flow as a safety measure. Failed sensors can incorrectly shut off gas even when flames are present, causing intermittent heating. Sensors also fail by not detecting flame absence, though this is less common. Our technicians test and replace flame sensors throughout Ridgewood, Englewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Burner Assembly Clogs</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave burner cleaning</strong> removes lint and debris that accumulate in the burner assembly. Unlike lint in the exhaust system, burner area lint affects combustion quality and can be a fire hazard. Clogged burner ports cause uneven flames, yellow flames (instead of blue), and incomplete combustion. Our technicians clean burner assemblies, inspect gas orifices, and ensure proper combustion throughout Glen Rock, Bergenfield, and Bergen County gas microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Gas Line Issues</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave gas line troubleshooting</strong> identifies supply problems affecting microwave operation. Low gas pressure, kinked flexible connectors, and partially closed shutoff valves can prevent proper burner operation. Gas leaks in connections are serious safety concerns requiring immediate attention. Our technicians test gas pressure at the microwave, inspect connections for leaks using proper detection methods, and ensure safe gas supply throughout Dumont, New Milford, and Bergen County homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Safety Thermostat Trips</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave safety thermostat repair</strong> addresses the temperature-limiting devices that protect against overheating. Gas microwaves have high-limit thermostats and thermal fuses that stop operation when temperatures exceed safe levels. Repeated trips indicate airflow restrictions, usually from clogged vents or lint-blocked internal passages. Our technicians replace failed safety devices AND identify why overheating occurred, preventing repeat failures throughout Mahwah, Ramsey, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">No Heat Complaints</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave no heat diagnosis</strong> systematically identifies why your microwave tumbles without producing heat. Gas microwave no-heat problems can stem from igniter failure, solenoid failure, flame sensor issues, thermal fuse failure, clogged vents, or gas supply problems. Our technicians follow diagnostic procedures to identify the specific cause, testing components in logical sequence. Accurate diagnosis ensures we repair the right part the first time throughout Tenafly, Cresskill, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Intermittent Heating</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave intermittent heat repair</strong> fixes inconsistent heating that causes some loads to dry while others don't. Intermittent problems are often more challenging to diagnose than complete failures. Common causes include failing solenoid coils that work when cold but fail when hot, loose connections, and marginal igniters. Our technicians use extended testing and thermal monitoring to catch intermittent failures, providing reliable repairs throughout Wyckoff, Franklin Lakes, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Gas Smell Concerns</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave gas odor inspection</strong> addresses safety concerns about gas smells. Mild gas odor during ignition is normal as unburned gas briefly escapes before lighting. Persistent gas smell indicates potential leaks in connections, valves, or supply lines requiring immediate attention. Strong gas odor means evacuate and call your gas company. Our technicians perform thorough leak detection using approved methods, ensuring safe gas microwave operation throughout Bergen County homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Combustion Testing</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave combustion analysis</strong> verifies proper burner operation and complete gas combustion. Proper combustion produces clean, blue flames and minimal carbon monoxide. Yellow flames, sooting, and incomplete combustion indicate adjustment or cleaning needs. Our technicians inspect flame characteristics, check burner alignment, and ensure exhaust gases vent properly. Complete combustion testing throughout Alpine, Closter, and Bergen County gas microwave service calls.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Pilot Light Issues</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas microwave pilot system service</strong> addresses older models with standing pilot lights or newer electronic ignition systems. While most modern LG microwaves use electric ignition, understanding your ignition system type is essential for proper diagnosis. Our technicians service all ignition system types, from standing pilots to hot surface igniters to spark ignition systems. Complete ignition system service throughout Bergen County for all LG gas microwave models.</p>
+
+                            </div>
+                            <div id="expandable-fade-gas" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-gas" onclick="toggleExpand('gas')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-microwave"></i>
-                    <h3>Built-In Microwave Repair</h3>
-                    <div class="service-types">
-                        <h4>Benefits of Built-In Microwaves:</h4>
-                        <ul>
-                            <li>Seamless cabinet integration</li>
-                            <li>Custom professional appearance</li>
-                            <li>Trim kit included for finishing</li>
-                            <li>Saves counter space elegantly</li>
-                            <li>Higher-end features available</li>
-                            <li>Increases home resale value</li>
-                        </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
-                        <ul>
-                            <li>Expensive installation required</li>
-                            <li>Custom cabinet modifications needed</li>
-                            <li>Difficult to remove for service</li>
-                            <li>Ventilation requirements critical</li>
-                            <li>Higher repair costs than countertop</li>
-                            <li>Trim kit must match perfectly</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service">
-                    <i class="fas fa-microwave"></i>
-                    <h3>Drawer Microwave Repair</h3>
-                    <div class="service-types">
-                        <h4>Benefits of Drawer Microwaves:</h4>
-                        <ul>
-                            <li>Ergonomic easy access at waist height</li>
-                            <li>No door swing space needed</li>
-                            <li>Sleek modern design aesthetic</li>
-                            <li>Child-safe low placement option</li>
-                            <li>Universal design accessibility</li>
-                            <li>Premium luxury appearance</li>
-                        </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
-                        <ul>
-                            <li>Most expensive microwave type</li>
-                            <li>Drawer slides wear and break</li>
-                            <li>Complex mechanism increases repairs</li>
-                            <li>Limited brand availability</li>
-                            <li>Costly replacement parts</li>
-                            <li>Requires professional installation</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service">
-                    <i class="fas fa-microwave"></i>
-                    <h3>Convection Microwave Repair</h3>
-                    <div class="service-types">
-                        <h4>Benefits of Convection Microwaves:</h4>
-                        <ul>
-                            <li>Combines microwave and convection cooking</li>
-                            <li>Bake, roast, and brown foods</li>
-                            <li>Faster cooking than traditional oven</li>
-                            <li>Versatile cooking methods available</li>
-                            <li>Space-saving two-in-one appliance</li>
-                            <li>Crispy results unlike standard microwaves</li>
-                        </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
-                        <ul>
-                            <li>Convection fan motor failures</li>
-                            <li>Heating element burnout common</li>
-                            <li>More complex repairs needed</li>
-                            <li>Higher purchase price</li>
-                            <li>Learning curve for operation</li>
-                            <li>Longer cooking times than expected</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="service">
-                    <i class="fas fa-microwave"></i>
+                    <div class="service-icon">🏢</div>
                     <h3>Commercial Microwave Repair</h3>
                     <div class="service-types">
-                        <h4>Benefits of Commercial Microwaves:</h4>
+                        <h4>Commercial Services:</h4>
                         <ul>
-                            <li>Heavy-duty construction durability</li>
-                            <li>Higher wattage for faster cooking</li>
-                            <li>Built for continuous all-day use</li>
-                            <li>Stainless steel interior and exterior</li>
-                            <li>Programmable memory settings</li>
-                            <li>NSF certified for food service</li>
+                            <li>Laundromat microwaves</li>
+                            <li>Hotel laundry systems</li>
+                            <li>Healthcare facilities</li>
+                            <li>Multi-family properties</li>
+                            <li>Coin/card mechanisms</li>
+                            <li>High-capacity drums</li>
+                            <li>Industrial heating systems</li>
+                            <li>Heavy-duty motors</li>
+                            <li>Commercial controls</li>
+                            <li>Stacked commercial units</li>
+                            <li>Priority response service</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
-                        <ul>
-                            <li>Requires dedicated electrical circuit</li>
-                            <li>Expensive professional repairs only</li>
-                            <li>Magnetron replacement costs high</li>
-                            <li>Not suitable for home kitchens</li>
-                            <li>Loud operation during use</li>
-                            <li>Parts availability limited</li>
-                        </ul>
+                        <div id="expandable-content-commercial" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-commercial" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Laundromat Microwaves</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG laundromat microwave repair</strong> provides priority service for self-service laundry businesses where every machine generates revenue. Microwave downtime directly impacts your bottom line—customers leave when machines aren't working. We respond quickly to minimize lost income. Our technicians understand commercial microwave demands including continuous operation, heavy loads, and customer expectations. Same-day laundromat service available throughout Hackensack, Paramus, Fort Lee, and all Bergen County locations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Hotel Laundry Systems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG hotel microwave repair</strong> serves hospitality properties requiring reliable laundry for guest satisfaction. Hotels depend on functioning microwaves for linens, towels, and guest laundry services. Equipment failures affect room availability and guest experience. Our technicians service on-premises laundry (OPL) systems, understanding the volume demands and scheduling pressures hotels face. We repair commercial microwaves in Bergen County hotels from budget properties to luxury establishments with flexible scheduling.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Healthcare Facilities</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG healthcare microwave repair</strong> addresses the critical laundry needs of hospitals, nursing homes, and medical facilities. Healthcare laundry requires high-temperature sanitization and reliable operation for infection control. Equipment failures can impact patient care and regulatory compliance. Our technicians understand healthcare laundry requirements and the documentation needs of medical facilities. We provide prompt service to healthcare properties throughout Bergen County with minimal disruption to operations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Multi-Family Properties</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG multi-family microwave repair</strong> services apartment buildings, condominiums, and housing complexes with shared laundry facilities. Property managers need reliable equipment to keep residents satisfied and laundry revenue flowing. We repair common-area microwaves experiencing heavy use from multiple households. Our technicians address coin and card mechanism issues, vandalism damage, and accelerated wear. Service throughout Fort Lee, Edgewater, Cliffside Park, and Bergen County multi-family properties.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Coin/Card Mechanisms</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG commercial microwave payment system repair</strong> fixes coin slides, coin drops, and card reader systems that collect revenue and control machine operation. Payment mechanism failures mean lost revenue and frustrated customers. Common problems include jammed coin mechanisms, worn coin slides that don't register payments, and card reader communication failures. Our technicians diagnose and repair payment systems, calibrate coin acceptance, and restore revenue collection throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">High-Capacity Drums</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG commercial microwave drum repair</strong> services the large-capacity drums designed for commercial loads. Commercial drums handle 30-75+ pounds per load, creating significant stress on bearings, rollers, and drive systems. Drum problems include roller wear causing noise, support bearing failures, and drum seal damage. Our technicians repair commercial drum assemblies and replace components rated for commercial use, restoring the capacity your business depends on throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Industrial Heating Systems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG commercial microwave heating repair</strong> addresses the heavy-duty heating systems powering commercial equipment. Commercial microwaves generate significantly more heat than residential units to handle larger loads and faster cycle times. Heating system failures bring operations to a halt. Our technicians repair commercial gas burners, industrial heating elements, and high-capacity blower systems designed for commercial applications throughout Teaneck, Bergenfield, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Heavy-Duty Motors</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG commercial microwave motor repair</strong> services the industrial-grade motors powering commercial equipment. Commercial motors run longer and work harder than residential units, requiring robust construction. Motor failures cause complete operational shutdown. Our technicians diagnose motor problems including winding failures, bearing wear, and overheating from ventilation issues. We replace commercial-grade motors with components rated for continuous operation throughout Bergen County commercial installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Commercial Controls</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG commercial microwave control repair</strong> services the electronic systems managing commercial dry programs. Commercial controls offer cycle options, temperature settings, and integration with payment systems. Control failures affect cycle selection, proper operation, and revenue collection. Our technicians diagnose commercial control boards, replace failed components, and reprogram systems when necessary throughout Ridgewood, Mahwah, and Bergen County commercial installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Stacked Commercial Units</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked commercial microwave repair</strong> services double-stacked units that maximize floor space in commercial laundry rooms. Stacked configurations present unique service access challenges while doubling capacity per square foot. Our technicians are experienced with stacked commercial installations, safely accessing components while maintaining stack stability. We repair both upper and lower units throughout Bergen County laundromats and multi-family facilities.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Priority Response Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG commercial microwave priority service</strong> provides rapid response for businesses where downtime equals lost revenue. We understand commercial operations can't wait—every hour without working microwaves costs money. Our commercial service team prioritizes business accounts, often providing same-day response. We stock commercial-grade parts and maintain relationships with commercial parts suppliers for quick access to specialized components throughout Bergen County.</p>
+
+                            </div>
+                            <div id="expandable-fade-commercial" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-commercial" onclick="toggleExpand('commercial')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-microwave"></i>
+                    <div class="service-icon">🏠</div>
+                    <h3>Residential Microwave Repair</h3>
+                    <div class="service-types">
+                        <h4>Home Microwave Services:</h4>
+                        <ul>
+                            <li>Same-day service available</li>
+                            <li>All LG home models</li>
+                            <li>Laundry room installations</li>
+                            <li>Basement microwave repair</li>
+                            <li>Closet installations</li>
+                            <li>Garage microwave service</li>
+                            <li>Vent cleaning included</li>
+                            <li>Moisture sensor repair</li>
+                            <li>Drum roller replacement</li>
+                            <li>Belt and pulley service</li>
+                            <li>Genuine LG parts</li>
+                        </ul>
+                        <div id="expandable-content-residential" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-residential" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Same-Day Service Available</h4>
+                                <p style="margin-bottom: 12px;"><strong>Same-day LG microwave repair</strong> gets your laundry routine back on track quickly. We understand that a broken microwave creates immediate problems—wet clothes from the washer with nowhere to go, piles of laundry backing up, and disruption to your household schedule. Our technicians are dispatched throughout Bergen County daily, often reaching your home within hours. We stock common parts on our service vehicles for single-visit repairs throughout Hackensack, Paramus, and all Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">All LG Home Models</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG residential microwave repair for all models</strong> covers every microwave LG has made for home use. Whether you have a basic electric microwave, a premium gas model with Steam and TurboSteam, or a Smart ThinQ-enabled unit, our technicians have the training and parts to repair it. We service microwaves from recent model years and older units still running strong. Our factory training covers the full LG residential microwave lineup throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Laundry Room Installations</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG laundry room microwave repair</strong> services machines in dedicated laundry spaces throughout Bergen County homes. Laundry rooms offer ideal microwave placement with proper venting, electrical or gas supply, and workspace. We repair microwaves in first-floor laundry rooms, second-floor installations, and utility room setups. Our technicians work carefully in finished spaces, protecting flooring and surrounding areas during service throughout Ridgewood, Tenafly, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Basement Microwave Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG basement microwave repair</strong> addresses machines installed in below-grade spaces common in Bergen County homes. Basement installations may have longer vent runs requiring more powerful exhaust or additional attention to airflow. Humidity in basements can also affect microwave components. Our technicians navigate basement access with tools and parts, completing repairs efficiently in lower-level laundry areas throughout Englewood, Glen Rock, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Closet Installations</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG closet microwave repair</strong> services compact laundry installations in hallway closets and alcoves. Closet installations maximize living space but present service access challenges and ventilation concerns. Our technicians are experienced working in confined spaces, efficiently diagnosing and repairing microwaves with limited room to maneuver. We address ventilation in enclosed installations and service stackable units common in closet setups throughout Fort Lee, Edgewater, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Garage Microwave Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG garage microwave repair</strong> addresses machines installed in attached or detached garages. Garage installations face temperature extremes, dust exposure, and sometimes non-standard venting configurations. We repair microwaves dealing with cold-weather starting issues, vent configurations unique to garage spaces, and problems from the garage environment. Our technicians ensure proper operation despite conditions garage-installed microwaves face throughout Mahwah, Ramsey, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Vent Cleaning Included</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave vent inspection and cleaning</strong> is included with many repairs because clogged vents cause microwave problems and fire hazards. Lint accumulation restricts airflow, causing overheating, extended dry times, and safety device failures. During service visits, our technicians inspect accessible vent sections and clean lint from microwave exhaust paths. We recommend professional vent cleaning for long or complex runs throughout Bergen County homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Moisture Sensor Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave moisture sensor repair</strong> fixes the sensing technology that determines when clothes are dry. Sensor bars inside the drum measure fabric moisture—when they fail or become coated with residue, cycles end too early (clothes still damp) or run too long (over-drying). Our technicians clean sensor bars, test sensor function, and replace failed sensors throughout Bergenfield, Dumont, and Bergen County residential microwaves.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Drum Roller Replacement</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave drum roller replacement</strong> eliminates the thumping and squeaking sounds from worn support rollers. Most LG microwaves use multiple rollers supporting the drum during rotation. When roller bearings wear or develop flat spots, rhythmic noise results. Our technicians replace drum rollers as a set for balanced support, along with inspecting related components like the axles and drum glides throughout New Milford, Oradell, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Belt and Pulley Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave belt and pulley repair</strong> addresses the drive system connecting the motor to the drum. The drive belt wraps around the drum while the idler pulley maintains tension. Belts wear and break; pulleys wear and seize. When either fails, the drum doesn't turn. Our technicians replace belts and pulleys together when wear is evident on both, preventing repeat failures throughout Wyckoff, Franklin Lakes, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Genuine LG Parts</h4>
+                                <p style="margin-bottom: 12px;"><strong>Genuine LG microwave parts</strong> ensure reliable repairs that last. We use authentic LG replacement parts designed specifically for your microwave model. Genuine parts fit correctly, meet LG's quality standards, and maintain performance specifications. While aftermarket parts may cost less initially, they often fail sooner or cause additional problems. Our technicians install genuine LG parts throughout Bergen County, backed by parts warranties.</p>
+
+                            </div>
+                            <div id="expandable-fade-residential" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-residential" onclick="toggleExpand('residential')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-icon">📦</div>
                     <h3>Compact Microwave Repair</h3>
                     <div class="service-types">
-                        <h4>Benefits of Compact Microwaves:</h4>
+                        <h4>Compact Microwave Services:</h4>
                         <ul>
-                            <li>Perfect for dorms and offices</li>
-                            <li>Small footprint saves space</li>
-                            <li>Portable and lightweight</li>
-                            <li>Lower energy consumption</li>
-                            <li>Affordable purchase price</li>
-                            <li>Ideal for RVs and boats</li>
+                            <li>24-inch width models</li>
+                            <li>Apartment installations</li>
+                            <li>Condo microwave repair</li>
+                            <li>Stackable compact units</li>
+                            <li>Ventless compact microwaves</li>
+                            <li>120V plug-in models</li>
+                            <li>Heat pump compact microwaves</li>
+                            <li>Condensation systems</li>
+                            <li>Small blower motors</li>
+                            <li>Compact heating elements</li>
+                            <li>Space-saving solutions</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
-                        <ul>
-                            <li>Limited interior capacity</li>
-                            <li>Lower wattage means slower cooking</li>
-                            <li>Can only fit small plates</li>
-                            <li>Shorter lifespan than full-size</li>
-                            <li>Basic features only available</li>
-                            <li>Not suitable for family cooking</li>
-                        </ul>
+                        <div id="expandable-content-compact" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-compact" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">24-Inch Width Models</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG 24-inch microwave repair</strong> services compact models designed for tight spaces. These narrower microwaves fit where standard 27-inch units won't, making them ideal for apartments, condos, and small laundry areas. Despite their smaller size, they require the same expert repair for heating elements, motors, controls, and other components. Our technicians are experienced with compact microwave configurations throughout Fort Lee, Edgewater, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Apartment Installations</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG apartment microwave repair</strong> serves renters and apartment dwellers using compact microwaves in limited spaces. Apartments throughout Bergen County often require compact or ventless microwaves due to space constraints and venting limitations. We understand apartment installation variations and the importance of quick repairs when in-unit laundry is your only option. Apartment microwave service in Fort Lee, Cliffside Park, Palisades Park, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Condo Microwave Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG condo microwave repair</strong> addresses compact installations common in condominium units. Condos often have designated laundry closets with specific size requirements. We service compact microwaves in condo buildings throughout Bergen County, understanding the access considerations and neighbor concerns in multi-unit buildings. Our technicians work efficiently and quietly, completing repairs with minimal disruption in Hackensack, Englewood, and surrounding areas.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Stackable Compact Units</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stackable compact microwave repair</strong> services microwaves designed to stack above matching compact washers. Stacked compact laundry pairs maximize vertical space in closets and small laundry areas. We repair compact microwaves in stacked configurations, addressing access challenges and ensuring stability of the stacked pair. Stackable compact service throughout Tenafly, Cresskill, and Bergen County installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Ventless Compact Microwaves</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ventless compact microwave repair</strong> services condensation and heat pump microwaves that don't require external venting. These units are ideal for apartments and condos without vent access. Ventless technology recycles air and collects moisture internally, requiring specialized service knowledge. Our technicians repair condenser systems, heat exchangers, and water collection components throughout Bergen County ventless installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">120V Plug-In Models</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG 120V microwave repair</strong> services compact microwaves that run on standard household outlets. Unlike full-size electric microwaves requiring 240V, these compact units plug into regular 120V outlets found in any room. The lower voltage means longer dry times but enables installation flexibility. Our technicians repair heating systems designed for 120V operation and address the specific components in these convenient compact units throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Heat Pump Compact Microwaves</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG compact heat pump microwave repair</strong> services energy-efficient microwaves using heat pump technology. Heat pump microwaves recycle hot air instead of venting it, dramatically reducing energy consumption. These sophisticated systems require specialized service for compressors, refrigerant circuits, and heat exchangers. Our technicians are trained on heat pump technology, providing expert repair throughout Ridgewood, Paramus, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Condensation Systems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG compact condenser microwave repair</strong> addresses the moisture removal systems in ventless microwaves. Condenser microwaves pass humid air over cold surfaces, causing moisture to condense and drain away. Dirty condensers reduce efficiency and extend dry times. Our technicians clean condensers, repair condensate pumps, and restore efficient moisture removal throughout Bergen County compact microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Small Blower Motors</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG compact microwave blower motor repair</strong> addresses the smaller motors used in compact designs. Compact blower motors work in limited space with less cooling capacity than full-size motors. Motor failures cause no airflow, overheating, or complete failure to operate. Our technicians diagnose motor issues specific to compact designs and replace motors sized for compact installations throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Compact Heating Elements</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG compact microwave heating element repair</strong> services the smaller heating systems in compact electric microwaves. Compact elements produce less heat than full-size units, balancing smaller drum capacity with appropriate heating. Element failures cause no heat or insufficient drying. Our technicians test and replace compact heating elements throughout Bergenfield, Dumont, and Bergen County compact microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Space-Saving Solutions</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG space-saving microwave repair</strong> keeps compact units operating in the tight spaces they're designed for. When compact microwaves break, there's often no room for a larger replacement—you need your existing unit repaired. Our technicians understand the importance of maintaining compact microwave functionality for Bergen County residents depending on these space-efficient machines. We prioritize compact repairs to restore your in-unit laundry quickly.</p>
+
+                            </div>
+                            <div id="expandable-fade-compact" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-compact" onclick="toggleExpand('compact')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-microwave"></i>
-                    <h3>Smart Microwave Repair</h3>
+                    <div class="service-icon">💨</div>
+                    <h3>Ventless Microwave Repair</h3>
                     <div class="service-types">
-                        <h4>Benefits of Smart Microwaves:</h4>
+                        <h4>Ventless Microwave Services:</h4>
                         <ul>
-                            <li>Wi-Fi connectivity for remote control</li>
-                            <li>Voice assistant integration</li>
-                            <li>Scan-to-cook barcode feature</li>
-                            <li>Recipe guidance and presets</li>
-                            <li>Smartphone app monitoring</li>
-                            <li>Automatic cooking adjustments</li>
+                            <li>Condenser microwave repair</li>
+                            <li>Heat pump systems</li>
+                            <li>Heat exchanger cleaning</li>
+                            <li>Condensation pump repair</li>
+                            <li>Water reservoir issues</li>
+                            <li>Humidity sensor service</li>
+                            <li>Compressor failures</li>
+                            <li>Refrigerant systems</li>
+                            <li>Extended dry time fixes</li>
+                            <li>No-vent installations</li>
+                            <li>Energy efficiency restore</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
-                        <ul>
-                            <li>Wi-Fi connectivity problems frequent</li>
-                            <li>Software updates cause glitches</li>
-                            <li>Smart features fail but microwave works</li>
-                            <li>App compatibility issues arise</li>
-                            <li>Higher repair costs for electronics</li>
-                            <li>Privacy concerns with connectivity</li>
-                        </ul>
+                        <div id="expandable-content-ventless" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-ventless" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Condenser Microwave Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG condenser microwave repair</strong> services ventless microwaves that use heat exchangers to remove moisture from clothes. Condenser microwaves heat air, pass it through tumbling clothes to absorb moisture, then cool the air to condense and collect water. This closed-loop system eliminates venting requirements. Our technicians repair condenser coils, airflow systems, and collection components throughout Fort Lee, Edgewater, and Bergen County apartments and condos.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Heat Pump Systems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG heat pump microwave repair</strong> services advanced ventless microwaves using refrigeration principles for energy-efficient drying. Heat pump microwaves use a compressor and refrigerant cycle to extract moisture while recycling heat—using up to 50% less energy than conventional microwaves. These sophisticated systems require specialized service for refrigerant circuits, compressors, and evaporator/condenser coils. Expert heat pump repair throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Heat Exchanger Cleaning</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ventless microwave heat exchanger service</strong> maintains the efficiency of condensing systems. Heat exchangers become coated with lint and residue over time, reducing heat transfer efficiency and extending dry times. Regular cleaning is essential for ventless microwave performance. Our technicians thoroughly clean heat exchanger surfaces, restoring efficient moisture removal throughout Hackensack, Teaneck, and Bergen County ventless installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Condensation Pump Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ventless microwave condensate pump repair</strong> fixes the pump that removes collected water. Some ventless microwaves pump condensate to a drain while others collect it in a reservoir for manual emptying. Pump failures cause water backup, error codes, and potential leaks. Our technicians diagnose pump issues, clear clogs, and replace failed pumps throughout Paramus, Ridgewood, and Bergen County ventless microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Water Reservoir Issues</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ventless microwave water tank repair</strong> addresses the collection reservoirs in microwaves without drain connections. Reservoir problems include float switches that don't detect full conditions, cracked tanks causing leaks, and drainage issues preventing proper emptying. Our technicians repair reservoir components and ensure proper water collection throughout Bergen County ventless installations without drain hookups.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Humidity Sensor Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ventless microwave humidity sensor repair</strong> fixes the sensors monitoring moisture levels in clothes and exhaust air. Ventless microwaves rely heavily on sensors to determine cycle completion since there's no external airflow reference. Failed sensors cause cycles ending too early (damp clothes) or running too long. Our technicians calibrate and replace humidity sensors throughout Englewood, Glen Rock, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Compressor Failures</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG heat pump microwave compressor repair</strong> addresses the heart of heat pump drying systems. The compressor circulates refrigerant through the heat pump cycle—when it fails, the microwave cannot remove moisture efficiently. Compressor problems include failure to start, noisy operation, and insufficient cooling. Our technicians diagnose compressor issues and replace failed units throughout Bergen County heat pump microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Refrigerant Systems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG heat pump microwave refrigerant service</strong> maintains the closed-loop refrigerant system enabling heat pump operation. Refrigerant leaks reduce system efficiency and eventually prevent drying altogether. Our technicians are trained to work with microwave refrigerant systems, identifying leaks, repairing connections, and restoring proper refrigerant levels throughout Mahwah, Ramsey, and Bergen County heat pump microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Extended Dry Time Fixes</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ventless microwave extended dry time repair</strong> addresses the most common ventless microwave complaint. Ventless microwaves naturally take longer than vented models, but excessive times indicate problems. Causes include dirty heat exchangers, failed sensors, clogged lint filters, and condenser efficiency loss. Our technicians diagnose extended dry times and restore reasonable cycle lengths throughout Bergen County ventless installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">No-Vent Installations</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG no-vent microwave repair</strong> serves locations where external venting is impossible—apartments without vent access, interior rooms, and buildings prohibiting exterior penetrations. Ventless microwaves are the only option in these situations, making reliable repair essential. Our technicians understand the importance of maintaining ventless functionality for Bergen County residents without venting alternatives.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Energy Efficiency Restore</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ventless microwave efficiency restoration</strong> returns your microwave to its designed energy savings. Heat pump microwaves especially offer significant energy savings over conventional microwaves—but only when functioning properly. Dirty condensers, failed components, and system wear reduce efficiency. Our technicians restore ventless microwave efficiency throughout Tenafly, Cresskill, and Bergen County, ensuring you receive the energy savings these units are designed to provide.</p>
+
+                            </div>
+                            <div id="expandable-fade-ventless" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-ventless" onclick="toggleExpand('ventless')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-microwave"></i>
-                    <h3>Combination Microwave Repair</h3>
+                    <div class="service-icon">♨️</div>
+                    <h3>Steam Microwave Repair</h3>
                     <div class="service-types">
-                        <h4>Benefits of Combination Microwaves:</h4>
+                        <h4>Steam Microwave Services:</h4>
                         <ul>
-                            <li>Microwave, grill, and convection in one</li>
-                            <li>Space-saving multi-function appliance</li>
-                            <li>Versatile cooking capabilities</li>
-                            <li>Can replace multiple appliances</li>
-                            <li>Professional cooking results</li>
-                            <li>Energy efficient operation</li>
+                            <li>Steam generator repair</li>
+                            <li>Water inlet valve service</li>
+                            <li>Steam nozzle cleaning</li>
+                            <li>TurboSteam systems</li>
+                            <li>Steam refresh cycles</li>
+                            <li>Wrinkle reduction features</li>
+                            <li>Sanitize cycle repair</li>
+                            <li>Allergen reduction</li>
+                            <li>Water supply issues</li>
+                            <li>Control board service</li>
+                            <li>Temperature sensors</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Common Issues & Solutions:</h4>
+                        <div id="expandable-content-steam" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-steam" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Steam Generator Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave steam generator repair</strong> fixes the component that produces steam for wrinkle reduction and fabric refreshing. The steam generator heats water to produce steam injected into the drum. Generator failures mean no steam production. Common issues include heating element failure, scale buildup from hard water, and thermostat problems. Our technicians repair and descale steam generators throughout Hackensack, Paramus, and Bergen County steam microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Water Inlet Valve Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave water inlet valve repair</strong> addresses the valve controlling water supply to the steam generator. The inlet valve opens to fill the steam generator with water—failures prevent steam production. Valves can fail electrically or become clogged with mineral deposits. Our technicians test valve operation, clean screens, and replace failed valves throughout Teaneck, Fort Lee, and Bergen County steam microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Steam Nozzle Cleaning</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave nozzle service</strong> clears mineral deposits blocking steam distribution. Steam nozzles direct steam into the drum—when blocked with scale from hard water, steam flow is reduced or eliminated. Regular cleaning prevents buildup; heavily scaled nozzles may need replacement. Our technicians clean and service steam nozzles throughout Ridgewood, Englewood, and Bergen County to restore proper steam function.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">TurboSteam Systems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG TurboSteam microwave repair</strong> services LG's advanced steam technology for rapid wrinkle reduction and fabric refreshing. TurboSteam generates steam faster than conventional steam systems, enabling quick refresh cycles. System components include specialized generators, controls, and steam distribution systems. Our technicians are trained on TurboSteam technology, diagnosing and repairing these premium features throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Steam Refresh Cycles</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave refresh cycle repair</strong> restores the quick-refresh functionality that reduces wrinkles without full drying. Steam refresh cycles are popular for refreshing clothes between washes, reducing ironing, and eliminating light odors. When refresh cycles don't produce steam or don't reduce wrinkles, underlying steam system problems need attention. Our technicians restore refresh cycle functionality throughout Glen Rock, Bergenfield, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Wrinkle Reduction Features</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave wrinkle care repair</strong> addresses features designed to minimize wrinkles in dried clothes. Steam penetrates fabric fibers to relax wrinkles without ironing. When wrinkle reduction doesn't work, problems may involve steam production, steam distribution, or the tumbling action that helps steam penetrate fabrics. Our technicians diagnose wrinkle reduction issues throughout Dumont, New Milford, and Bergen County steam microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Sanitize Cycle Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave sanitize cycle repair</strong> restores high-temperature steam cycles designed to kill bacteria and allergens. Sanitize cycles combine steam with heat to achieve temperatures eliminating most common household germs. When sanitize cycles don't reach proper temperatures or don't produce steam, the sanitization effectiveness is compromised. Our technicians repair sanitize cycle functionality throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Allergen Reduction</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave allergen cycle repair</strong> services cycles using steam and heat to reduce allergens in fabrics. Families with allergies depend on these features for bedding, stuffed toys, and other items harboring dust mites and allergens. Steam penetration and proper temperatures are essential for allergen reduction effectiveness. Our technicians restore allergen cycle performance throughout Mahwah, Ramsey, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Water Supply Issues</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave water supply troubleshooting</strong> diagnoses problems with water reaching the steam generator. Steam microwaves need water supply connections—installation problems, kinked lines, low water pressure, and supply valve issues prevent steam production. Our technicians verify proper water supply to steam systems, addressing supply-side problems that prevent steam function throughout Tenafly, Cresskill, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Control Board Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave control board repair</strong> addresses electronic systems managing steam functions. Steam microwave control boards manage steam generator operation, water valve timing, and steam cycle programming in addition to standard drying functions. Board failures can affect steam features while leaving basic drying functional, or impact all operations. Our technicians diagnose and repair steam microwave control boards throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Temperature Sensors</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam microwave temperature sensor repair</strong> fixes the sensors monitoring steam generator and drum temperatures. Steam production requires precise temperature control—sensors provide the feedback needed for proper operation. Failed sensors cause incorrect temperatures, no steam production, or error codes. Our technicians test and replace temperature sensors throughout Wyckoff, Franklin Lakes, and Bergen County steam microwave installations.</p>
+
+                            </div>
+                            <div id="expandable-fade-steam" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-steam" onclick="toggleExpand('steam')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-icon">📚</div>
+                    <h3>Stackable Microwave Repair</h3>
+                    <div class="service-types">
+                        <h4>Stackable Services:</h4>
                         <ul>
-                            <li>Complex repairs require specialists</li>
-                            <li>Multiple components can fail</li>
-                            <li>Higher purchase and repair costs</li>
-                            <li>Grill element failures common</li>
-                            <li>Steep learning curve for features</li>
-                            <li>Longer cooking times than expected</li>
+                            <li>Stacked unit access</li>
+                            <li>Vibration issues</li>
+                            <li>Stacking kit repair</li>
+                            <li>Vent connection service</li>
+                            <li>Top unit maintenance</li>
+                            <li>Tight space repairs</li>
+                            <li>Unit separation when needed</li>
+                            <li>Drum roller service</li>
+                            <li>Belt replacement</li>
+                            <li>Heating system repair</li>
+                            <li>Matching washer coordination</li>
                         </ul>
+                        <div id="expandable-content-stackable" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-stackable" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Stacked Unit Access</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave service access</strong> provides repair for microwaves mounted above washers in vertical configurations. The microwave's elevated position can make access challenging for some repairs. Our technicians are experienced with stacked configurations, knowing which repairs can be completed with the stack intact and which require careful separation. We minimize disruption while ensuring complete access throughout Bergen County stacked laundry installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Vibration Issues</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave vibration repair</strong> addresses shaking that can affect both units in a stacked pair. While microwaves typically vibrate less than washers, worn drum rollers, damaged drum glides, or unbalanced loads cause movement transferred through the stacking kit. Severe vibration stresses stacking hardware and can damage both units. Our technicians diagnose and repair vibration sources throughout Hackensack, Teaneck, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Stacking Kit Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave stacking kit repair</strong> fixes the hardware connecting microwaves to washers in stacked configurations. Stacking kits include brackets, fasteners, and anti-vibration components. Damaged or loose stacking kits cause instability and noise. Our technicians inspect stacking kit installations, tighten connections, replace damaged components, and ensure secure stacking throughout Paramus, Fort Lee, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Vent Connection Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave vent service</strong> addresses exhaust connections in stacked configurations. The microwave's elevated position often requires longer vent runs or creative routing around the washer below. Kinked vents, crushed connections, and restricted airflow are common in stacked setups. Our technicians optimize vent routing, repair damaged connections, and ensure proper exhaust throughout Ridgewood, Englewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Top Unit Maintenance</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave top unit service</strong> provides maintenance for elevated microwaves. The microwave's position above the washer makes routine maintenance like lint removal more challenging for homeowners. During service visits, our technicians clean lint from accessible areas, check vent connections, and inspect components that are difficult to reach in everyday use throughout Bergen County stacked installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Tight Space Repairs</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave tight space repair</strong> provides expert service in the confined areas where stacked laundry is typically installed. Closets, alcoves, and narrow laundry rooms present service challenges—limited room to work and difficulty accessing the elevated microwave. Our technicians are experienced working in confined spaces common throughout Bergen County apartments, condos, and homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Unit Separation When Needed</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave unit separation</strong> safely separates washer and microwave pairs when repairs require complete access. Some repairs—particularly to components between the microwave and washer or requiring microwave removal—cannot be completed while stacked. Our technicians safely disconnect, separate, and support both units, completing necessary repairs before carefully restacking throughout Mahwah, Ramsey, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Drum Roller Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave drum roller repair</strong> eliminates noise from worn drum support components. Drum roller replacement is a common microwave repair—in stacked configurations, it requires working within the elevated microwave cabinet. Our technicians access and replace drum rollers in stacked microwaves efficiently, restoring quiet operation throughout Glen Rock, Bergenfield, and Bergen County stacked laundry pairs.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Belt Replacement</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave belt replacement</strong> restores drum rotation when drive belts break or wear out. Belt replacement requires accessing the microwave's interior, which can be more challenging in stacked configurations. Our technicians complete belt service in stacked setups, often without needing to unstack the units, throughout Dumont, New Milford, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Heating System Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave heating repair</strong> addresses no-heat and low-heat problems in elevated microwaves. Heating element replacement, thermostat service, and gas valve repairs are performed in stacked configurations with appropriate access techniques. Our technicians diagnose and repair heating systems in stacked microwaves throughout Tenafly, Cresskill, and Bergen County laundry installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Matching Washer Coordination</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacked microwave and washer coordination</strong> considers how microwave repairs may require washer involvement. When unstacking is required, we can inspect and service both units while separated. If microwave vibration has stressed the washer below or stacking hardware, we address all issues during the service visit. Complete stacked laundry care throughout Alpine, Closter, and Bergen County.</p>
+
+                            </div>
+                            <div id="expandable-fade-stackable" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-stackable" onclick="toggleExpand('stackable')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-icon">💚</div>
+                    <h3>High-Efficiency Microwave Repair</h3>
+                    <div class="service-types">
+                        <h4>HE Microwave Services:</h4>
+                        <ul>
+                            <li>Energy Star models</li>
+                            <li>Heat pump technology</li>
+                            <li>Advanced moisture sensing</li>
+                            <li>Eco cycle repair</li>
+                            <li>Sensor calibration</li>
+                            <li>Efficiency optimization</li>
+                            <li>Control system service</li>
+                            <li>Software updates</li>
+                            <li>Smart ThinQ features</li>
+                            <li>Energy usage monitoring</li>
+                            <li>Performance restoration</li>
+                        </ul>
+                        <div id="expandable-content-he" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-he" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Energy Star Models</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG Energy Star microwave repair</strong> maintains the efficiency of certified high-efficiency models. Energy Star microwaves meet strict efficiency standards, using 20% less energy than conventional models. Maintaining this efficiency requires proper repair and calibration. Our technicians service Energy Star microwaves throughout Hackensack, Paramus, and Bergen County, ensuring your microwave continues meeting its efficiency ratings after repairs.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Heat Pump Technology</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG heat pump microwave repair</strong> services the most energy-efficient microwave technology available. Heat pump microwaves use refrigeration cycles to recycle heat, using up to 50% less energy than conventional microwaves. These sophisticated systems require specialized service for compressors, evaporators, condensers, and refrigerant circuits. Our technicians are trained on heat pump technology throughout Teaneck, Fort Lee, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Advanced Moisture Sensing</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG HE microwave moisture sensor repair</strong> fixes the sophisticated sensing systems in high-efficiency models. HE microwaves use multiple sensors to optimize drying, preventing over-drying that wastes energy and damages fabrics. Sensor failures cause inefficient operation and poor drying results. Our technicians calibrate and replace advanced moisture sensors throughout Ridgewood, Englewood, and Bergen County HE microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Eco Cycle Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave eco cycle repair</strong> restores energy-saving cycle functionality. Eco cycles use lower temperatures and optimized timing to reduce energy consumption. When eco cycles don't work properly—running too long, not drying completely, or not available—underlying problems need diagnosis. Our technicians repair eco cycle functionality throughout Glen Rock, Bergenfield, and Bergen County HE microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Sensor Calibration</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG HE microwave sensor calibration</strong> ensures accurate moisture and temperature readings. Sensors drift over time or after repairs, affecting cycle accuracy. Calibration procedures restore sensor accuracy, ensuring cycles end at the right moisture level without over-drying. Our technicians perform factory calibration procedures throughout Dumont, New Milford, and Bergen County HE microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Efficiency Optimization</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG HE microwave efficiency restoration</strong> returns your microwave to its designed energy savings. Failed components, dirty filters, and miscalibrated sensors reduce HE microwave efficiency—you pay more while getting the same or worse results. Our technicians identify efficiency-robbing problems and restore optimal performance throughout Mahwah, Ramsey, and Bergen County HE microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Control System Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG HE microwave control board repair</strong> addresses the sophisticated electronics managing high-efficiency operation. HE microwave control systems are more complex than standard models, managing multiple sensors, eco algorithms, and smart features. Control failures can affect efficiency, cycle selection, or complete operation. Our technicians diagnose and repair HE control systems throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Software Updates</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG HE microwave software service</strong> ensures your microwave runs current firmware for optimal performance. Smart HE microwaves receive software updates improving efficiency and fixing bugs. Update failures can leave microwaves with incomplete programming or disabled features. Our technicians assist with software issues throughout Tenafly, Cresskill, and Bergen County smart HE microwave installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Smart ThinQ Features</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ThinQ HE microwave repair</strong> services WiFi-connected high-efficiency models with smart features. ThinQ enables remote monitoring, cycle downloads, and smart diagnosis. When smart features fail or connectivity is lost, our technicians diagnose whether problems are network-related or microwave-related, restoring smart functionality throughout Wyckoff, Franklin Lakes, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Energy Usage Monitoring</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG HE microwave energy monitoring repair</strong> restores features tracking your microwave's energy consumption. Smart HE microwaves can report energy usage through apps, helping you understand consumption patterns. When monitoring features fail, you lose visibility into your microwave's efficiency. Our technicians repair energy monitoring systems throughout Alpine, Closter, and Bergen County smart HE microwaves.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Performance Restoration</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG HE microwave performance restoration</strong> brings aging HE microwaves back to peak efficiency. Over time, components wear and efficiency degrades. Our technicians evaluate overall HE microwave condition, recommending and completing repairs that restore both drying performance and energy efficiency. Complete HE microwave restoration throughout Bergen County for microwaves worth maintaining.</p>
+
+                            </div>
+                            <div id="expandable-fade-he" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-he" onclick="toggleExpand('he')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
     </section>
     <section class="alt" id="contact">
         <div class="container">
@@ -1314,7 +1753,80 @@
                     <div class="sa-dropdown-content" id="saDropdownContent">
                         <div class="sa-slide">
                             <h2>All Bergen County NJ Towns We Service</h2>
-                            <ul class="sa-responsive-columns" id="townsList"></ul>
+                            <ul id="townsList">
+                                <li><a href="https://lgbergencounty.com/nj/allendale/"><h3>Allendale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/alpine/"><h3>Alpine</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/bergenfield/"><h3>Bergenfield</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/bogota/"><h3>Bogota</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/carlstadt/"><h3>Carlstadt</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/cliffside-park/"><h3>Cliffside Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/closter/"><h3>Closter</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/cresskill/"><h3>Cresskill</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/demarest/"><h3>Demarest</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/dumont/"><h3>Dumont</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/east-rutherford/"><h3>East Rutherford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/edgewater/"><h3>Edgewater</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/elmwood-park/"><h3>Elmwood Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/emerson/"><h3>Emerson</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/englewood/"><h3>Englewood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/englewood-cliffs/"><h3>Englewood Cliffs</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fair-lawn/"><h3>Fair Lawn</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fairview/"><h3>Fairview</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fort-lee/"><h3>Fort Lee</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/franklin-lakes/"><h3>Franklin Lakes</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/garfield/"><h3>Garfield</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/glen-rock/"><h3>Glen Rock</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hackensack/"><h3>Hackensack</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/harrington-park/"><h3>Harrington Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hasbrouck-heights/"><h3>Hasbrouck Heights</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/haworth/"><h3>Haworth</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hillsdale/"><h3>Hillsdale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ho-ho-kus/"><h3>Ho-Ho-Kus</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/jersey-city/"><h3>Jersey City</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/leonia/"><h3>Leonia</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/little-ferry/"><h3>Little Ferry</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/lodi/"><h3>Lodi</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/lyndhurst/"><h3>Lyndhurst</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/mahwah/"><h3>Mahwah</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/maywood/"><h3>Maywood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/midland-park/"><h3>Midland Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/montvale/"><h3>Montvale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/moonachie/"><h3>Moonachie</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/new-milford/"><h3>New Milford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/newark/"><h3>Newark</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/north-arlington/"><h3>North Arlington</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/northvale/"><h3>Northvale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/norwood/"><h3>Norwood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/oakland/"><h3>Oakland</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/old-tappan/"><h3>Old Tappan</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/oradell/"><h3>Oradell</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/palisades-park/"><h3>Palisades Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/paramus/"><h3>Paramus</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/park-ridge/"><h3>Park Ridge</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ramsey/"><h3>Ramsey</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ridgefield/"><h3>Ridgefield</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ridgefield-park/"><h3>Ridgefield Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ridgewood/"><h3>Ridgewood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/river-edge/"><h3>River Edge</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/river-vale/"><h3>River Vale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/rochelle-park/"><h3>Rochelle Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/rockleigh/"><h3>Rockleigh</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/rutherford/"><h3>Rutherford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/saddle-brook/"><h3>Saddle Brook</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/saddle-river/"><h3>Saddle River</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/south-hackensack/"><h3>South Hackensack</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/teaneck/"><h3>Teaneck</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/tenafly/"><h3>Tenafly</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/teterboro/"><h3>Teterboro</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/upper-saddle-river/"><h3>Upper Saddle River</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/waldwick/"><h3>Waldwick</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/wallington/"><h3>Wallington</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/washington-township/"><h3>Washington Township</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/westwood/"><h3>Westwood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/woodcliff-lake/"><h3>Woodcliff Lake</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/wood-ridge/"><h3>Wood-Ridge</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/wyckoff/"><h3>Wyckoff</h3></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1330,20 +1842,21 @@
                         <div class="cf-form-group"><label for="cfEmail">Email *</label><input type="email" id="cfEmail" name="user_email" placeholder="john@example.com" required></div>
                         <div class="cf-form-group"><label for="cfPhone">Phone *</label><input type="tel" id="cfPhone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}"></div>
                         <div class="cf-form-group"><label for="cfAddress">Address *</label><textarea id="cfAddress" name="address" placeholder="123 Main St, Ridgewood, NJ 07450" required></textarea></div>
-                        <div class="cf-form-group"><label for="cfMessage">Describe the Problem & Microwave Type *</label><textarea id="cfMessage" name="message" placeholder="Please describe the issue and specify the microwave type (e.g., LG Electric Dryer, LG Gas Dryer, etc.)" required></textarea></div>
+                        <div class="cf-form-group"><label for="cfMessage">Describe the Problem & Microwave Type *</label><textarea id="cfMessage" name="message" placeholder="Please describe the issue and specify your microwave type (e.g., LG Front Load Microwave, LG Top Load Microwave, etc.)" required></textarea></div>
                         <button type="submit" class="cf-form-button">Send Request</button>
                     </form>
                 </div>
-                <div class="cf-success-modal" id="cfSuccessModal">
-                    <div class="cf-success-content">
-                        <p id="successMessage">Your request has been sent.<br>An LG technician will contact you within 30 minutes!</p>
-                        <button class="cf-close-modal" id="cfCloseModal">Close</button>
-                    </div>
-                </div>
-                <div class="cf-modal-overlay" id="cfModalOverlay"></div>
             </section>
         </div>
     </section>
+    <div class="cf-modal-overlay" id="cfModalOverlay"></div>
+    <div class="cf-success-modal" id="cfSuccessModal">
+        <div class="cf-success-content">
+            <p id="successMessage">Your request has been sent.<br>An LG technician will contact you within 30 minutes!</p>
+            <button class="cf-close-modal" id="cfCloseModal">Close</button>
+        </div>
+    </div>
+    </main>
     <footer>
         <div class="footer-main">
             <div class="footer-grid">
@@ -1351,7 +1864,7 @@
                     <h2>LG Appliance Repair</h2>
                     <p><strong>Bergen County, New Jersey</strong></p>
                     <p>100 Corporate Drive<br>Mahwah, NJ 07430</p>
-                    <p style="margin-top: 15px;">Certified LG appliance repair serving all of Bergen County. Same-day service available for washers, dryers, dishwashers, ovens, microwaves, cooktops, and refrigerators.</p>
+                    <p style="margin-top: 15px;">Certified LG appliance repair serving all of Bergen County. Same-day service available for microwaves, microwaves, dishmicrowaves, ovens, microwaves, cooktops, and refrigerators.</p>
                     <div class="footer-hours">
                         <p><strong>Business Hours</strong></p>
                         <p>Monday - Sunday<br>7:00 AM – 9:00 PM</p>
@@ -1361,10 +1874,10 @@
                 <div class="footer-column">
                     <h3>Our Services</h3>
                     <ul>
-                        <li><a href="https://lgbergencounty.com/appliances/washer-repair/">Washer Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/microwave-repair/">Microwave Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/microwave-repair/">Microwave Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
-                        <li><a href="https://lgbergencounty.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/dishmicrowave-repair/">Dishmicrowave Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/oven-repair/">Oven Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/microwave-repair/">Microwave Repair</a></li>
                     </ul>
@@ -1409,268 +1922,139 @@
         </div>
     </footer>
     <script>
-        // Towns list with URLs
-        const bergenTowns = [
-            {name: "Allendale", zip: "07401", url: "https://lgbergencounty.com/nj/allendale/"},
-            {name: "Alpine", zip: "07620", url: "https://lgbergencounty.com/nj/alpine/"},
-            {name: "Bergenfield", zip: "07621", url: "https://lgbergencounty.com/nj/bergenfield/"},
-            {name: "Bogota", zip: "07603", url: "https://lgbergencounty.com/nj/bogota/"},
-            {name: "Carlstadt", zip: "07072", url: "https://lgbergencounty.com/nj/carlstadt/"},
-            {name: "Cliffside Park", zip: "07010", url: "https://lgbergencounty.com/nj/cliffside-park/"},
-            {name: "Closter", zip: "07624", url: "https://lgbergencounty.com/nj/closter/"},
-            {name: "Cresskill", zip: "07626", url: "https://lgbergencounty.com/nj/cresskill/"},
-            {name: "Demarest", zip: "07627", url: "https://lgbergencounty.com/nj/demarest/"},
-            {name: "Dumont", zip: "07628", url: "https://lgbergencounty.com/nj/dumont/"},
-            {name: "East Rutherford", zip: "07073", url: "https://lgbergencounty.com/nj/east-rutherford/"},
-            {name: "Edgewater", zip: "07020", url: "https://lgbergencounty.com/nj/edgewater/"},
-            {name: "Elmwood Park", zip: "07407", url: "https://lgbergencounty.com/nj/elmwood-park/"},
-            {name: "Emerson", zip: "07630", url: "https://lgbergencounty.com/nj/emerson/"},
-            {name: "Englewood", zip: "07631", url: "https://lgbergencounty.com/nj/englewood/"},
-            {name: "Englewood Cliffs", zip: "07632", url: "https://lgbergencounty.com/nj/englewood-cliffs/"},
-            {name: "Fair Lawn", zip: "07410", url: "https://lgbergencounty.com/nj/fair-lawn/"},
-            {name: "Fairview", zip: "07022", url: "https://lgbergencounty.com/nj/fairview/"},
-            {name: "Fort Lee", zip: "07024", url: "https://lgbergencounty.com/nj/fort-lee/"},
-            {name: "Franklin Lakes", zip: "07417", url: "https://lgbergencounty.com/nj/franklin-lakes/"},
-            {name: "Garfield", zip: "07026", url: "https://lgbergencounty.com/nj/garfield/"},
-            {name: "Glen Rock", zip: "07452", url: "https://lgbergencounty.com/nj/glen-rock/"},
-            {name: "Hackensack", zip: "07601", url: "https://lgbergencounty.com/nj/hackensack/"},
-            {name: "Harrington Park", zip: "07640", url: "https://lgbergencounty.com/nj/harrington-park/"},
-            {name: "Hasbrouck Heights", zip: "07604", url: "https://lgbergencounty.com/nj/hasbrouck-heights/"},
-            {name: "Haworth", zip: "07641", url: "https://lgbergencounty.com/nj/haworth/"},
-            {name: "Hillsdale", zip: "07642", url: "https://lgbergencounty.com/nj/hillsdale/"},
-            {name: "Ho-Ho-Kus", zip: "07423", url: "https://lgbergencounty.com/nj/ho-ho-kus/"},
-            {name: "Jersey City", zip: "07302", url: "https://lgbergencounty.com/nj/jersey-city/"},
-            {name: "Leonia", zip: "07605", url: "https://lgbergencounty.com/nj/leonia/"},
-            {name: "Little Ferry", zip: "07643", url: "https://lgbergencounty.com/nj/little-ferry/"},
-            {name: "Lodi", zip: "07644", url: "https://lgbergencounty.com/nj/lodi/"},
-            {name: "Lyndhurst", zip: "07071", url: "https://lgbergencounty.com/nj/lyndhurst/"},
-            {name: "Mahwah", zip: "07430", url: "https://lgbergencounty.com/nj/mahwah/"},
-            {name: "Maywood", zip: "07607", url: "https://lgbergencounty.com/nj/maywood/"},
-            {name: "Midland Park", zip: "07432", url: "https://lgbergencounty.com/nj/midland-park/"},
-            {name: "Montvale", zip: "07645", url: "https://lgbergencounty.com/nj/montvale/"},
-            {name: "Moonachie", zip: "07074", url: "https://lgbergencounty.com/nj/moonachie/"},
-            {name: "New Milford", zip: "07646", url: "https://lgbergencounty.com/nj/new-milford/"},
-            {name: "Newark", zip: "07102", url: "https://lgbergencounty.com/nj/newark/"},
-            {name: "North Arlington", zip: "07031", url: "https://lgbergencounty.com/nj/north-arlington/"},
-            {name: "Northvale", zip: "07647", url: "https://lgbergencounty.com/nj/northvale/"},
-            {name: "Norwood", zip: "07648", url: "https://lgbergencounty.com/nj/norwood/"},
-            {name: "Oakland", zip: "07436", url: "https://lgbergencounty.com/nj/oakland/"},
-            {name: "Old Tappan", zip: "07675", url: "https://lgbergencounty.com/nj/old-tappan/"},
-            {name: "Oradell", zip: "07649", url: "https://lgbergencounty.com/nj/oradell/"},
-            {name: "Palisades Park", zip: "07650", url: "https://lgbergencounty.com/nj/palisades-park/"},
-            {name: "Paramus", zip: "07652", url: "https://lgbergencounty.com/nj/paramus/"},
-            {name: "Park Ridge", zip: "07656", url: "https://lgbergencounty.com/nj/park-ridge/"},
-            {name: "Ramsey", zip: "07446", url: "https://lgbergencounty.com/nj/ramsey/"},
-            {name: "Ridgefield", zip: "07657", url: "https://lgbergencounty.com/nj/ridgefield/"},
-            {name: "Ridgefield Park", zip: "07660", url: "https://lgbergencounty.com/nj/ridgefield-park/"},
-            {name: "Ridgewood", zip: "07450", url: "https://lgbergencounty.com/nj/ridgewood/"},
-            {name: "River Edge", zip: "07661", url: "https://lgbergencounty.com/nj/river-edge/"},
-            {name: "River Vale", zip: "07675", url: "https://lgbergencounty.com/nj/river-vale/"},
-            {name: "Rochelle Park", zip: "07662", url: "https://lgbergencounty.com/nj/rochelle-park/"},
-            {name: "Rockleigh", zip: "07647", url: "https://lgbergencounty.com/nj/rockleigh/"},
-            {name: "Rutherford", zip: "07070", url: "https://lgbergencounty.com/nj/rutherford/"},
-            {name: "Saddle Brook", zip: "07663", url: "https://lgbergencounty.com/nj/saddle-brook/"},
-            {name: "Saddle River", zip: "07458", url: "https://lgbergencounty.com/nj/saddle-river/"},
-            {name: "South Hackensack", zip: "07606", url: "https://lgbergencounty.com/nj/south-hackensack/"},
-            {name: "Teaneck", zip: "07666", url: "https://lgbergencounty.com/nj/teaneck/"},
-            {name: "Tenafly", zip: "07670", url: "https://lgbergencounty.com/nj/tenafly/"},
-            {name: "Teterboro", zip: "07608", url: "https://lgbergencounty.com/nj/teterboro/"},
-            {name: "Upper Saddle River", zip: "07458", url: "https://lgbergencounty.com/nj/upper-saddle-river/"},
-            {name: "Waldwick", zip: "07463", url: "https://lgbergencounty.com/nj/waldwick/"},
-            {name: "Wallington", zip: "07057", url: "https://lgbergencounty.com/nj/wallington/"},
-            {name: "Washington Township", zip: "07676", url: "https://lgbergencounty.com/nj/washington-township/"},
-            {name: "Westwood", zip: "07675", url: "https://lgbergencounty.com/nj/westwood/"},
-            {name: "Woodcliff Lake", zip: "07677", url: "https://lgbergencounty.com/nj/woodcliff-lake/"},
-            {name: "Wood-Ridge", zip: "07075", url: "https://lgbergencounty.com/nj/wood-ridge/"},
-            {name: "Wyckoff", zip: "07481", url: "https://lgbergencounty.com/nj/wyckoff/"}
-        ].sort((a, b) => a.name.localeCompare(b.name));
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM loaded at', new Date().toLocaleString());
-            
-            // Services Dropdown
+        document.addEventListener('DOMContentLoaded', function() {
             const servicesMenu = document.getElementById('servicesMenu');
             const servicesToggle = document.getElementById('servicesToggle');
-            const servicesDropdown = document.getElementById('servicesDropdown');
             const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
             const additionalToggle = document.getElementById('additionalToggle');
             const additionalSubmenu = document.getElementById('additionalSubmenu');
             const serviceAreasToggle = document.getElementById('serviceAreasToggle');
             const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
             
-            if (!servicesMenu || !servicesToggle || !servicesDropdown || !dropdownCloseBtn || !additionalToggle || !additionalSubmenu || !serviceAreasToggle || !serviceAreasSubmenu) {
-                console.error('Services dropdown elements missing');
-                return;
-            }
-            
-            console.log('Services dropdown elements found');
-            
-            function populateServiceAreasSubmenu() {
-                serviceAreasSubmenu.innerHTML = bergenTowns.map(t => {
-                    return `<li><a href="${t.url}" class="service-area-link" aria-label="LG Appliance Repair in ${t.name}">${t.name}</a></li>`;
-                }).join('');
-            }
-            
-            populateServiceAreasSubmenu();
-            
             function closeDropdown() {
                 servicesMenu.classList.remove('active');
-                additionalToggle.classList.remove('active');
-                additionalSubmenu.classList.remove('active');
-                serviceAreasToggle.classList.remove('active');
-                serviceAreasSubmenu.classList.remove('active');
+                additionalSubmenu.style.maxHeight = '0';
+                serviceAreasSubmenu.style.maxHeight = '0';
             }
             
-            servicesToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                servicesMenu.classList.toggle('active');
-            });
-            
-            dropdownCloseBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                closeDropdown();
-            });
-            
-            additionalToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                additionalToggle.classList.toggle('active');
-                additionalSubmenu.classList.toggle('active');
-            });
-            
-            serviceAreasToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                serviceAreasToggle.classList.toggle('active');
-                serviceAreasSubmenu.classList.toggle('active');
-            });
-            
-            servicesDropdown.addEventListener('click', (e) => {
-                const link = e.target.closest('.service-area-link') || e.target.closest('a');
-                if (link) {
-                    return;
-                }
-                
-                if (e.target.closest('.submenu-toggle') || e.target.closest('.dropdown-close-btn')) {
-                    return;
-                }
-                
-                e.stopPropagation();
-            });
-            
-            // Touch events for mobile - allow links to work
-            let touchStartTime = 0;
-            let touchStartY = 0;
-            
-            servicesDropdown.addEventListener('touchstart', (e) => {
-                touchStartTime = Date.now();
-                touchStartY = e.touches[0].clientY;
-                if (!e.target.closest('.service-area-link') && !e.target.closest('a')) {
+            if (servicesToggle) {
+                servicesToggle.addEventListener('click', function(e) {
                     e.stopPropagation();
-                }
-            }, { passive: true });
-            
-            servicesDropdown.addEventListener('touchmove', (e) => {
-                // Allow scrolling
-            }, { passive: true });
-            
-            servicesDropdown.addEventListener('touchend', (e) => {
-                const touchDuration = Date.now() - touchStartTime;
-                const touchEndY = e.changedTouches[0].clientY;
-                const touchDistance = Math.abs(touchEndY - touchStartY);
-                
-                if ((e.target.closest('.service-area-link') || e.target.closest('a')) && touchDuration < 300 && touchDistance < 10) {
-                    return;
-                }
-                
-                if (!e.target.closest('.service-area-link') && !e.target.closest('a')) {
-                    e.stopPropagation();
-                }
-            }, { passive: true });
-            
-            document.addEventListener('click', () => {
-                closeDropdown();
-            });
-            
-            // Service Areas (Section Dropdown)
-            const saToggle = document.getElementById('saToggleBtn');
-            const saContent = document.getElementById('saDropdownContent');
-            const townsList = document.getElementById('townsList');
-            
-            function populateTowns() {
-                if (townsList.innerHTML) return;
-                townsList.innerHTML = bergenTowns.map(t => ` <li onclick="this.querySelector('.sa-zip-dropdown').classList.toggle('active')"> <h3>${t.name}</h3> <div class="sa-zip-dropdown">ZIP Code: ${t.zip}</div> </li> `).join('');
-            }
-            
-            if (saToggle && saContent) {
-                saToggle.addEventListener('click', () => {
-                    const expanded = saContent.classList.toggle('active');
-                    saToggle.setAttribute('aria-expanded', expanded);
-                    if (expanded) populateTowns();
+                    servicesMenu.classList.toggle('active');
                 });
             }
             
-            // Appliance Cards
-            document.querySelectorAll('.service').forEach(service => {
-                service.addEventListener('click', function(e) {
-                    if (!e.target.closest('.service-types')) {
-                        this.classList.toggle('active');
+            if (dropdownCloseBtn) {
+                dropdownCloseBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    closeDropdown();
+                });
+            }
+            
+            if (additionalToggle) {
+                additionalToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (additionalSubmenu.style.maxHeight && additionalSubmenu.style.maxHeight !== '0px') {
+                        additionalSubmenu.style.maxHeight = '0';
+                    } else {
+                        additionalSubmenu.style.maxHeight = additionalSubmenu.scrollHeight + 'px';
                     }
                 });
+            }
+            
+            if (serviceAreasToggle) {
+                serviceAreasToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (serviceAreasSubmenu.style.maxHeight && serviceAreasSubmenu.style.maxHeight !== '0px') {
+                        serviceAreasSubmenu.style.maxHeight = '0';
+                    } else {
+                        serviceAreasSubmenu.style.maxHeight = serviceAreasSubmenu.scrollHeight + 'px';
+                    }
+                });
+            }
+            
+            // Prevent additional submenu items from closing dropdown
+            const additionalItems = additionalSubmenu.querySelectorAll('li');
+            additionalItems.forEach(function(item) {
+                item.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
             });
             
-            // Book Online
+            document.addEventListener('click', closeDropdown);
+            
+            const saToggle = document.getElementById('saToggleBtn');
+            const saContent = document.getElementById('saDropdownContent');
+            
+            if (saToggle && saContent) {
+                saToggle.addEventListener('click', function() {
+                    if (saContent.style.maxHeight && saContent.style.maxHeight !== '0px') {
+                        saContent.style.maxHeight = '0';
+                    } else {
+                        saContent.style.maxHeight = saContent.scrollHeight + 'px';
+                    }
+                });
+            }
+            
+            const services = document.querySelectorAll('.service');
+            services.forEach(function(service) {
+                service.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'BUTTON' || e.target.closest('button') || e.target.tagName === 'LI' || e.target.closest('.service-types ul')) {
+                        return;
+                    }
+                    this.classList.toggle('active');
+                });
+            });
+            
             const cfBookButton = document.getElementById('cfBookButton');
             if (cfBookButton) {
-                cfBookButton.addEventListener('click', () => {
+                cfBookButton.addEventListener('click', function() {
                     document.getElementById('cfContactFormSection').classList.toggle('active');
                 });
             }
             
-            // Call Now
-            const setupCallButton = (btn) => {
+            function setupCallButton(btn) {
                 if (btn) {
                     btn.addEventListener('click', function() {
                         if (this.dataset.revealed) return;
                         const digits = [2, 0, 1, 2, 9, 8, 3, 4, 9, 9];
                         const num = digits.join('');
-                        const formatted = `+1 (${num.slice(0,3)}) ${num.slice(3,6)}-${num.slice(6)}`;
+                        const formatted = '+1 (' + num.slice(0,3) + ') ' + num.slice(3,6) + '-' + num.slice(6);
                         this.innerHTML = formatted;
                         this.dataset.revealed = 'true';
-                        this.onclick = () => {
-                            window.location.href = `tel:+1${num}`;
+                        this.onclick = function() {
+                            window.location.href = 'tel:+1' + num;
                         };
                     });
                 }
-            };
+            }
             
             setupCallButton(document.getElementById('navCallNow'));
             setupCallButton(document.getElementById('formCallNow'));
             setupCallButton(document.getElementById('heroCallNow'));
             
-            // Form Submit
             const cfContactForm = document.getElementById('cfContactForm');
             if (cfContactForm) {
                 cfContactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const email = this.user_email.value.trim();
                     emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
-                        .then(() => {
-                            this.reset();
+                        .then(function() {
+                            cfContactForm.reset();
                             document.getElementById('cfContactFormSection').classList.remove('active');
-                            document.getElementById('successMessage').innerHTML = ` <strong>Thank you!</strong><br><br> Your request has been sent.<br><br> We will contact you at<br><strong>${email}</strong><br> within the next 30 minutes. `;
+                            document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
                             document.getElementById('cfSuccessModal').classList.add('active');
                             document.getElementById('cfModalOverlay').classList.add('active');
                         })
-                        .catch((error) => {
-                            console.error('Form submission failed:', error);
+                        .catch(function() {
                             alert('Failed to send. Please try again or call us.');
                         });
                 });
             }
             
-            // Modal Close
             const cfCloseModal = document.getElementById('cfCloseModal');
             if (cfCloseModal) {
-                cfCloseModal.onclick = () => {
+                cfCloseModal.onclick = function() {
                     document.getElementById('cfSuccessModal').classList.remove('active');
                     document.getElementById('cfModalOverlay').classList.remove('active');
                 };
@@ -1678,9 +2062,58 @@
             
             const cfModalOverlay = document.getElementById('cfModalOverlay');
             if (cfModalOverlay) {
-                cfModalOverlay.onclick = () => cfCloseModal && cfCloseModal.click();
+                cfModalOverlay.onclick = function() {
+                    if (cfCloseModal) cfCloseModal.click();
+                };
             }
         });
+        
+        function toggleExpand(id) {
+            event.stopPropagation();
+            var text = document.getElementById('expandable-text-' + id);
+            var btn = document.getElementById('expandable-btn-' + id);
+            var fade = document.getElementById('expandable-fade-' + id);
+            var isCollapsed = !text.classList.contains('expanded');
+            if (isCollapsed) {
+                if (id === '1') {
+                    text.style.maxHeight = text.scrollHeight + 'px';
+                    text.style.overflowY = 'visible';
+                } else {
+                    text.style.maxHeight = '200px';
+                    text.style.overflowY = 'auto';
+                    text.style.paddingRight = '10px';
+                }
+                text.classList.add('expanded');
+                btn.innerHTML = '− Show Less';
+                btn.setAttribute('aria-expanded', 'true');
+                if (fade) fade.style.display = 'none';
+            } else {
+                var originalHeight = text.getAttribute('data-collapsed-height') || '110px';
+                text.style.maxHeight = originalHeight;
+                text.style.overflowY = 'hidden';
+                text.style.paddingRight = '0';
+                text.classList.remove('expanded');
+                btn.innerHTML = '+ Show More';
+                btn.setAttribute('aria-expanded', 'false');
+                if (fade) fade.style.display = 'block';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[id^="expandable-text-"]').forEach(function(el) {
+                var height = el.style.maxHeight || '110px';
+                el.setAttribute('data-collapsed-height', height);
+            });
+        });
     </script>
+    <style>
+        [id^="expandable-text-"].expanded::-webkit-scrollbar { width: 6px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb:hover { background: var(--red); }
+        [id^="expandable-text-"].expanded { scrollbar-width: thin; scrollbar-color: var(--blue) #f1f1f1; }
+    </style>
+    <script>var emailjs=function(e){"use strict";class t{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Network Error";this.status=e,this.text=t}}const i={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:(()=>{if("undefined"!=typeof localStorage)return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,t)=>Promise.resolve(localStorage.setItem(e,t)),remove:e=>Promise.resolve(localStorage.removeItem(e))}})()},r=e=>e?"string"==typeof e?{publicKey:e}:"[object Object]"===e.toString()?e:{}:{},o=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"https://api.emailjs.com";if(!e)return;const o=r(e);i.publicKey=o.publicKey,i.blockHeadless=o.blockHeadless,i.storageProvider=o.storageProvider,i.blockList=o.blockList,i.limitRate=o.limitRate,i.origin=o.origin||t},a=async function(e,r){let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const a=await fetch(i.origin+e,{method:"POST",headers:o,body:r}),s=await a.text(),n=new t(a.status,s);if(a.ok)return n;throw n},s=(e,t,i)=>{if(!e||"string"!=typeof e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t||"string"!=typeof t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!i||"string"!=typeof i)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},n=e=>e.webdriver||!e.languages||0===e.languages.length,l=()=>new t(451,"Unavailable For Headless Browser"),c=(e,t)=>{if((e=>!e.list?.length||!e.watchVariable)(e))return!1;((e,t)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if("string"!=typeof t)throw"The BlockList watchVariable has to be a string"})(e.list,e.watchVariable);const i=(r=t,o=e.watchVariable,r instanceof FormData?r.get(o):r[o]);var r,o;return"string"==typeof i&&e.list.includes(i)},d=()=>new t(403,"Forbidden"),m=async(e,t,i)=>{if(!t.throttle||!i)return!1;((e,t)=>{if("number"!=typeof e||e<0)throw"The LimitRate throttle has to be a positive number";if(t&&"string"!=typeof t)throw"The LimitRate ID has to be a non-empty string"})(t.throttle,t.id);const r=t.id||e,o=await(async(e,t,i)=>{const r=Number(await i.get(e)||0);return t-Date.now()+r})(r,t.throttle,i);return o>0||(await i.set(r,Date.now().toString()),!1)},h=()=>new t(429,"Too Many Requests"),p=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=u.storageProvider||i.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());if(s(b,e,t),(e=>{if(e&&"[object Object]"!==e.toString())throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"})(o),o&&c(w,o))return Promise.reject(d());if(await m(location.pathname,y,f))return Promise.reject(h());const v={lib_version:"4.4.1",user_id:b,service_id:e,template_id:t,template_params:o};return a("/api/v1.0/email/send",JSON.stringify(v),{"Content-type":"application/json"})},u=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=i.storageProvider||u.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());const v=(e=>"string"==typeof e?document.querySelector(e):e)(o);s(b,e,t),(e=>{if(!e||"FORM"!==e.nodeName)throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"})(v);const j=new FormData(v);return c(w,j)?Promise.reject(d()):await m(location.pathname,y,f)?Promise.reject(h()):(j.append("lib_version","4.4.1"),j.append("service_id",e),j.append("template_id",t),j.append("user_id",b),a("/api/v1.0/email/send-form",j))};var b={init:o,send:p,sendForm:u,EmailJSResponseStatus:t};return e.EmailJSResponseStatus=t,e.default=b,e.init=o,e.send=p,e.sendForm=u,Object.defineProperty(e,"__esModule",{value:!0}),e}({});emailjs.init({publicKey:'zfCrLmZU8eK9CuZcs'});</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"df4eaee1f863452385fca24b1c8a3813","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
