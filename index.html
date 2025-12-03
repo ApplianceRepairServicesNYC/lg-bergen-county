@@ -588,6 +588,7 @@
             border-radius: 8px;
             box-sizing: border-box;
             white-space: normal;
+            -webkit-overflow-scrolling: touch;
         }
         .additional-submenu li,
         .service-areas-submenu li {
@@ -598,6 +599,15 @@
             margin: 12px 0;
             transition: all .3s;
             box-sizing: border-box;
+            cursor: pointer;
+        }
+        .additional-submenu li:hover,
+        .additional-submenu li:active,
+        .service-areas-submenu li:hover,
+        .service-areas-submenu li:active {
+            background: var(--red);
+            color: white;
+            padding-left: 54px;
         }
         .service-areas-submenu li a {
             color: #eee;
@@ -609,13 +619,8 @@
             cursor: pointer;
             pointer-events: auto;
         }
-        .additional-submenu li:hover,
-        .service-areas-submenu li:hover {
-            background: var(--red);
-            color: white;
-            padding-left: 54px;
-        }
-        .service-areas-submenu li:hover a {
+        .service-areas-submenu li:hover a,
+        .service-areas-submenu li:active a {
             color: white;
         }
         .hero {
