@@ -744,15 +744,10 @@
             padding: 20px;
             background: rgba(0, 48, 135, 0.05);
             border-radius: 10px;
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height .5s ease, opacity .5s ease;
-            opacity: 0;
-            box-sizing: border-box;
-        }
-        .service.active .service-types {
             max-height: 2000px;
+            overflow: visible;
             opacity: 1;
+            box-sizing: border-box;
         }
         .service-types h4 {
             margin: 0 0 15px;
@@ -1922,7 +1917,6 @@
                     if (e.target.tagName === 'BUTTON' || e.target.closest('button')) {
                         return;
                     }
-                    this.classList.toggle('active');
                 });
             });
             
