@@ -92,7 +92,7 @@
             --gray: #f8f9fa;
         }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             margin: 0;
             color: #333;
             background: #fff;
@@ -103,7 +103,8 @@
         h1,
         h2,
         h3 {
-            font-family: 'Montserrat', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-weight: 700;
             color: var(--blue);
         }
         .container {
@@ -173,6 +174,7 @@
             transition: all .3s;
             cursor: pointer;
             box-sizing: border-box;
+            border: none;
         }
         .nav-call-btn:hover {
             background: #c41b20;
@@ -197,10 +199,14 @@
             overflow-wrap: break-word;
             white-space: nowrap;
             overscroll-behavior: contain;
-            -webkit-overflow-scrolling: touch;
         }
         .services-menu.active .services-dropdown {
-            display: block !important;
+            display: block;
+        }
+        @media (hover: hover) and (pointer: fine) {
+            .services-menu:hover .services-dropdown {
+                display: block;
+            }
         }
         #servicesMenu .services-dropdown {
             right: 20px;
@@ -296,34 +302,25 @@
             cursor: pointer;
             box-sizing: border-box;
         }
-        .submenu-toggle i {
+        .submenu-toggle:after {
+            content: "›";
             transition: transform .3s;
             font-size: 18px;
         }
-        .submenu-toggle.active i {
+        .submenu-toggle:hover:after {
             transform: rotate(90deg);
         }
         .additional-submenu,
         .service-areas-submenu {
             max-height: 0;
             overflow-y: auto;
-            transition: max-height 0.8s ease, opacity 0.3s ease, visibility 0.3s ease;
+            transition: max-height 0.8s ease;
             background: rgba(0, 0, 0, 0.2);
             margin: 0 20px 14px;
             border-radius: 8px;
             box-sizing: border-box;
             white-space: normal;
-            visibility: hidden;
-            opacity: 0;
             -webkit-overflow-scrolling: touch;
-        }
-        .additional-submenu.active,
-        .service-areas-submenu.active {
-            max-height: none;
-            padding: 16px 0;
-            visibility: visible;
-            opacity: 1;
-            display: block;
         }
         .additional-submenu li,
         .service-areas-submenu li {
@@ -334,6 +331,15 @@
             margin: 12px 0;
             transition: all .3s;
             box-sizing: border-box;
+            cursor: pointer;
+        }
+        .additional-submenu li:hover,
+        .additional-submenu li:active,
+        .service-areas-submenu li:hover,
+        .service-areas-submenu li:active {
+            background: var(--red);
+            color: white;
+            padding-left: 54px;
         }
         .service-areas-submenu li a {
             color: #eee;
@@ -345,13 +351,8 @@
             cursor: pointer;
             pointer-events: auto;
         }
-        .additional-submenu li:hover,
-        .service-areas-submenu li:hover {
-            background: var(--red);
-            color: white;
-            padding-left: 54px;
-        }
-        .service-areas-submenu li:hover a {
+        .service-areas-submenu li:hover a,
+        .service-areas-submenu li:active a {
             color: white;
         }
         .hero {
@@ -360,7 +361,7 @@
             text-align: center;
             padding: 160px 20px 120px;
             margin-top: 80px;
-            background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png') center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png') center center/cover no-repeat;
             background-attachment: scroll;
             min-height: 70vh;
             display: flex;
@@ -373,6 +374,7 @@
             margin-bottom: 16px;
             text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
             line-height: 1.2;
+            color: white;
         }
         .hero p {
             font-size: 24px;
@@ -391,63 +393,49 @@
             font-size: 20px;
             transition: all .3s;
             box-sizing: border-box;
+            border: none;
+            cursor: pointer;
         }
         .btn:hover {
             background: #c41b20;
             transform: translateY(-3px);
             box-shadow: 0 10px 30px rgba(228, 30, 38, 0.5);
         }
-        #heroCallNow {
-            background: var(--red);
-            color: white;
-            padding: 16px 40px;
-            border-radius: 8px;
-            font-weight: 700;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 20px;
-            transition: all .3s;
-            border: none;
-            cursor: pointer;
-        }
-        #heroCallNow:hover {
-            background: #c41b20;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(228, 30, 38, 0.5);
-        }
         @media (max-width: 768px) {
             .hero {
-                padding: 130px 15px 90px;
-                min-height: 65vh;
-                background-position: center 35%;
+                padding: 160px 15px 90px;
+                min-height: 55vh;
+                background-position: center center;
+                background-size: cover;
             }
             .hero h1 {
-                font-size: 42px;
+                font-size: 32px;
+                line-height: 1.3;
             }
             .hero p {
-                font-size: 20px;
+                font-size: 18px;
+                padding: 0 10px;
             }
-            .sa-responsive-columns {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
+            .btn {
+                padding: 14px 30px;
+                font-size: 18px;
             }
         }
         @media (max-width: 480px) {
             .hero {
-                padding: 110px 15px 70px;
-                min-height: 60vh;
+                padding: 150px 15px 60px;
+                min-height: 50vh;
             }
             .hero h1 {
-                font-size: 34px;
+                font-size: 26px;
+                line-height: 1.3;
             }
             .hero p {
-                font-size: 18px;
+                font-size: 16px;
             }
-            .sa-responsive-columns {
-                display: flex;
-                flex-direction: column;
-                gap: 8px;
+            .btn {
+                padding: 12px 24px;
+                font-size: 16px;
             }
         }
         section {
@@ -461,6 +449,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
+            align-items: start;
         }
         .service {
             background: white;
@@ -472,18 +461,28 @@
             position: relative;
             cursor: pointer;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-types {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .service-types > div[id^="expandable-content-"] {
+            margin-top: auto;
         }
         .service:hover {
             transform: translateY(-12px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
-        .service i {
+        .service-icon {
             font-size: 52px;
             margin-bottom: 20px;
             color: var(--blue);
             transition: color .3s;
         }
-        .service:hover i {
+        .service:hover .service-icon {
             color: var(--red);
         }
         .service-types {
@@ -493,12 +492,13 @@
             border-radius: 10px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height .5s ease, opacity .5s ease;
             opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
             box-sizing: border-box;
         }
         .service.active .service-types {
             max-height: 2000px;
+            overflow: visible;
             opacity: 1;
         }
         .service-types h4 {
@@ -517,7 +517,7 @@
             margin: 6px 0;
             background: rgba(255, 255, 255, 0.8);
             border-radius: 8px;
-            transition: all .3s;
+            transition: background .3s, color .3s;
             color: #333;
             font-size: 15px;
             box-sizing: border-box;
@@ -526,8 +526,6 @@
         .service-types li:active {
             background: var(--red);
             color: white;
-            padding-left: 30px;
-            transform: translateX(5px);
         }
         #sa-service-areas {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -538,7 +536,6 @@
             margin: 0 auto 3rem;
             padding: 20px;
             position: relative;
-            animation: fadeIn .8s ease-out forwards;
             box-sizing: border-box;
         }
         #sa-service-areas h2 {
@@ -548,10 +545,6 @@
             margin-bottom: 5px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, .3);
             transition: transform .3s, color .3s;
-        }
-        #sa-service-areas h2:hover {
-            color: #ffd700;
-            transform: scale(1.05);
         }
         #sa-service-areas p {
             font-size: 16px;
@@ -574,9 +567,6 @@
             cursor: pointer;
             transition: all .3s;
             box-shadow: 0 4px 15px rgba(0, 48, 135, .4);
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
             box-sizing: border-box;
         }
         .sa-dropdown-button:hover {
@@ -585,25 +575,11 @@
             box-shadow: 0 6px 20px rgba(0, 48, 135, .6);
         }
         .sa-dropdown-content {
-            opacity: 0;
-            height: 0;
+            max-height: 0;
             overflow: hidden;
-            transition: opacity .5s, height .5s, transform .5s;
-            transform: translateY(-10px);
+            transition: max-height .5s;
             background: transparent;
             box-sizing: border-box;
-        }
-        .sa-dropdown-content.active {
-            opacity: 1;
-            height: auto;
-            transform: translateY(0);
-            padding: 20px 0;
-        }
-        .sa-slide h2 {
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 15px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
         }
         .sa-slide ul {
             background: rgba(255, 255, 255, .95);
@@ -612,18 +588,12 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
             transition: transform .3s;
             box-sizing: border-box;
-        }
-        .sa-slide ul:hover {
-            transform: translateY(-5px);
-        }
-        .sa-responsive-columns {
             list-style: none;
-            padding: 0;
             margin: 0;
             column-gap: 30px;
             columns: 3;
         }
-        .sa-responsive-columns li {
+        .sa-slide ul li {
             padding: 12px 15px;
             margin: 8px 0;
             border-radius: 10px;
@@ -633,43 +603,16 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
             box-sizing: border-box;
         }
-        .sa-responsive-columns li:hover {
+        .sa-slide ul li:hover {
             background: #d4e4ff;
             transform: scale(1.03);
             box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
         }
-        .sa-responsive-columns h3 {
-            margin: 0 0 6px;
+        .sa-slide ul li h3 {
+            margin: 0;
             font-size: 17px;
             color: #1e3c72;
             font-weight: 600;
-        }
-        .sa-zip-dropdown {
-            font-size: 14px;
-            color: #003087;
-            font-weight: 600;
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all .4s ease;
-            transform: translateY(-10px);
-            box-sizing: border-box;
-        }
-        .sa-zip-dropdown.active {
-            max-height: 40px;
-            opacity: 1;
-            transform: translateY(0);
-            padding-top: 4px;
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
         }
         #cf-schedule-container {
             background: transparent;
@@ -682,7 +625,7 @@
             box-sizing: border-box;
         }
         .cf-schedule-text {
-            font-family: 'Montserrat', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             font-size: 1.5rem;
             color: #2A2A2A;
             font-weight: 600;
@@ -730,6 +673,7 @@
             justify-content: center;
             transition: all .3s;
             box-sizing: border-box;
+            border: none;
         }
         .form-call-now:hover {
             background: #c41b20;
@@ -852,6 +796,19 @@
             cursor: pointer;
             box-sizing: border-box;
         }
+        .cf-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 1999;
+        }
+        .cf-modal-overlay.active {
+            display: block;
+        }
         footer {
             background: #1a1a1a;
             color: #b0b0b0;
@@ -879,7 +836,6 @@
             font-size: 18px;
             font-weight: 700;
             margin-bottom: 20px;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .footer-column p {
@@ -921,7 +877,6 @@
             font-size: 22px;
             font-weight: 700;
             margin-bottom: 15px;
-            font-family: 'Montserrat', sans-serif;
         }
         
         .footer-hours {
@@ -992,6 +947,10 @@
                 justify-content: center;
                 gap: 20px 30px;
             }
+            
+            .sa-slide ul {
+                columns: 2;
+            }
         }
         
         @media (max-width: 768px) {
@@ -1014,6 +973,10 @@
             
             .footer-bottom-links {
                 gap: 15px 25px;
+            }
+            
+            .sa-slide ul {
+                columns: 1;
             }
         }
         
@@ -1038,11 +1001,9 @@
                 <div class="services-menu" id="servicesMenu">
                     <div class="services-btn" id="servicesToggle">Services</div>
                     <ul class="services-dropdown" id="servicesDropdown">
-                        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">
-                            <i class="fas fa-times"></i>
-                        </button>
+                        <button class="dropdown-close-btn" id="dropdownCloseBtn" aria-label="Close Services Menu">×</button>
                         <li><a href="https://lgbergencounty.com/appliances/washer-repair/" aria-label="Washer Repair">Washer Repair</a></li>
-                        <li><a href="https://lgbergencounty.com/appliances/installation-maintenance/" aria-label="Installation &amp; Maintenance">Installation &amp; Maintenance</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/dryer-repair/" aria-label="Dryer Repair">Dryer Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/refrigerator-repair/" aria-label="Refrigerator Repair">Refrigerator Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/dishwasher-repair/" aria-label="Dishwasher Repair">Dishwasher Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/oven-repair/" aria-label="Oven & Range Repair">Oven & Range Repair</a></li>
@@ -1051,7 +1012,7 @@
                         <li><a href="https://lgbergencounty.com/appliances/wine-cooler-repair/" aria-label="Wine Cooler Repair">Wine Cooler Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/installation-maintenance/" aria-label="Installation & Maintenance">Installation & Maintenance</a></li>
                         <li><a href="https://lgbergencounty.com/" aria-label="All Appliances Repair">All Appliances</a></li>
-                        <li class="submenu-toggle" id="additionalToggle">Additional Services <i class="fas fa-chevron-right"></i></li>
+                        <li class="submenu-toggle" id="additionalToggle">Additional Services</li>
                         <div class="additional-submenu" id="additionalSubmenu">
                             <li>Installation, Repair & Maintenance</li>
                             <li>Refrigerator Compressor & Refrigerant Service</li>
@@ -1066,261 +1027,724 @@
                             <li>EPA Section 608 Certification</li>
                             <li>Appliance Warranty & Extended Service Plans</li>
                         </div>
-                        <li class="submenu-toggle" id="serviceAreasToggle">Service Areas <i class="fas fa-chevron-right"></i></li>
-                        <div class="service-areas-submenu" id="serviceAreasSubmenu"></div>
+                        <li class="submenu-toggle" id="serviceAreasToggle">Service Areas</li>
+                        <div class="service-areas-submenu" id="serviceAreasSubmenu">
+                            <li><a href="https://lgbergencounty.com/nj/allendale/">Allendale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/alpine/">Alpine</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/bergenfield/">Bergenfield</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/bogota/">Bogota</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/carlstadt/">Carlstadt</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/cliffside-park/">Cliffside Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/closter/">Closter</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/cresskill/">Cresskill</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/demarest/">Demarest</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/dumont/">Dumont</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/east-rutherford/">East Rutherford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/edgewater/">Edgewater</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/elmwood-park/">Elmwood Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/emerson/">Emerson</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/englewood/">Englewood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/englewood-cliffs/">Englewood Cliffs</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fair-lawn/">Fair Lawn</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fairview/">Fairview</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fort-lee/">Fort Lee</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/franklin-lakes/">Franklin Lakes</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/garfield/">Garfield</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/glen-rock/">Glen Rock</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hackensack/">Hackensack</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/harrington-park/">Harrington Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hasbrouck-heights/">Hasbrouck Heights</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/haworth/">Haworth</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hillsdale/">Hillsdale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ho-ho-kus/">Ho-Ho-Kus</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/jersey-city/">Jersey City</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/leonia/">Leonia</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/little-ferry/">Little Ferry</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/lodi/">Lodi</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/lyndhurst/">Lyndhurst</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/mahwah/">Mahwah</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/maywood/">Maywood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/midland-park/">Midland Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/montvale/">Montvale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/moonachie/">Moonachie</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/new-milford/">New Milford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/newark/">Newark</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/north-arlington/">North Arlington</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/northvale/">Northvale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/norwood/">Norwood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/oakland/">Oakland</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/old-tappan/">Old Tappan</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/oradell/">Oradell</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/palisades-park/">Palisades Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/paramus/">Paramus</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/park-ridge/">Park Ridge</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ramsey/">Ramsey</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ridgefield/">Ridgefield</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ridgefield-park/">Ridgefield Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ridgewood/">Ridgewood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/river-edge/">River Edge</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/river-vale/">River Vale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/rochelle-park/">Rochelle Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/rockleigh/">Rockleigh</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/rutherford/">Rutherford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/saddle-brook/">Saddle Brook</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/saddle-river/">Saddle River</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/south-hackensack/">South Hackensack</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/teaneck/">Teaneck</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/tenafly/">Tenafly</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/teterboro/">Teterboro</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/upper-saddle-river/">Upper Saddle River</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/waldwick/">Waldwick</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/wallington/">Wallington</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/washington-township/">Washington Township</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/westwood/">Westwood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/woodcliff-lake/">Woodcliff Lake</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/wood-ridge/">Wood-Ridge</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/wyckoff/">Wyckoff</a></li>
+                        </div>
                     </ul>
                 </div>
-                <div class="nav-call-btn" id="navCallNow">Call Now</div>
+                <button class="nav-call-btn" id="navCallNow">Call Now</button>
             </div>
         </div>
     </header>
+    <main>
     <section class="hero">
         <div class="container">
-            <h1>LG Installation &amp; Maintenance<br>Bergen County, New Jersey</h1>
-            <p>Same-Day Service • Factory-Trained Technicians • All Service Types</p>
-            <button class="btn" id="heroCallNow">Request Installation &amp; Maintenance Today</button>
+            <h1>Authorized LG Installation & Maintenance<br>Bergen County, New Jersey</h1>
+            <p>Same-Day Service • Factory-Trained Technicians • All Bergen County</p>
+            <button class="btn" id="heroCallNow">Request Service Today</button>
+        </div>
+    </section>
+    <section style="padding: 60px 0; background: #fff;" aria-labelledby="about-section-heading">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <article itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="serviceType" content="LG Installation & Maintenance">
+                <meta itemprop="areaServed" content="Bergen County, New Jersey">
+                <h2 id="about-section-heading" itemprop="name" style="text-align:center; font-size:32px; margin-bottom:30px; color: var(--blue);">Expert LG Installation & Maintenance in Bergen County</h2>
+                <div id="expandable-content-1" style="position: relative;">
+                    <div id="expandable-text-1" itemprop="description" style="max-height: 110px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444; font-size: 16px;">
+                        <p style="margin-bottom: 15px;">When your <strong>LG appliance</strong> stops working, you deserve a repair service that delivers results. Our <strong>factory-certified technicians</strong> focus exclusively on LG appliances, bringing specialized expertise to every service call across <strong>Bergen County, New Jersey</strong>. We know how frustrating a appliance needs can be to your household—installation delays, maintenance concerns, and the stress of finding reliable help.</p>
+                        <p style="margin-bottom: 15px;">Our technicians complete <strong>annual training programs</strong> to stay current with evolving LG appliance technologies including installation techniques, maintenance procedures, and Smart ThinQ connectivity. They also have access to <strong>round-the-clock technical support</strong>, ensuring even the most challenging installation & maintenances are resolved quickly and correctly.</p>
+                        <h3 style="font-size: 20px; color: var(--blue); margin: 25px 0 15px;">The LG Installation & Maintenance Advantage</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0;">
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Authorized Bergen County Coverage:</strong> Our skilled technicians are strategically positioned throughout Bergen County, ready to address your repair needs with speed and precision.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Reliable & Prompt Service:</strong> With technicians dispatched from locations across Bergen County, we guarantee swift response times for every appointment.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Fully Equipped Service Vehicles:</strong> Each vehicle carries a comprehensive parts inventory, paired with intelligent dispatch software for maximum efficiency.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Same-Day Repair Solutions:</strong> We stock commonly needed parts to complete the majority of repairs during your first appointment.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Complete Repair Warranty:</strong> Every repair is backed by our comprehensive warranty. If any issues occur, we'll return to resolve them at no extra cost.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Diagnostic Fee Applied to Repair:</strong> Your diagnostic fee is credited toward the total repair cost, reducing your overall expense.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Certified Repair Specialists:</strong> Our technicians hold industry certifications and participate in continuous education to master the latest LG repair methods.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Upfront, Honest Pricing:</strong> No surprises or hidden charges—we provide clear pricing before any work begins.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>24/7 Emergency Repairs:</strong> Appliance emergencies don't follow a schedule—neither do we. Urgent service is available when you need it most.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Genuine LG Parts Only:</strong> We exclusively use authentic, manufacturer-approved parts to ensure lasting repairs that meet factory specifications.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Dedicated Support Team:</strong> Our friendly customer service representatives are here to answer questions and schedule appointments at your convenience.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Weekend & Flexible Appointments:</strong> We accommodate your schedule with availability seven days a week, including evenings.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Best Price Guarantee:</strong> Found a lower quote? We'll match any competitor's price to deliver exceptional value.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Money Back Guarantee:</strong> If we're unable to repair your appliance, you owe us nothing. It's that simple.</span>
+                            </li>
+                            <li style="padding: 12px 0; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Fully Insured Service:</strong> We carry comprehensive property damage insurance for your protection. For New Jersey residences, we provide certificates of insurance upon request to meet building requirements and ensure seamless access.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="expandable-fade-1" style="position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: linear-gradient(transparent, #fff); pointer-events: none;" aria-hidden="true"></div>
+                </div>
+                <button id="expandable-btn-1" onclick="toggleExpand('1')" aria-expanded="false" aria-controls="expandable-text-1" style="display: block; margin: 20px auto 0; background: none; border: none; color: var(--blue); font-size: 16px; font-weight: 600; cursor: pointer; padding: 10px 20px; transition: color 0.3s;">+ Show More</button>
+            </article>
         </div>
     </section>
     <section class="alt">
         <div class="container">
-            <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified LG Installation &amp; Maintenance</h2>
+    <section class="alt">
+        <div class="container">
+            <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified LG Installation & Maintenance</h2>
             <div class="services-grid">
                 <div class="service">
-                    <i class="fas fa-tools"></i>
+                    <div class="service-icon">🔧</div>
                     <h3>Appliance Installation</h3>
                     <div class="service-types">
-                        <h4>Professional Installation Services:</h4>
+                        <h4>Installation Services:</h4>
                         <ul>
-                            <li>Washers and dryers - water line and venting</li>
-                            <li>Refrigerators - water line and ice maker</li>
-                            <li>Dishwashers - plumbing and electrical</li>
-                            <li>Ovens and ranges - gas line or electrical</li>
-                            <li>Cooktops - gas or electric hookup</li>
-                            <li>Microwaves - mounting and electrical</li>
-                            <li>Wine coolers - proper ventilation setup</li>
-                            <li>Vent hoods - ductwork and electrical</li>
+                            <li>Washer installation</li>
+                            <li>Dryer installation</li>
+                            <li>Refrigerator installation</li>
+                            <li>Dishwasher installation</li>
+                            <li>Oven & range installation</li>
+                            <li>Cooktop installation</li>
+                            <li>Microwave installation</li>
+                            <li>Wine cooler installation</li>
+                            <li>Hood vent installation</li>
+                            <li>Built-in appliances</li>
+                            <li>Stacking kits</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Why Professional Installation Matters:</h4>
-                        <ul>
-                            <li>Manufacturer warranty protection maintained</li>
-                            <li>Proper electrical and gas connections</li>
-                            <li>Code-compliant installation guaranteed</li>
-                            <li>Prevents damage from incorrect setup</li>
-                            <li>Safety first with gas and electrical</li>
-                            <li>Ensures optimal appliance performance</li>
-                        </ul>
+                        <div id="expandable-content-installation" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-installation" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Washer Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG washer installation service</strong> ensures your new washing machine is properly connected and configured for optimal performance. Professional installation includes leveling the unit to prevent vibration, connecting water supply lines with proper pressure, installing drain hoses at correct heights, and testing all cycles. We remove shipping bolts that can damage the drum if left in place. Our technicians verify proper operation throughout Hackensack, Paramus, Fort Lee, and all Bergen County communities.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dryer Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dryer installation service</strong> covers both electric and gas dryer setup throughout Bergen County. Electric dryer installation includes proper 240V outlet connection and cord configuration. Gas dryer installation requires connecting the gas supply line, testing for leaks, and verifying proper combustion. Both types need proper venting to exhaust moisture and lint safely outside. Our technicians ensure safe, code-compliant installation in Teaneck, Ridgewood, Englewood, and surrounding areas.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Refrigerator Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG refrigerator installation service</strong> positions your new refrigerator, connects water lines for ice makers and dispensers, and ensures proper leveling for door alignment and drainage. We verify adequate clearance for ventilation and door swing. Ice maker hookup includes installing supply lines with proper shutoff valves. Our technicians set temperature controls and explain features throughout Glen Rock, Bergenfield, Dumont, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dishwasher Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dishwasher installation service</strong> connects your new dishwasher to water supply, drain, and electrical systems. Proper installation prevents leaks and ensures efficient operation. We secure the unit to countertops, connect drain hoses with air gaps or high loops as required by code, and test all cycles. Our technicians handle built-in dishwasher installation throughout Mahwah, Ramsey, Wyckoff, and all Bergen County kitchens.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Oven & Range Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG oven and range installation service</strong> covers freestanding ranges, slide-in models, and wall ovens. Electric ranges require proper 240V connections; gas ranges need gas line hookup with leak testing. Wall oven installation includes securing units in cabinet cutouts and ensuring proper ventilation. We level ranges, install anti-tip brackets for safety, and verify all functions throughout Tenafly, Cresskill, Alpine, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Cooktop Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG cooktop installation service</strong> installs gas, electric, and induction cooktops in countertop cutouts. Gas cooktops require proper gas connections with shutoff valves and leak testing. Electric and induction models need appropriate electrical connections. We ensure proper support, sealing, and ventilation clearances. Our technicians install cooktops throughout Closter, Demarest, Haworth, and all Bergen County custom kitchens.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Microwave Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave installation service</strong> covers over-the-range, built-in, and microwave drawer installations. Over-the-range units require secure wall mounting, electrical connection, and ventilation ductwork. Built-in microwaves need proper cabinet preparation and trim kit installation. Microwave drawers require precise cabinet cutouts and electrical work. Our technicians install all microwave types throughout New Milford, Oradell, River Edge, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Wine Cooler Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG wine cooler installation service</strong> positions freestanding units or installs built-in and undercounter models. Built-in wine coolers require proper cabinet ventilation to prevent overheating. We level units for proper door operation, connect electrical supply, and set temperature zones. Our technicians install wine coolers throughout Franklin Lakes, Saddle River, Upper Saddle River, and Bergen County wine enthusiast homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Hood Vent Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG hood vent installation service</strong> mounts range hoods and connects ventilation ductwork for proper exhaust. Under-cabinet, wall-mount, and island hoods each have specific installation requirements. We ensure adequate CFM for your cooking setup and proper duct routing to exterior vents. Our technicians install hood vents throughout Paramus, Hackensack, Teaneck, and all Bergen County kitchens.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Built-In Appliances</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG built-in appliance installation</strong> handles the specialized requirements of cabinet-integrated appliances. Built-in refrigerators, dishwashers, microwaves, and ovens require precise cabinet preparation and proper utility connections. We ensure seamless integration with your cabinetry and verify all functions. Our technicians install built-in appliances throughout Ridgewood, Glen Rock, and Bergen County custom kitchen installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Stacking Kits</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG stacking kit installation</strong> safely stacks your dryer on top of your washer to maximize floor space. Stacking kits provide secure attachment and may include pull-out shelves for convenience. Proper installation ensures stability and safety. Our technicians install stacking kits throughout Bergen County apartments, condos, and homes with limited laundry space.</p>
+
+                            </div>
+                            <div id="expandable-fade-installation" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-installation" onclick="toggleExpand('installation')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-wrench"></i>
+                    <div class="service-icon">🛡️</div>
                     <h3>Preventive Maintenance</h3>
                     <div class="service-types">
-                        <h4>Regular Maintenance Services:</h4>
+                        <h4>Maintenance Services:</h4>
                         <ul>
-                            <li>Washer drum cleaning and inspection</li>
-                            <li>Dryer vent cleaning and safety check</li>
-                            <li>Refrigerator coil cleaning and defrost</li>
-                            <li>Dishwasher spray arm and filter cleaning</li>
-                            <li>Oven calibration and cleaning</li>
-                            <li>Cooktop burner adjustment and cleaning</li>
-                            <li>Microwave door seal inspection</li>
-                            <li>Wine cooler temperature calibration</li>
+                            <li>Annual appliance checkups</li>
+                            <li>Washer maintenance</li>
+                            <li>Dryer vent cleaning</li>
+                            <li>Refrigerator coil cleaning</li>
+                            <li>Dishwasher maintenance</li>
+                            <li>Oven calibration</li>
+                            <li>Cooktop cleaning</li>
+                            <li>Filter replacement</li>
+                            <li>Seal inspection</li>
+                            <li>Performance optimization</li>
+                            <li>Multi-appliance service</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Benefits of Regular Maintenance:</h4>
-                        <ul>
-                            <li>Extends appliance lifespan significantly</li>
-                            <li>Prevents costly emergency repairs</li>
-                            <li>Maintains energy efficiency savings</li>
-                            <li>Identifies issues before they worsen</li>
-                            <li>Keeps warranty coverage valid</li>
-                            <li>Improves appliance performance</li>
-                        </ul>
+                        <div id="expandable-content-maintenance" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-maintenance" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Annual Appliance Checkups</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance annual checkup service</strong> provides comprehensive inspection of your LG appliances to identify potential problems before they cause breakdowns. Our technicians test all functions, inspect wear items, clean critical components, and verify safe operation. Annual maintenance extends appliance life, maintains efficiency, and prevents costly emergency repairs. Schedule checkups throughout Hackensack, Paramus, and all Bergen County for peace of mind.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Washer Maintenance</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG washer preventive maintenance</strong> keeps your washing machine running efficiently and odor-free. Service includes cleaning the drum and gaskets, inspecting hoses for wear, checking water inlet screens, testing drain pump operation, and verifying proper leveling. We treat mold and mildew issues common in front-load washers. Our technicians provide washer maintenance throughout Teaneck, Fort Lee, Englewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dryer Vent Cleaning</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dryer vent cleaning service</strong> removes lint buildup that creates fire hazards and reduces drying efficiency. Clogged vents cause longer dry times, higher energy bills, and potential fires. We clean the entire vent run from dryer to exterior, inspect the vent hood, and verify proper airflow. Dryer vent cleaning is essential maintenance throughout Ridgewood, Glen Rock, Bergenfield, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Refrigerator Coil Cleaning</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG refrigerator coil cleaning service</strong> removes dust and debris from condenser coils that reduce cooling efficiency. Dirty coils force the compressor to work harder, increasing energy consumption and shortening compressor life. We clean coils, inspect door seals, verify temperatures, and check ice maker operation. Coil cleaning maintains efficiency throughout Dumont, New Milford, Oradell, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dishwasher Maintenance</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dishwasher preventive maintenance</strong> ensures clean dishes and efficient operation. Service includes cleaning spray arms and filters, inspecting door seals, descaling the interior, checking drain pump operation, and verifying proper water temperature. Regular maintenance prevents odors, improves cleaning performance, and extends dishwasher life throughout Mahwah, Ramsey, Wyckoff, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Oven Calibration</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG oven calibration service</strong> ensures accurate cooking temperatures for consistent results. Ovens drift out of calibration over time, causing undercooked or overcooked food. We test actual temperatures against settings, adjust calibration, and verify accuracy across the temperature range. Proper calibration improves cooking results throughout Tenafly, Cresskill, Alpine, and Bergen County kitchens.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Cooktop Cleaning</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG cooktop professional cleaning</strong> removes stubborn buildup that affects performance and appearance. Gas burner ports clog with debris; glass cooktops develop burned-on residue. We clean burner assemblies, polish glass surfaces, and restore cooktop appearance. Professional cleaning maintains cooktop performance throughout Closter, Demarest, Haworth, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Filter Replacement</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance filter replacement service</strong> installs fresh filters in refrigerators, range hoods, and other filtered appliances. Water filters require regular replacement for clean ice and water. Range hood filters need cleaning or replacement for effective ventilation. We supply and install genuine LG filters throughout Franklin Lakes, Saddle River, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Seal Inspection</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance seal inspection service</strong> checks door gaskets and seals that maintain efficiency. Refrigerator door seals prevent cold air loss; washer door boots prevent leaks; oven seals retain heat. Worn seals waste energy and affect performance. Our technicians inspect and replace seals throughout Paramus, Hackensack, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Performance Optimization</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance performance optimization</strong> fine-tunes your appliances for maximum efficiency and effectiveness. We adjust settings, update configurations, and optimize operation based on your usage patterns. Performance optimization reduces energy consumption and improves results throughout Bergen County homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Multi-Appliance Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG multi-appliance maintenance packages</strong> provide convenient service for all your LG appliances in one visit. Bundle maintenance for washers, dryers, refrigerators, dishwashers, and other appliances for efficiency and savings. Our technicians service complete LG kitchens and laundry rooms throughout Bergen County in single appointments.</p>
+
+                            </div>
+                            <div id="expandable-fade-maintenance" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-maintenance" onclick="toggleExpand('maintenance')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-check-circle"></i>
+                    <div class="service-icon">✅</div>
                     <h3>Safety Inspections</h3>
                     <div class="service-types">
-                        <h4>Comprehensive Safety Checks:</h4>
+                        <h4>Inspection Services:</h4>
                         <ul>
-                            <li>Gas line leak detection and testing</li>
-                            <li>Electrical connection safety verification</li>
-                            <li>Water line leak inspection</li>
-                            <li>Ventilation system assessment</li>
-                            <li>Door seal integrity testing</li>
-                            <li>Grounding and polarity checks</li>
-                            <li>Carbon monoxide testing for gas appliances</li>
-                            <li>Fire hazard identification</li>
+                            <li>Gas appliance safety check</li>
+                            <li>Electrical safety inspection</li>
+                            <li>Dryer vent inspection</li>
+                            <li>Water connection check</li>
+                            <li>Refrigerant system check</li>
+                            <li>Ventilation inspection</li>
+                            <li>Anti-tip bracket check</li>
+                            <li>Door latch testing</li>
+                            <li>Leak detection</li>
+                            <li>Code compliance review</li>
+                            <li>Home sale inspections</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">When Safety Inspections Are Critical:</h4>
-                        <ul>
-                            <li>After moving into a new home</li>
-                            <li>Before selling your property</li>
-                            <li>When appliances are 10+ years old</li>
-                            <li>After any DIY repairs or modifications</li>
-                            <li>If you smell gas or notice unusual odors</li>
-                            <li>Annual check for rental properties</li>
-                        </ul>
+                        <div id="expandable-content-safety" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-safety" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Gas Appliance Safety Check</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas appliance safety inspection</strong> verifies safe operation of gas ranges, cooktops, dryers, and ovens. We test for gas leaks, verify proper combustion, check ignition systems, and ensure adequate ventilation. Gas appliance safety is critical—carbon monoxide and fire hazards require professional inspection. Our technicians perform gas safety checks throughout Hackensack, Paramus, Fort Lee, and all Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Electrical Safety Inspection</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electrical appliance safety inspection</strong> checks wiring, connections, and grounding on all electric appliances. We verify proper voltage, inspect cords and plugs for damage, check outlet conditions, and test ground fault protection where applicable. Electrical problems cause fires and shock hazards. Our technicians inspect electrical safety throughout Teaneck, Englewood, Ridgewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dryer Vent Inspection</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dryer vent safety inspection</strong> evaluates your entire vent system for fire hazards. Lint accumulation in dryer vents causes thousands of house fires annually. We inspect vent runs for blockages, crushed sections, improper materials, and excessive length. Vent inspection identifies hazards before fires occur throughout Glen Rock, Bergenfield, Dumont, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Water Connection Check</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG water appliance connection inspection</strong> checks hoses, valves, and connections on washers, dishwashers, and refrigerators. Water supply hoses deteriorate and can burst, causing flooding. We inspect hose condition, check valve operation, and verify connections. Water connection inspection prevents water damage throughout Mahwah, Ramsey, Wyckoff, and Bergen County homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Refrigerant System Check</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG refrigerant system inspection</strong> verifies proper operation of sealed cooling systems in refrigerators, freezers, and wine coolers. We check for refrigerant leaks, verify proper pressures, and inspect compressor operation. Refrigerant leaks reduce cooling efficiency and harm the environment. Our EPA-certified technicians inspect refrigerant systems throughout Tenafly, Cresskill, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Ventilation Inspection</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance ventilation inspection</strong> ensures proper airflow around and through ventilated appliances. Refrigerators need clearance for condenser cooling; built-in appliances require specified ventilation; range hoods need clear ductwork. Inadequate ventilation causes overheating and poor performance. We inspect ventilation throughout Alpine, Closter, Demarest, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Anti-Tip Bracket Check</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG range anti-tip bracket inspection</strong> verifies that your range is secured against tipping. Ranges can tip forward when weight is placed on open oven doors, creating serious injury hazards especially for children. We check bracket installation and secure ranges properly. Anti-tip inspection is essential throughout Bergen County homes with freestanding ranges.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Door Latch Testing</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance door latch safety testing</strong> verifies that safety interlocks function properly on microwaves, ovens, washers, and dryers. Door switches prevent operation when doors are open—failed switches create safety hazards. We test all door safety systems throughout Franklin Lakes, Saddle River, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Leak Detection</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance leak detection service</strong> identifies water and gas leaks before they cause damage or danger. We use specialized equipment to detect gas leaks and inspect for water leaks at all connection points. Early leak detection prevents property damage and safety hazards throughout Bergen County homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Code Compliance Review</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance code compliance inspection</strong> verifies that appliance installations meet current building and safety codes. Code requirements change over time—older installations may not meet current standards. We identify compliance issues and recommend corrections throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Home Sale Inspections</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance home sale inspection</strong> provides documentation of appliance condition for real estate transactions. Buyers and sellers benefit from professional appliance assessment. We provide detailed reports on appliance condition and expected lifespan throughout Bergen County real estate transactions.</p>
+
+                            </div>
+                            <div id="expandable-fade-safety" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-safety" onclick="toggleExpand('safety')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-recycle"></i>
+                    <div class="service-icon">🚚</div>
                     <h3>Appliance Removal & Disposal</h3>
                     <div class="service-types">
-                        <h4>Professional Removal Services:</h4>
+                        <h4>Removal Services:</h4>
                         <ul>
-                            <li>Safe disconnection of all utilities</li>
-                            <li>Careful removal without property damage</li>
-                            <li>Haul away old appliances responsibly</li>
-                            <li>Eco-friendly recycling and disposal</li>
-                            <li>Compliance with local regulations</li>
-                            <li>Certificate of disposal provided</li>
-                            <li>Same-day service available</li>
-                            <li>No hidden fees or charges</li>
-                        </ul>
-                        <h4 style="margin-top: 20px;">Why Professional Removal:</h4>
-                        <ul>
-                            <li>Heavy appliances require proper equipment</li>
-                            <li>Prevents injury from improper lifting</li>
-                            <li>Protects floors, walls, and doorways</li>
-                            <li>Proper refrigerant recovery required by law</li>
+                            <li>Old appliance removal</li>
+                            <li>Haul-away service</li>
+                            <li>Refrigerant recovery</li>
                             <li>Environmentally responsible disposal</li>
-                            <li>Saves time and physical effort</li>
+                            <li>Donation coordination</li>
+                            <li>Recycling service</li>
+                            <li>Washer removal</li>
+                            <li>Dryer removal</li>
+                            <li>Refrigerator removal</li>
+                            <li>Built-in removal</li>
+                            <li>Multi-unit removal</li>
                         </ul>
+                        <div id="expandable-content-removal" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-removal" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Old Appliance Removal</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG old appliance removal service</strong> takes away your existing appliances when you upgrade to new LG models. We disconnect old units safely, navigate stairs and tight spaces, and remove appliances from your home. Old appliance removal makes your upgrade hassle-free. Our technicians remove old appliances throughout Hackensack, Paramus, Fort Lee, and all Bergen County communities.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Haul-Away Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance haul-away service</strong> removes unwanted appliances from your property completely. We load appliances onto our trucks and transport them away—you don't need to worry about disposal. Haul-away service is available standalone or combined with new appliance installation throughout Teaneck, Englewood, Ridgewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Refrigerant Recovery</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG refrigerant recovery service</strong> properly removes refrigerants from old cooling appliances before disposal. EPA regulations require refrigerant recovery to prevent environmental damage. Our EPA-certified technicians recover refrigerants from refrigerators, freezers, air conditioners, and wine coolers throughout Glen Rock, Bergenfield, Dumont, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Environmentally Responsible Disposal</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance environmental disposal</strong> ensures old appliances are disposed of responsibly. We follow all environmental regulations for refrigerant recovery, hazardous material handling, and proper disposal. Environmentally responsible disposal protects our community throughout Mahwah, Ramsey, Wyckoff, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Donation Coordination</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance donation coordination</strong> connects working appliances with charitable organizations. If your old appliance still functions, donation gives it new life while helping those in need. We can coordinate donation pickup for qualifying appliances throughout Tenafly, Cresskill, Alpine, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Recycling Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance recycling service</strong> ensures old appliances are recycled properly. Appliances contain valuable metals and materials that can be reclaimed. We work with certified recyclers to maximize material recovery throughout Closter, Demarest, Haworth, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Washer Removal</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG old washer removal service</strong> disconnects and removes your old washing machine. We shut off water supply, disconnect hoses, and carefully remove heavy washers from laundry rooms, basements, and tight spaces. Washer removal is available throughout Franklin Lakes, Saddle River, Upper Saddle River, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dryer Removal</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG old dryer removal service</strong> safely disconnects and removes electric or gas dryers. We properly disconnect electrical and gas connections, detach venting, and remove the unit. Gas dryer removal requires proper valve shutoff for safety throughout Paramus, Hackensack, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Refrigerator Removal</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG old refrigerator removal service</strong> handles the heavy lifting and proper disposal of old refrigerators. We disconnect water lines, recover refrigerants as required, and navigate large refrigerators through doorways and stairs. Refrigerator removal is available throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Built-In Removal</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG built-in appliance removal service</strong> extracts cabinet-integrated appliances requiring careful removal. Built-in refrigerators, wall ovens, dishwashers, and microwaves need proper disconnection and extraction from cabinetry. Our technicians remove built-in appliances throughout Bergen County custom kitchens.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Multi-Unit Removal</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG multi-appliance removal service</strong> removes multiple old appliances efficiently during kitchen or laundry renovations. Bundle removal of washers, dryers, refrigerators, and other appliances for convenience and savings throughout Bergen County renovation projects.</p>
+
+                            </div>
+                            <div id="expandable-fade-removal" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-removal" onclick="toggleExpand('removal')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-award"></i>
+                    <div class="service-icon">📋</div>
                     <h3>Warranty Assistance</h3>
                     <div class="service-types">
-                        <h4>Warranty Repair Support:</h4>
+                        <h4>Warranty Services:</h4>
                         <ul>
-                            <li>Help navigating warranty claims</li>
-                            <li>Quality OEM replacement parts</li>
-                            <li>Documentation for warranty purposes</li>
-                            <li>Service estimates provided</li>
-                            <li>Repair work professionally completed</li>
-                            <li>Contact LG for coverage details</li>
-                            <li>Service performed to high standards</li>
-                            <li>Extended protection plans available</li>
+                            <li>Manufacturer warranty claims</li>
+                            <li>Extended warranty service</li>
+                            <li>Warranty registration help</li>
+                            <li>Coverage verification</li>
+                            <li>Claim documentation</li>
+                            <li>Parts warranty</li>
+                            <li>Labor warranty</li>
+                            <li>Warranty transfers</li>
+                            <li>Out-of-warranty options</li>
+                            <li>Home warranty coordination</li>
+                            <li>Warranty repair priority</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Important Warranty Notes:</h4>
-                        <ul>
-                            <li>Always verify coverage with LG first</li>
-                            <li>LG warranty terms vary by product and purchase date</li>
-                            <li>Some repairs may not be covered</li>
-                            <li>Customer responsible for non-covered work</li>
-                            <li>We provide service quotes before work begins</li>
-                            <li>Keep your proof of purchase and warranty info</li>
-                        </ul>
+                        <div id="expandable-content-warranty" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-warranty" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Manufacturer Warranty Claims</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG manufacturer warranty service</strong> provides authorized repairs covered under your LG factory warranty. As an authorized service provider, we process warranty claims directly with LG. Covered repairs are completed at no cost to you for parts and labor during the warranty period. We handle warranty claims throughout Hackensack, Paramus, Fort Lee, and all Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Extended Warranty Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG extended warranty repair service</strong> handles repairs covered by extended protection plans purchased from LG or retailers. We work with extended warranty providers to process claims and complete authorized repairs. Extended warranty service is available throughout Teaneck, Englewood, Ridgewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Warranty Registration Help</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance warranty registration assistance</strong> helps you register new appliances to activate warranty coverage. Proper registration ensures you receive full warranty benefits and important product updates. Our technicians assist with warranty registration throughout Glen Rock, Bergenfield, Dumont, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Coverage Verification</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG warranty coverage verification</strong> determines what repairs are covered under your warranty. Warranty terms vary by appliance, purchase date, and warranty type. We verify coverage before repairs so you know your costs upfront throughout Mahwah, Ramsey, Wyckoff, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Claim Documentation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG warranty claim documentation</strong> provides proper paperwork for warranty repairs. We document repairs, parts used, and labor performed as required by warranty providers. Proper documentation ensures smooth claim processing throughout Tenafly, Cresskill, Alpine, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Parts Warranty</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG parts warranty service</strong> covers replacement parts that fail during the warranty period. Genuine LG parts carry their own warranty coverage. If a replaced part fails prematurely, we handle warranty replacement throughout Closter, Demarest, Haworth, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Labor Warranty</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG labor warranty coverage</strong> protects you against repair failures during the warranty period. If our repair doesn't resolve the problem, we return at no additional labor charge. Our labor warranty provides peace of mind throughout Franklin Lakes, Saddle River, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Warranty Transfers</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG warranty transfer assistance</strong> helps transfer warranty coverage when you purchase a home with LG appliances. Warranty transferability depends on LG's terms and the warranty type. We assist with transfer documentation throughout Bergen County real estate transactions.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Out-of-Warranty Options</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG out-of-warranty repair service</strong> provides cost-effective options when warranty coverage has expired. We offer competitive pricing on parts and labor for appliances no longer under warranty. Quality repair extends appliance life throughout Paramus, Hackensack, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Home Warranty Coordination</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG home warranty coordination</strong> works with third-party home warranty companies covering your appliances. We coordinate with home warranty providers for authorization and payment processing. Home warranty service is available throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Warranty Repair Priority</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG warranty repair priority scheduling</strong> provides prompt service for warranty-covered repairs. We schedule warranty repairs quickly to minimize inconvenience during coverage periods throughout Bergen County.</p>
+
+                            </div>
+                            <div id="expandable-fade-warranty" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-warranty" onclick="toggleExpand('warranty')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-bolt"></i>
+                    <div class="service-icon">🚨</div>
                     <h3>Emergency Services</h3>
                     <div class="service-types">
-                        <h4>24/7 Emergency Response:</h4>
+                        <h4>Emergency Services:</h4>
                         <ul>
-                            <li>Gas leak emergency response</li>
-                            <li>Water leak flooding prevention</li>
-                            <li>Electrical hazard mitigation</li>
-                            <li>Refrigerator cooling failure - food loss</li>
-                            <li>Oven or cooktop fire hazards</li>
-                            <li>Carbon monoxide detector alerts</li>
-                            <li>Same-day emergency appointments</li>
-                            <li>After-hours and weekend availability</li>
+                            <li>Same-day emergency repair</li>
+                            <li>Gas leak response</li>
+                            <li>Water leak emergency</li>
+                            <li>Refrigerator failure</li>
+                            <li>Electrical hazards</li>
+                            <li>After-hours service</li>
+                            <li>Weekend availability</li>
+                            <li>Holiday service</li>
+                            <li>Commercial emergencies</li>
+                            <li>Priority dispatch</li>
+                            <li>Rapid response team</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Emergency Service Benefits:</h4>
-                        <ul>
-                            <li>Rapid response within 2 hours</li>
-                            <li>Fully stocked service vehicles</li>
-                            <li>Licensed and insured technicians</li>
-                            <li>Temporary solutions provided immediately</li>
-                            <li>Prevents secondary damage to home</li>
-                            <li>Direct insurance claim assistance</li>
-                        </ul>
+                        <div id="expandable-content-emergency" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-emergency" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Same-Day Emergency Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG same-day emergency repair service</strong> responds to urgent appliance failures requiring immediate attention. When appliance breakdowns can't wait, we dispatch technicians for same-day service. Same-day emergency repair is available throughout Hackensack, Paramus, Fort Lee, and all Bergen County based on technician availability and emergency severity.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Gas Leak Response</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas appliance emergency response</strong> addresses suspected gas leaks from ranges, cooktops, dryers, and ovens. Gas leaks pose immediate fire and health hazards requiring urgent attention. If you smell gas, leave the area and call the gas company first, then contact us for appliance repair throughout Teaneck, Englewood, Ridgewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Water Leak Emergency</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG water appliance leak emergency service</strong> responds to active water leaks from washers, dishwashers, and refrigerators. Water leaks cause progressive damage—quick response limits property damage. We help stop leaks and repair the source throughout Glen Rock, Bergenfield, Dumont, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Refrigerator Failure</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG refrigerator emergency repair</strong> responds when refrigerators stop cooling, threatening food spoilage. Complete cooling failure is an emergency requiring prompt service. We prioritize refrigerator emergencies to save your food throughout Mahwah, Ramsey, Wyckoff, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Electrical Hazards</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electrical appliance hazard response</strong> addresses sparking, burning smells, or other electrical dangers from appliances. Electrical problems can cause fires—unplug affected appliances and contact us for emergency service throughout Tenafly, Cresskill, Alpine, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">After-Hours Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG after-hours emergency service</strong> provides repair options outside normal business hours for urgent situations. Appliance emergencies don't follow business schedules. We offer after-hours availability for true emergencies throughout Closter, Demarest, Haworth, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Weekend Availability</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG weekend emergency repair service</strong> responds to urgent appliance failures on Saturdays and Sundays. Weekend breakdowns shouldn't mean waiting until Monday. We provide weekend emergency service throughout Franklin Lakes, Saddle River, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Holiday Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG holiday emergency repair service</strong> offers limited availability for critical appliance failures during holidays. Refrigerator failures before holiday gatherings and other urgent situations may qualify for holiday service throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Commercial Emergencies</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG commercial appliance emergency service</strong> provides priority response for businesses where appliance failure affects operations. Restaurant, hotel, and commercial laundry emergencies receive expedited service throughout Paramus, Hackensack, and Bergen County business locations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Priority Dispatch</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG emergency priority dispatch</strong> moves urgent repairs to the front of our service queue. True emergencies receive priority scheduling over routine service calls throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Rapid Response Team</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG rapid response emergency team</strong> consists of experienced technicians equipped for urgent repairs. Our emergency team carries common parts and has authority to expedite solutions throughout Bergen County emergency situations.</p>
+
+                            </div>
+                            <div id="expandable-fade-emergency" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-emergency" onclick="toggleExpand('emergency')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-clipboard-check"></i>
+                    <div class="service-icon">📝</div>
                     <h3>Service Contracts</h3>
                     <div class="service-types">
-                        <h4>Annual Maintenance Plans:</h4>
+                        <h4>Contract Options:</h4>
                         <ul>
-                            <li>Scheduled maintenance visits included</li>
-                            <li>Priority scheduling guaranteed</li>
-                            <li>Discounted repair rates - save 15-20%</li>
-                            <li>Discounted diagnostic fees</li>
-                            <li>Annual safety inspections included</li>
-                            <li>Parts warranty extended coverage</li>
-                            <li>Transferable to new homeowners</li>
-                            <li>Flexible monthly payment options</li>
+                            <li>Annual service plans</li>
+                            <li>Multi-appliance contracts</li>
+                            <li>Priority scheduling</li>
+                            <li>Discounted repairs</li>
+                            <li>Preventive maintenance included</li>
+                            <li>No service call fees</li>
+                            <li>Parts discounts</li>
+                            <li>Commercial contracts</li>
+                            <li>Property management plans</li>
+                            <li>Landlord programs</li>
+                            <li>Flexible terms</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Service Contract Advantages:</h4>
-                        <ul>
-                            <li>Budget-friendly predictable costs</li>
-                            <li>Extends appliance lifespan by years</li>
-                            <li>Priority emergency service access</li>
-                            <li>Comprehensive coverage for all LG appliances</li>
-                            <li>Peace of mind protection</li>
-                            <li>Increased home resale value</li>
-                        </ul>
-                    </div>
-                </div>
-                                <div class="service">
-                    <i class="fas fa-plug"></i>
-                    <h3>Appliance Conversion Services</h3>
-                    <div class="service-types">
-                        <h4>Gas to Electric & Electric to Gas:</h4>
-                        <ul>
-                            <li>Range and oven fuel type conversions</li>
-                            <li>Dryer power source conversion kits</li>
-                            <li>Cooktop fuel modification services</li>
-                            <li>Gas line installation or capping</li>
-                            <li>220V electrical circuit installation</li>
-                            <li>Proper ventilation adjustments</li>
-                            <li>Code compliance verification</li>
-                            <li>Manufacturer approved conversion kits</li>
-                        </ul>
-                        <h4 style="margin-top: 20px;">Why Convert Your Appliances:</h4>
-                        <ul>
-                            <li>Moving to home without gas lines</li>
-                            <li>Lower energy costs with fuel switch</li>
-                            <li>Kitchen remodel fuel preference change</li>
-                            <li>Safety concerns with gas appliances</li>
-                            <li>Building code requirements updated</li>
-                            <li>Environmental preference for electric</li>
-                        </ul>
+                        <div id="expandable-content-contracts" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-contracts" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Annual Service Plans</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG annual service plan contracts</strong> provide comprehensive coverage for your LG appliances throughout the year. Annual plans include scheduled maintenance, priority repair scheduling, and discounts on parts and labor. Plans provide budget predictability and peace of mind throughout Hackensack, Paramus, Fort Lee, and all Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Multi-Appliance Contracts</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG multi-appliance service contracts</strong> cover all your LG appliances under one agreement. Bundle coverage for washers, dryers, refrigerators, dishwashers, and more for convenience and savings. Multi-appliance contracts simplify service throughout Teaneck, Englewood, Ridgewood, and Bergen County homes with multiple LG appliances.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Priority Scheduling</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG service contract priority scheduling</strong> gives contract customers preferred appointment times. When repairs are needed, contract customers move to the front of our scheduling queue. Priority scheduling minimizes wait times throughout Glen Rock, Bergenfield, Dumont, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Discounted Repairs</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG service contract repair discounts</strong> reduce costs when repairs are needed. Contract customers receive discounted labor rates and parts pricing. Discounts provide significant savings over time throughout Mahwah, Ramsey, Wyckoff, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Preventive Maintenance Included</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG service contracts with maintenance</strong> include scheduled preventive maintenance visits. Regular maintenance prevents breakdowns and extends appliance life. Maintenance visits are scheduled at your convenience throughout Tenafly, Cresskill, Alpine, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">No Service Call Fees</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG service contracts without trip charges</strong> eliminate service call fees for covered appliances. Standard service calls include a trip charge—contracts waive this fee for savings on every visit throughout Closter, Demarest, Haworth, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Parts Discounts</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG service contract parts discounts</strong> reduce the cost of replacement parts. Contract customers pay reduced prices for genuine LG parts. Parts discounts add up throughout Franklin Lakes, Saddle River, and Bergen County contract customers.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Commercial Contracts</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG commercial service contracts</strong> provide coverage for businesses with LG appliances. Commercial contracts include priority response, maintenance scheduling around business hours, and volume discounts throughout Paramus, Hackensack, and Bergen County businesses.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Property Management Plans</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG property management service plans</strong> cover multiple units for property managers and management companies. Simplified billing, tenant coordination, and volume pricing make managing appliance service easier throughout Bergen County rental properties.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Landlord Programs</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG landlord service programs</strong> help rental property owners maintain appliances across their properties. Landlord programs include tenant coordination and streamlined service throughout Bergen County rental units.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Flexible Terms</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG service contract flexible terms</strong> allow customization to meet your needs. Choose coverage levels, payment schedules, and contract lengths that work for you throughout Bergen County.</p>
+
+                            </div>
+                            <div id="expandable-fade-contracts" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-contracts" onclick="toggleExpand('contracts')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
-                    <i class="fas fa-cogs"></i>
+                    <div class="service-icon">🔄</div>
+                    <h3>Appliance Conversion Services</h3>
+                    <div class="service-types">
+                        <h4>Conversion Services:</h4>
+                        <ul>
+                            <li>Gas to electric conversion</li>
+                            <li>Electric to gas conversion</li>
+                            <li>LP to natural gas</li>
+                            <li>Natural gas to LP</li>
+                            <li>Dryer fuel conversion</li>
+                            <li>Range conversion</li>
+                            <li>Cooktop conversion</li>
+                            <li>Oven conversion</li>
+                            <li>Voltage conversion</li>
+                            <li>Hook-up modifications</li>
+                            <li>Code compliance updates</li>
+                        </ul>
+                        <div id="expandable-content-conversion" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-conversion" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Gas to Electric Conversion</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas to electric appliance conversion</strong> helps when you're switching from gas to electric appliances. Conversion involves capping gas lines and installing appropriate electrical circuits. We coordinate the transition throughout Hackensack, Paramus, Fort Lee, and all Bergen County homes converting to electric appliances.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Electric to Gas Conversion</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric to gas appliance conversion</strong> assists when changing from electric to gas appliances. Gas appliance installation requires proper gas line connections and venting. We install gas appliances and ensure safe operation throughout Teaneck, Englewood, Ridgewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">LP to Natural Gas</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG LP to natural gas conversion</strong> adapts appliances designed for propane to work with natural gas. Conversion requires orifice changes and regulator adjustments for proper combustion. We convert ranges, cooktops, dryers, and ovens throughout Glen Rock, Bergenfield, Dumont, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Natural Gas to LP</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG natural gas to LP conversion</strong> adapts appliances for propane use when natural gas isn't available. LP conversion is common in rural Bergen County areas served by propane. We convert appliances for LP operation throughout Mahwah, Ramsey, and other Bergen County areas using propane.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dryer Fuel Conversion</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dryer fuel type conversion</strong> changes dryers between gas and electric or between LP and natural gas. When moving or changing fuel availability, dryer conversion lets you keep your appliance. We convert dryers throughout Tenafly, Cresskill, Alpine, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Range Conversion</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG range fuel conversion service</strong> adapts ranges for different fuel types. Gas range conversion between LP and natural gas requires orifice and regulator changes. We convert ranges throughout Closter, Demarest, Haworth, and Bergen County kitchens.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Cooktop Conversion</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG cooktop fuel conversion</strong> modifies gas cooktops for LP or natural gas operation. Cooktop conversion ensures proper flame characteristics for safe, efficient cooking. We convert cooktops throughout Franklin Lakes, Saddle River, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Oven Conversion</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG oven fuel conversion service</strong> adapts gas ovens for different fuel sources. Oven conversion requires proper adjustment for accurate temperatures and safe operation. We convert ovens throughout Paramus, Hackensack, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Voltage Conversion</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance voltage configuration</strong> ensures appliances match your electrical supply. Some appliances can be configured for different voltages. We verify electrical compatibility throughout Bergen County installations.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Hook-Up Modifications</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance connection modifications</strong> adapt appliances to existing utility connections. When new appliances don't match existing hookups, modifications may allow installation without utility changes throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Code Compliance Updates</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance code compliance conversion</strong> updates installations to meet current codes. Building codes evolve—older installations may need updates during appliance replacement throughout Bergen County.</p>
+
+                            </div>
+                            <div id="expandable-fade-conversion" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-conversion" onclick="toggleExpand('conversion')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
+                    </div>
+                </div>
+                <div class="service">
+                    <div class="service-icon">⬆️</div>
                     <h3>Retrofit & Upgrades</h3>
                     <div class="service-types">
-                        <h4>Appliance Upgrade Services:</h4>
+                        <h4>Upgrade Services:</h4>
                         <ul>
-                            <li>Smart appliance conversion and setup</li>
-                            <li>Energy-efficient model recommendations</li>
-                            <li>Kitchen layout optimization</li>
-                            <li>Electrical panel upgrade coordination</li>
-                            <li>Gas line expansion and modification</li>
-                            <li>Ventilation system improvements</li>
-                            <li>Water filtration system installation</li>
-                            <li>Old appliance removal included</li>
+                            <li>Smart home integration</li>
+                            <li>WiFi module installation</li>
+                            <li>Ice maker additions</li>
+                            <li>Water dispenser upgrades</li>
+                            <li>Pedestal installation</li>
+                            <li>Trim kit installation</li>
+                            <li>Panel-ready conversion</li>
+                            <li>Accessibility modifications</li>
+                            <li>Energy efficiency upgrades</li>
+                            <li>Feature additions</li>
+                            <li>Capacity upgrades</li>
                         </ul>
-                        <h4 style="margin-top: 20px;">Why Upgrade Your Appliances:</h4>
-                        <ul>
-                            <li>Modern features improve daily life</li>
-                            <li>Energy savings reduce utility bills</li>
-                            <li>Increased home value and appeal</li>
-                            <li>Better performance and reliability</li>
-                            <li>Smart home integration capability</li>
-                            <li>Environmental impact reduction</li>
-                        </ul>
+                        <div id="expandable-content-retrofit" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-retrofit" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Smart Home Integration</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG smart home appliance integration</strong> connects your LG appliances to your smart home ecosystem. Integration with Google Home, Amazon Alexa, and other platforms enables voice control and automation. We configure smart features throughout Hackensack, Paramus, Fort Lee, and all Bergen County smart homes.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">WiFi Module Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG WiFi module retrofit installation</strong> adds WiFi connectivity to compatible appliances lacking factory-installed modules. WiFi enablement unlocks ThinQ app features on qualifying models. We install WiFi modules throughout Teaneck, Englewood, Ridgewood, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Ice Maker Additions</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ice maker installation service</strong> adds ice making capability to refrigerators with ice maker options. Ice maker kits require water line connection and proper installation. We add ice makers throughout Glen Rock, Bergenfield, Dumont, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Water Dispenser Upgrades</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG water dispenser upgrade service</strong> adds or upgrades water dispensing features on compatible refrigerators. Water dispenser installation requires water line connection and proper configuration. We install dispensers throughout Mahwah, Ramsey, Wyckoff, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Pedestal Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG washer and dryer pedestal installation</strong> raises front-load washers and dryers for easier loading and adds storage drawers. Pedestals reduce bending and provide convenient storage. We install pedestals throughout Tenafly, Cresskill, Alpine, and Bergen County laundry rooms.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Trim Kit Installation</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG built-in trim kit installation</strong> provides finished appearance for built-in microwave and other cabinet installations. Trim kits cover gaps between appliances and cabinetry for seamless integration. We install trim kits throughout Closter, Demarest, Haworth, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Panel-Ready Conversion</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG panel-ready appliance installation</strong> integrates custom cabinet panels on panel-ready refrigerators and dishwashers. Panel installation creates seamless kitchen aesthetics. We handle panel-ready installations throughout Franklin Lakes, Saddle River, and Bergen County custom kitchens.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Accessibility Modifications</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance accessibility modifications</strong> adapt appliances for easier use by individuals with disabilities or limited mobility. Modifications may include repositioning, adding pedestals, or installing assistive devices throughout Paramus, Hackensack, and Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Energy Efficiency Upgrades</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance energy efficiency service</strong> optimizes settings and configurations for reduced energy consumption. Proper configuration and maintenance maximize efficiency. We optimize appliance efficiency throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Feature Additions</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance feature upgrade service</strong> adds available options and accessories to expand appliance capabilities. Optional accessories enhance functionality. We install feature upgrades throughout Bergen County.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Capacity Upgrades</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG appliance capacity consultation</strong> helps when your current appliance capacity no longer meets your needs. We advise on upgrade options and handle installation of larger capacity replacements throughout Bergen County.</p>
+
+                            </div>
+                            <div id="expandable-fade-retrofit" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-retrofit" onclick="toggleExpand('retrofit')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
     </section>
     <section class="alt" id="contact">
         <div class="container">
@@ -1332,13 +1756,86 @@
                     <div class="sa-dropdown-content" id="saDropdownContent">
                         <div class="sa-slide">
                             <h2>All Bergen County NJ Towns We Service</h2>
-                            <ul class="sa-responsive-columns" id="townsList"></ul>
+                            <ul id="townsList">
+                                <li><a href="https://lgbergencounty.com/nj/allendale/"><h3>Allendale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/alpine/"><h3>Alpine</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/bergenfield/"><h3>Bergenfield</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/bogota/"><h3>Bogota</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/carlstadt/"><h3>Carlstadt</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/cliffside-park/"><h3>Cliffside Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/closter/"><h3>Closter</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/cresskill/"><h3>Cresskill</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/demarest/"><h3>Demarest</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/dumont/"><h3>Dumont</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/east-rutherford/"><h3>East Rutherford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/edgewater/"><h3>Edgewater</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/elmwood-park/"><h3>Elmwood Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/emerson/"><h3>Emerson</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/englewood/"><h3>Englewood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/englewood-cliffs/"><h3>Englewood Cliffs</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fair-lawn/"><h3>Fair Lawn</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fairview/"><h3>Fairview</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fort-lee/"><h3>Fort Lee</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/franklin-lakes/"><h3>Franklin Lakes</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/garfield/"><h3>Garfield</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/glen-rock/"><h3>Glen Rock</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hackensack/"><h3>Hackensack</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/harrington-park/"><h3>Harrington Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hasbrouck-heights/"><h3>Hasbrouck Heights</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/haworth/"><h3>Haworth</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hillsdale/"><h3>Hillsdale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ho-ho-kus/"><h3>Ho-Ho-Kus</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/jersey-city/"><h3>Jersey City</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/leonia/"><h3>Leonia</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/little-ferry/"><h3>Little Ferry</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/lodi/"><h3>Lodi</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/lyndhurst/"><h3>Lyndhurst</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/mahwah/"><h3>Mahwah</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/maywood/"><h3>Maywood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/midland-park/"><h3>Midland Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/montvale/"><h3>Montvale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/moonachie/"><h3>Moonachie</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/new-milford/"><h3>New Milford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/newark/"><h3>Newark</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/north-arlington/"><h3>North Arlington</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/northvale/"><h3>Northvale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/norwood/"><h3>Norwood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/oakland/"><h3>Oakland</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/old-tappan/"><h3>Old Tappan</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/oradell/"><h3>Oradell</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/palisades-park/"><h3>Palisades Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/paramus/"><h3>Paramus</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/park-ridge/"><h3>Park Ridge</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ramsey/"><h3>Ramsey</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ridgefield/"><h3>Ridgefield</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ridgefield-park/"><h3>Ridgefield Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ridgewood/"><h3>Ridgewood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/river-edge/"><h3>River Edge</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/river-vale/"><h3>River Vale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/rochelle-park/"><h3>Rochelle Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/rockleigh/"><h3>Rockleigh</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/rutherford/"><h3>Rutherford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/saddle-brook/"><h3>Saddle Brook</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/saddle-river/"><h3>Saddle River</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/south-hackensack/"><h3>South Hackensack</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/teaneck/"><h3>Teaneck</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/tenafly/"><h3>Tenafly</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/teterboro/"><h3>Teterboro</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/upper-saddle-river/"><h3>Upper Saddle River</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/waldwick/"><h3>Waldwick</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/wallington/"><h3>Wallington</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/washington-township/"><h3>Washington Township</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/westwood/"><h3>Westwood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/woodcliff-lake/"><h3>Woodcliff Lake</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/wood-ridge/"><h3>Wood-Ridge</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/wyckoff/"><h3>Wyckoff</h3></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="cf-schedule-container">
-                <div class="cf-schedule-text">Schedule Your LG Installation &amp; Maintenance Online</div>
+                <div class="cf-schedule-text">Schedule Your LG Appliance Repair Online</div>
                 <button class="cf-book-button" id="cfBookButton">Book Online</button>
                 <button class="form-call-now" id="formCallNow">Call Now</button>
                 <div class="cf-contact-form-section" id="cfContactFormSection">
@@ -1348,20 +1845,21 @@
                         <div class="cf-form-group"><label for="cfEmail">Email *</label><input type="email" id="cfEmail" name="user_email" placeholder="john@example.com" required></div>
                         <div class="cf-form-group"><label for="cfPhone">Phone *</label><input type="tel" id="cfPhone" name="phone" placeholder="1234567890" required pattern="[0-9]{10}"></div>
                         <div class="cf-form-group"><label for="cfAddress">Address *</label><textarea id="cfAddress" name="address" placeholder="123 Main St, Ridgewood, NJ 07450" required></textarea></div>
-                        <div class="cf-form-group"><label for="cfMessage">Describe the Problem & Service Type *</label><textarea id="cfMessage" name="message" placeholder="Please describe the issue and specify the service type (e.g., LG Electric Dryer, LG Gas Dryer, etc.)" required></textarea></div>
+                        <div class="cf-form-group"><label for="cfMessage">Describe the Problem & Service Type *</label><textarea id="cfMessage" name="message" placeholder="Please describe the service you need (e.g., LG Washer Installation, LG Refrigerator Maintenance, etc.)" required></textarea></div>
                         <button type="submit" class="cf-form-button">Send Request</button>
                     </form>
                 </div>
-                <div class="cf-success-modal" id="cfSuccessModal">
-                    <div class="cf-success-content">
-                        <p id="successMessage">Your request has been sent.<br>An LG technician will contact you within 30 minutes!</p>
-                        <button class="cf-close-modal" id="cfCloseModal">Close</button>
-                    </div>
-                </div>
-                <div class="cf-modal-overlay" id="cfModalOverlay"></div>
             </section>
         </div>
     </section>
+    <div class="cf-modal-overlay" id="cfModalOverlay"></div>
+    <div class="cf-success-modal" id="cfSuccessModal">
+        <div class="cf-success-content">
+            <p id="successMessage">Your request has been sent.<br>An LG technician will contact you within 30 minutes!</p>
+            <button class="cf-close-modal" id="cfCloseModal">Close</button>
+        </div>
+    </div>
+    </main>
     <footer>
         <div class="footer-main">
             <div class="footer-grid">
@@ -1380,7 +1878,7 @@
                     <h3>Our Services</h3>
                     <ul>
                         <li><a href="https://lgbergencounty.com/appliances/washer-repair/">Washer Repair</a></li>
-                        <li><a href="https://lgbergencounty.com/appliances/installation-maintenance/">Installation &amp; Maintenance</a></li>
+                        <li><a href="https://lgbergencounty.com/appliances/dryer-repair/">Dryer Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/refrigerator-repair/">Refrigerator Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/dishwasher-repair/">Dishwasher Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/oven-repair/">Oven Repair</a></li>
@@ -1427,268 +1925,139 @@
         </div>
     </footer>
     <script>
-        // Towns list with URLs
-        const bergenTowns = [
-            {name: "Allendale", zip: "07401", url: "https://lgbergencounty.com/nj/allendale/"},
-            {name: "Alpine", zip: "07620", url: "https://lgbergencounty.com/nj/alpine/"},
-            {name: "Bergenfield", zip: "07621", url: "https://lgbergencounty.com/nj/bergenfield/"},
-            {name: "Bogota", zip: "07603", url: "https://lgbergencounty.com/nj/bogota/"},
-            {name: "Carlstadt", zip: "07072", url: "https://lgbergencounty.com/nj/carlstadt/"},
-            {name: "Cliffside Park", zip: "07010", url: "https://lgbergencounty.com/nj/cliffside-park/"},
-            {name: "Closter", zip: "07624", url: "https://lgbergencounty.com/nj/closter/"},
-            {name: "Cresskill", zip: "07626", url: "https://lgbergencounty.com/nj/cresskill/"},
-            {name: "Demarest", zip: "07627", url: "https://lgbergencounty.com/nj/demarest/"},
-            {name: "Dumont", zip: "07628", url: "https://lgbergencounty.com/nj/dumont/"},
-            {name: "East Rutherford", zip: "07073", url: "https://lgbergencounty.com/nj/east-rutherford/"},
-            {name: "Edgewater", zip: "07020", url: "https://lgbergencounty.com/nj/edgewater/"},
-            {name: "Elmwood Park", zip: "07407", url: "https://lgbergencounty.com/nj/elmwood-park/"},
-            {name: "Emerson", zip: "07630", url: "https://lgbergencounty.com/nj/emerson/"},
-            {name: "Englewood", zip: "07631", url: "https://lgbergencounty.com/nj/englewood/"},
-            {name: "Englewood Cliffs", zip: "07632", url: "https://lgbergencounty.com/nj/englewood-cliffs/"},
-            {name: "Fair Lawn", zip: "07410", url: "https://lgbergencounty.com/nj/fair-lawn/"},
-            {name: "Fairview", zip: "07022", url: "https://lgbergencounty.com/nj/fairview/"},
-            {name: "Fort Lee", zip: "07024", url: "https://lgbergencounty.com/nj/fort-lee/"},
-            {name: "Franklin Lakes", zip: "07417", url: "https://lgbergencounty.com/nj/franklin-lakes/"},
-            {name: "Garfield", zip: "07026", url: "https://lgbergencounty.com/nj/garfield/"},
-            {name: "Glen Rock", zip: "07452", url: "https://lgbergencounty.com/nj/glen-rock/"},
-            {name: "Hackensack", zip: "07601", url: "https://lgbergencounty.com/nj/hackensack/"},
-            {name: "Harrington Park", zip: "07640", url: "https://lgbergencounty.com/nj/harrington-park/"},
-            {name: "Hasbrouck Heights", zip: "07604", url: "https://lgbergencounty.com/nj/hasbrouck-heights/"},
-            {name: "Haworth", zip: "07641", url: "https://lgbergencounty.com/nj/haworth/"},
-            {name: "Hillsdale", zip: "07642", url: "https://lgbergencounty.com/nj/hillsdale/"},
-            {name: "Ho-Ho-Kus", zip: "07423", url: "https://lgbergencounty.com/nj/ho-ho-kus/"},
-            {name: "Jersey City", zip: "07302", url: "https://lgbergencounty.com/nj/jersey-city/"},
-            {name: "Leonia", zip: "07605", url: "https://lgbergencounty.com/nj/leonia/"},
-            {name: "Little Ferry", zip: "07643", url: "https://lgbergencounty.com/nj/little-ferry/"},
-            {name: "Lodi", zip: "07644", url: "https://lgbergencounty.com/nj/lodi/"},
-            {name: "Lyndhurst", zip: "07071", url: "https://lgbergencounty.com/nj/lyndhurst/"},
-            {name: "Mahwah", zip: "07430", url: "https://lgbergencounty.com/nj/mahwah/"},
-            {name: "Maywood", zip: "07607", url: "https://lgbergencounty.com/nj/maywood/"},
-            {name: "Midland Park", zip: "07432", url: "https://lgbergencounty.com/nj/midland-park/"},
-            {name: "Montvale", zip: "07645", url: "https://lgbergencounty.com/nj/montvale/"},
-            {name: "Moonachie", zip: "07074", url: "https://lgbergencounty.com/nj/moonachie/"},
-            {name: "New Milford", zip: "07646", url: "https://lgbergencounty.com/nj/new-milford/"},
-            {name: "Newark", zip: "07102", url: "https://lgbergencounty.com/nj/newark/"},
-            {name: "North Arlington", zip: "07031", url: "https://lgbergencounty.com/nj/north-arlington/"},
-            {name: "Northvale", zip: "07647", url: "https://lgbergencounty.com/nj/northvale/"},
-            {name: "Norwood", zip: "07648", url: "https://lgbergencounty.com/nj/norwood/"},
-            {name: "Oakland", zip: "07436", url: "https://lgbergencounty.com/nj/oakland/"},
-            {name: "Old Tappan", zip: "07675", url: "https://lgbergencounty.com/nj/old-tappan/"},
-            {name: "Oradell", zip: "07649", url: "https://lgbergencounty.com/nj/oradell/"},
-            {name: "Palisades Park", zip: "07650", url: "https://lgbergencounty.com/nj/palisades-park/"},
-            {name: "Paramus", zip: "07652", url: "https://lgbergencounty.com/nj/paramus/"},
-            {name: "Park Ridge", zip: "07656", url: "https://lgbergencounty.com/nj/park-ridge/"},
-            {name: "Ramsey", zip: "07446", url: "https://lgbergencounty.com/nj/ramsey/"},
-            {name: "Ridgefield", zip: "07657", url: "https://lgbergencounty.com/nj/ridgefield/"},
-            {name: "Ridgefield Park", zip: "07660", url: "https://lgbergencounty.com/nj/ridgefield-park/"},
-            {name: "Ridgewood", zip: "07450", url: "https://lgbergencounty.com/nj/ridgewood/"},
-            {name: "River Edge", zip: "07661", url: "https://lgbergencounty.com/nj/river-edge/"},
-            {name: "River Vale", zip: "07675", url: "https://lgbergencounty.com/nj/river-vale/"},
-            {name: "Rochelle Park", zip: "07662", url: "https://lgbergencounty.com/nj/rochelle-park/"},
-            {name: "Rockleigh", zip: "07647", url: "https://lgbergencounty.com/nj/rockleigh/"},
-            {name: "Rutherford", zip: "07070", url: "https://lgbergencounty.com/nj/rutherford/"},
-            {name: "Saddle Brook", zip: "07663", url: "https://lgbergencounty.com/nj/saddle-brook/"},
-            {name: "Saddle River", zip: "07458", url: "https://lgbergencounty.com/nj/saddle-river/"},
-            {name: "South Hackensack", zip: "07606", url: "https://lgbergencounty.com/nj/south-hackensack/"},
-            {name: "Teaneck", zip: "07666", url: "https://lgbergencounty.com/nj/teaneck/"},
-            {name: "Tenafly", zip: "07670", url: "https://lgbergencounty.com/nj/tenafly/"},
-            {name: "Teterboro", zip: "07608", url: "https://lgbergencounty.com/nj/teterboro/"},
-            {name: "Upper Saddle River", zip: "07458", url: "https://lgbergencounty.com/nj/upper-saddle-river/"},
-            {name: "Waldwick", zip: "07463", url: "https://lgbergencounty.com/nj/waldwick/"},
-            {name: "Wallington", zip: "07057", url: "https://lgbergencounty.com/nj/wallington/"},
-            {name: "Washington Township", zip: "07676", url: "https://lgbergencounty.com/nj/washington-township/"},
-            {name: "Westwood", zip: "07675", url: "https://lgbergencounty.com/nj/westwood/"},
-            {name: "Woodcliff Lake", zip: "07677", url: "https://lgbergencounty.com/nj/woodcliff-lake/"},
-            {name: "Wood-Ridge", zip: "07075", url: "https://lgbergencounty.com/nj/wood-ridge/"},
-            {name: "Wyckoff", zip: "07481", url: "https://lgbergencounty.com/nj/wyckoff/"}
-        ].sort((a, b) => a.name.localeCompare(b.name));
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            console.log('DOM loaded at', new Date().toLocaleString());
-            
-            // Services Dropdown
+        document.addEventListener('DOMContentLoaded', function() {
             const servicesMenu = document.getElementById('servicesMenu');
             const servicesToggle = document.getElementById('servicesToggle');
-            const servicesDropdown = document.getElementById('servicesDropdown');
             const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
             const additionalToggle = document.getElementById('additionalToggle');
             const additionalSubmenu = document.getElementById('additionalSubmenu');
             const serviceAreasToggle = document.getElementById('serviceAreasToggle');
             const serviceAreasSubmenu = document.getElementById('serviceAreasSubmenu');
             
-            if (!servicesMenu || !servicesToggle || !servicesDropdown || !dropdownCloseBtn || !additionalToggle || !additionalSubmenu || !serviceAreasToggle || !serviceAreasSubmenu) {
-                console.error('Services dropdown elements missing');
-                return;
-            }
-            
-            console.log('Services dropdown elements found');
-            
-            function populateServiceAreasSubmenu() {
-                serviceAreasSubmenu.innerHTML = bergenTowns.map(t => {
-                    return `<li><a href="${t.url}" class="service-area-link" aria-label="LG Appliance Repair in ${t.name}">${t.name}</a></li>`;
-                }).join('');
-            }
-            
-            populateServiceAreasSubmenu();
-            
             function closeDropdown() {
                 servicesMenu.classList.remove('active');
-                additionalToggle.classList.remove('active');
-                additionalSubmenu.classList.remove('active');
-                serviceAreasToggle.classList.remove('active');
-                serviceAreasSubmenu.classList.remove('active');
+                additionalSubmenu.style.maxHeight = '0';
+                serviceAreasSubmenu.style.maxHeight = '0';
             }
             
-            servicesToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                servicesMenu.classList.toggle('active');
-            });
-            
-            dropdownCloseBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                closeDropdown();
-            });
-            
-            additionalToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                additionalToggle.classList.toggle('active');
-                additionalSubmenu.classList.toggle('active');
-            });
-            
-            serviceAreasToggle.addEventListener('click', (e) => {
-                e.stopPropagation();
-                serviceAreasToggle.classList.toggle('active');
-                serviceAreasSubmenu.classList.toggle('active');
-            });
-            
-            servicesDropdown.addEventListener('click', (e) => {
-                const link = e.target.closest('.service-area-link') || e.target.closest('a');
-                if (link) {
-                    return;
-                }
-                
-                if (e.target.closest('.submenu-toggle') || e.target.closest('.dropdown-close-btn')) {
-                    return;
-                }
-                
-                e.stopPropagation();
-            });
-            
-            // Touch events for mobile - allow links to work
-            let touchStartTime = 0;
-            let touchStartY = 0;
-            
-            servicesDropdown.addEventListener('touchstart', (e) => {
-                touchStartTime = Date.now();
-                touchStartY = e.touches[0].clientY;
-                if (!e.target.closest('.service-area-link') && !e.target.closest('a')) {
+            if (servicesToggle) {
+                servicesToggle.addEventListener('click', function(e) {
                     e.stopPropagation();
-                }
-            }, { passive: true });
-            
-            servicesDropdown.addEventListener('touchmove', (e) => {
-                // Allow scrolling
-            }, { passive: true });
-            
-            servicesDropdown.addEventListener('touchend', (e) => {
-                const touchDuration = Date.now() - touchStartTime;
-                const touchEndY = e.changedTouches[0].clientY;
-                const touchDistance = Math.abs(touchEndY - touchStartY);
-                
-                if ((e.target.closest('.service-area-link') || e.target.closest('a')) && touchDuration < 300 && touchDistance < 10) {
-                    return;
-                }
-                
-                if (!e.target.closest('.service-area-link') && !e.target.closest('a')) {
-                    e.stopPropagation();
-                }
-            }, { passive: true });
-            
-            document.addEventListener('click', () => {
-                closeDropdown();
-            });
-            
-            // Service Areas (Section Dropdown)
-            const saToggle = document.getElementById('saToggleBtn');
-            const saContent = document.getElementById('saDropdownContent');
-            const townsList = document.getElementById('townsList');
-            
-            function populateTowns() {
-                if (townsList.innerHTML) return;
-                townsList.innerHTML = bergenTowns.map(t => ` <li onclick="this.querySelector('.sa-zip-dropdown').classList.toggle('active')"> <h3>${t.name}</h3> <div class="sa-zip-dropdown">ZIP Code: ${t.zip}</div> </li> `).join('');
-            }
-            
-            if (saToggle && saContent) {
-                saToggle.addEventListener('click', () => {
-                    const expanded = saContent.classList.toggle('active');
-                    saToggle.setAttribute('aria-expanded', expanded);
-                    if (expanded) populateTowns();
+                    servicesMenu.classList.toggle('active');
                 });
             }
             
-            // Appliance Cards
-            document.querySelectorAll('.service').forEach(service => {
-                service.addEventListener('click', function(e) {
-                    if (!e.target.closest('.service-types')) {
-                        this.classList.toggle('active');
+            if (dropdownCloseBtn) {
+                dropdownCloseBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    closeDropdown();
+                });
+            }
+            
+            if (additionalToggle) {
+                additionalToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (additionalSubmenu.style.maxHeight && additionalSubmenu.style.maxHeight !== '0px') {
+                        additionalSubmenu.style.maxHeight = '0';
+                    } else {
+                        additionalSubmenu.style.maxHeight = additionalSubmenu.scrollHeight + 'px';
                     }
                 });
+            }
+            
+            if (serviceAreasToggle) {
+                serviceAreasToggle.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    if (serviceAreasSubmenu.style.maxHeight && serviceAreasSubmenu.style.maxHeight !== '0px') {
+                        serviceAreasSubmenu.style.maxHeight = '0';
+                    } else {
+                        serviceAreasSubmenu.style.maxHeight = serviceAreasSubmenu.scrollHeight + 'px';
+                    }
+                });
+            }
+            
+            // Prevent additional submenu items from closing dropdown
+            const additionalItems = additionalSubmenu.querySelectorAll('li');
+            additionalItems.forEach(function(item) {
+                item.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                });
             });
             
-            // Book Online
+            document.addEventListener('click', closeDropdown);
+            
+            const saToggle = document.getElementById('saToggleBtn');
+            const saContent = document.getElementById('saDropdownContent');
+            
+            if (saToggle && saContent) {
+                saToggle.addEventListener('click', function() {
+                    if (saContent.style.maxHeight && saContent.style.maxHeight !== '0px') {
+                        saContent.style.maxHeight = '0';
+                    } else {
+                        saContent.style.maxHeight = saContent.scrollHeight + 'px';
+                    }
+                });
+            }
+            
+            const services = document.querySelectorAll('.service');
+            services.forEach(function(service) {
+                service.addEventListener('click', function(e) {
+                    if (e.target.tagName === 'BUTTON' || e.target.closest('button') || e.target.tagName === 'LI' || e.target.closest('.service-types ul')) {
+                        return;
+                    }
+                    this.classList.toggle('active');
+                });
+            });
+            
             const cfBookButton = document.getElementById('cfBookButton');
             if (cfBookButton) {
-                cfBookButton.addEventListener('click', () => {
+                cfBookButton.addEventListener('click', function() {
                     document.getElementById('cfContactFormSection').classList.toggle('active');
                 });
             }
             
-            // Call Now
-            const setupCallButton = (btn) => {
+            function setupCallButton(btn) {
                 if (btn) {
                     btn.addEventListener('click', function() {
                         if (this.dataset.revealed) return;
                         const digits = [2, 0, 1, 2, 9, 8, 3, 4, 9, 9];
                         const num = digits.join('');
-                        const formatted = `+1 (${num.slice(0,3)}) ${num.slice(3,6)}-${num.slice(6)}`;
+                        const formatted = '+1 (' + num.slice(0,3) + ') ' + num.slice(3,6) + '-' + num.slice(6);
                         this.innerHTML = formatted;
                         this.dataset.revealed = 'true';
-                        this.onclick = () => {
-                            window.location.href = `tel:+1${num}`;
+                        this.onclick = function() {
+                            window.location.href = 'tel:+1' + num;
                         };
                     });
                 }
-            };
+            }
             
             setupCallButton(document.getElementById('navCallNow'));
             setupCallButton(document.getElementById('formCallNow'));
             setupCallButton(document.getElementById('heroCallNow'));
             
-            // Form Submit
             const cfContactForm = document.getElementById('cfContactForm');
             if (cfContactForm) {
                 cfContactForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     const email = this.user_email.value.trim();
                     emailjs.sendForm('service_emxksio', 'template_tmexlql', this)
-                        .then(() => {
-                            this.reset();
+                        .then(function() {
+                            cfContactForm.reset();
                             document.getElementById('cfContactFormSection').classList.remove('active');
-                            document.getElementById('successMessage').innerHTML = ` <strong>Thank you!</strong><br><br> Your request has been sent.<br><br> We will contact you at<br><strong>${email}</strong><br> within the next 30 minutes. `;
+                            document.getElementById('successMessage').innerHTML = '<strong>Thank you!</strong><br><br>Your request has been sent.<br><br>We will contact you at<br><strong>' + email + '</strong><br>within the next 30 minutes.';
                             document.getElementById('cfSuccessModal').classList.add('active');
                             document.getElementById('cfModalOverlay').classList.add('active');
                         })
-                        .catch((error) => {
-                            console.error('Form submission failed:', error);
+                        .catch(function() {
                             alert('Failed to send. Please try again or call us.');
                         });
                 });
             }
             
-            // Modal Close
             const cfCloseModal = document.getElementById('cfCloseModal');
             if (cfCloseModal) {
-                cfCloseModal.onclick = () => {
+                cfCloseModal.onclick = function() {
                     document.getElementById('cfSuccessModal').classList.remove('active');
                     document.getElementById('cfModalOverlay').classList.remove('active');
                 };
@@ -1696,9 +2065,58 @@
             
             const cfModalOverlay = document.getElementById('cfModalOverlay');
             if (cfModalOverlay) {
-                cfModalOverlay.onclick = () => cfCloseModal && cfCloseModal.click();
+                cfModalOverlay.onclick = function() {
+                    if (cfCloseModal) cfCloseModal.click();
+                };
             }
         });
+        
+        function toggleExpand(id) {
+            event.stopPropagation();
+            var text = document.getElementById('expandable-text-' + id);
+            var btn = document.getElementById('expandable-btn-' + id);
+            var fade = document.getElementById('expandable-fade-' + id);
+            var isCollapsed = !text.classList.contains('expanded');
+            if (isCollapsed) {
+                if (id === '1') {
+                    text.style.maxHeight = text.scrollHeight + 'px';
+                    text.style.overflowY = 'visible';
+                } else {
+                    text.style.maxHeight = '200px';
+                    text.style.overflowY = 'auto';
+                    text.style.paddingRight = '10px';
+                }
+                text.classList.add('expanded');
+                btn.innerHTML = '− Show Less';
+                btn.setAttribute('aria-expanded', 'true');
+                if (fade) fade.style.display = 'none';
+            } else {
+                var originalHeight = text.getAttribute('data-collapsed-height') || '110px';
+                text.style.maxHeight = originalHeight;
+                text.style.overflowY = 'hidden';
+                text.style.paddingRight = '0';
+                text.classList.remove('expanded');
+                btn.innerHTML = '+ Show More';
+                btn.setAttribute('aria-expanded', 'false');
+                if (fade) fade.style.display = 'block';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[id^="expandable-text-"]').forEach(function(el) {
+                var height = el.style.maxHeight || '110px';
+                el.setAttribute('data-collapsed-height', height);
+            });
+        });
     </script>
+    <style>
+        [id^="expandable-text-"].expanded::-webkit-scrollbar { width: 6px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb:hover { background: var(--red); }
+        [id^="expandable-text-"].expanded { scrollbar-width: thin; scrollbar-color: var(--blue) #f1f1f1; }
+    </style>
+    <script>var emailjs=function(e){"use strict";class t{constructor(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:0,t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"Network Error";this.status=e,this.text=t}}const i={origin:"https://api.emailjs.com",blockHeadless:!1,storageProvider:(()=>{if("undefined"!=typeof localStorage)return{get:e=>Promise.resolve(localStorage.getItem(e)),set:(e,t)=>Promise.resolve(localStorage.setItem(e,t)),remove:e=>Promise.resolve(localStorage.removeItem(e))}})()},r=e=>e?"string"==typeof e?{publicKey:e}:"[object Object]"===e.toString()?e:{}:{},o=function(e){let t=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"https://api.emailjs.com";if(!e)return;const o=r(e);i.publicKey=o.publicKey,i.blockHeadless=o.blockHeadless,i.storageProvider=o.storageProvider,i.blockList=o.blockList,i.limitRate=o.limitRate,i.origin=o.origin||t},a=async function(e,r){let o=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{};const a=await fetch(i.origin+e,{method:"POST",headers:o,body:r}),s=await a.text(),n=new t(a.status,s);if(a.ok)return n;throw n},s=(e,t,i)=>{if(!e||"string"!=typeof e)throw"The public key is required. Visit https://dashboard.emailjs.com/admin/account";if(!t||"string"!=typeof t)throw"The service ID is required. Visit https://dashboard.emailjs.com/admin";if(!i||"string"!=typeof i)throw"The template ID is required. Visit https://dashboard.emailjs.com/admin/templates"},n=e=>e.webdriver||!e.languages||0===e.languages.length,l=()=>new t(451,"Unavailable For Headless Browser"),c=(e,t)=>{if((e=>!e.list?.length||!e.watchVariable)(e))return!1;((e,t)=>{if(!Array.isArray(e))throw"The BlockList list has to be an array";if("string"!=typeof t)throw"The BlockList watchVariable has to be a string"})(e.list,e.watchVariable);const i=(r=t,o=e.watchVariable,r instanceof FormData?r.get(o):r[o]);var r,o;return"string"==typeof i&&e.list.includes(i)},d=()=>new t(403,"Forbidden"),m=async(e,t,i)=>{if(!t.throttle||!i)return!1;((e,t)=>{if("number"!=typeof e||e<0)throw"The LimitRate throttle has to be a positive number";if(t&&"string"!=typeof t)throw"The LimitRate ID has to be a non-empty string"})(t.throttle,t.id);const r=t.id||e,o=await(async(e,t,i)=>{const r=Number(await i.get(e)||0);return t-Date.now()+r})(r,t.throttle,i);return o>0||(await i.set(r,Date.now().toString()),!1)},h=()=>new t(429,"Too Many Requests"),p=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=u.storageProvider||i.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());if(s(b,e,t),(e=>{if(e&&"[object Object]"!==e.toString())throw"The template params have to be the object. Visit https://www.emailjs.com/docs/sdk/send/"})(o),o&&c(w,o))return Promise.reject(d());if(await m(location.pathname,y,f))return Promise.reject(h());const v={lib_version:"4.4.1",user_id:b,service_id:e,template_id:t,template_params:o};return a("/api/v1.0/email/send",JSON.stringify(v),{"Content-type":"application/json"})},u=async(e,t,o,p)=>{const u=r(p),b=u.publicKey||i.publicKey,g=u.blockHeadless||i.blockHeadless,f=i.storageProvider||u.storageProvider,w={...i.blockList,...u.blockList},y={...i.limitRate,...u.limitRate};if(g&&n(navigator))return Promise.reject(l());const v=(e=>"string"==typeof e?document.querySelector(e):e)(o);s(b,e,t),(e=>{if(!e||"FORM"!==e.nodeName)throw"The 3rd parameter is expected to be the HTML form element or the style selector of the form"})(v);const j=new FormData(v);return c(w,j)?Promise.reject(d()):await m(location.pathname,y,f)?Promise.reject(h()):(j.append("lib_version","4.4.1"),j.append("service_id",e),j.append("template_id",t),j.append("user_id",b),a("/api/v1.0/email/send-form",j))};var b={init:o,send:p,sendForm:u,EmailJSResponseStatus:t};return e.EmailJSResponseStatus=t,e.default=b,e.init=o,e.send=p,e.sendForm=u,Object.defineProperty(e,"__esModule",{value:!0}),e}({});emailjs.init({publicKey:'zfCrLmZU8eK9CuZcs'});</script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"df4eaee1f863452385fca24b1c8a3813","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 </body>
 </html>
