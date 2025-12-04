@@ -660,6 +660,7 @@
             margin-bottom: 16px;
             text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.9);
             line-height: 1.2;
+            color: white;
         }
         .hero p {
             font-size: 24px;
@@ -886,12 +887,6 @@
             transform: translateY(0);
             padding: 20px 0;
         }
-        .sa-slide h2 {
-            font-size: 28px;
-            text-align: center;
-            margin-bottom: 15px;
-            text-shadow: 0 1px 3px rgba(0, 0, 0, .2);
-        }
         .sa-slide ul {
             background: rgba(255, 255, 255, .95);
             border-radius: 12px;
@@ -899,18 +894,15 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, .1);
             transition: transform .3s;
             box-sizing: border-box;
-        }
-        .sa-slide ul:hover {
-            transform: translateY(-5px);
-        }
-        .sa-responsive-columns {
             list-style: none;
-            padding: 0;
             margin: 0;
             column-gap: 30px;
             columns: 3;
         }
-        .sa-responsive-columns li {
+        .sa-slide ul:hover {
+            transform: translateY(-5px);
+        }
+        .sa-slide ul li {
             padding: 12px 15px;
             margin: 8px 0;
             border-radius: 10px;
@@ -920,13 +912,13 @@
             box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
             box-sizing: border-box;
         }
-        .sa-responsive-columns li:hover {
+        .sa-slide ul li:hover {
             background: #d4e4ff;
             transform: scale(1.03);
             box-shadow: 0 4px 12px rgba(0, 0, 0, .15);
         }
-        .sa-responsive-columns h3 {
-            margin: 0 0 6px;
+        .sa-slide ul li h3 {
+            margin: 0;
             font-size: 17px;
             color: #1e3c72;
             font-weight: 600;
@@ -1310,6 +1302,11 @@
                 font-size: 13px;
             }
         }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar { width: 6px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 3px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb { background: var(--blue); border-radius: 3px; }
+        [id^="expandable-text-"].expanded::-webkit-scrollbar-thumb:hover { background: var(--red); }
+        [id^="expandable-text-"].expanded { scrollbar-width: thin; scrollbar-color: var(--blue) #f1f1f1; }
     </style>
 </head>
 <body>
@@ -1363,6 +1360,54 @@
             <button class="btn" id="heroCallNow">Request Hood Vent Repair Today</button>
         </div>
     </section>
+    <section style="padding: 60px 0; background: #fff;" aria-labelledby="about-section-heading">
+        <div class="container" style="max-width: 900px; margin: 0 auto; padding: 0 20px;">
+            <article itemscope itemtype="https://schema.org/Service">
+                <meta itemprop="serviceType" content="LG Hood Vent Repair">
+                <meta itemprop="areaServed" content="Bergen County, New Jersey">
+                <h2 id="about-section-heading" itemprop="name" style="text-align:center; font-size:32px; margin-bottom:30px; color: var(--blue);">Expert LG Hood Vent Repair in Bergen County</h2>
+                <div id="expandable-content-1" style="position: relative;">
+                    <div id="expandable-text-1" itemprop="description" style="max-height: 110px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444; font-size: 16px;">
+                        <p style="margin-bottom: 15px;">When your <strong>LG hood vent</strong> stops working properly, cooking becomes uncomfortable and your kitchen air quality suffers. Our <strong>factory-certified technicians</strong> specialize exclusively in LG ventilation systems, bringing expert knowledge to every service call across <strong>Bergen County, New Jersey</strong>. We understand how essential proper kitchen ventilation is for your home.</p>
+                        <p style="margin-bottom: 15px;">Our technicians complete <strong>annual training programs</strong> covering the latest LG hood vent technologies including smart connectivity, variable speed motors, and advanced filtration systems. They have access to <strong>round-the-clock technical support</strong>, ensuring even complex ventilation repairs are resolved quickly and correctly.</p>
+                        <h3 style="font-size: 20px; color: var(--blue); margin: 25px 0 15px;">The LG Hood Vent Repair Advantage</h3>
+                        <ul style="list-style: none; padding: 0; margin: 0 0 20px 0;">
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Authorized Bergen County Coverage:</strong> Our skilled technicians are strategically positioned throughout Bergen County, ready to address your hood vent repair needs with speed and precision.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>All Hood Vent Types:</strong> We repair under cabinet hoods, wall mount hoods, island hoods, downdraft systems, and all other LG ventilation products.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Fully Equipped Service Vehicles:</strong> Each vehicle carries motors, control boards, filters, and lighting components for most LG hood vent models.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Same-Day Repair Solutions:</strong> We stock commonly needed parts to complete the majority of hood vent repairs during your first appointment.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Complete Repair Warranty:</strong> Every repair is backed by our comprehensive warranty. If any issues occur, we'll return to resolve them at no extra cost.</span>
+                            </li>
+                            <li style="padding: 12px 0; border-bottom: 1px solid #eee; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Diagnostic Fee Applied to Repair:</strong> Your diagnostic fee is credited toward the total repair cost, reducing your overall expense.</span>
+                            </li>
+                            <li style="padding: 12px 0; display: flex; align-items: flex-start;">
+                                <span style="color: var(--red); font-weight: bold; margin-right: 10px; font-size: 18px;">✓</span>
+                                <span><strong>Expert Ventilation Knowledge:</strong> From motor repairs to ductwork issues, our technicians understand the complete ventilation system for optimal kitchen air quality.</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="expandable-fade-1" style="position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: linear-gradient(transparent, #fff); pointer-events: none;" aria-hidden="true"></div>
+                </div>
+                <button id="expandable-btn-1" onclick="toggleExpand('1')" aria-expanded="false" aria-controls="expandable-text-1" style="display: block; margin: 20px auto 0; background: none; border: none; color: var(--blue); font-size: 16px; font-weight: 600; cursor: pointer; padding: 10px 20px; transition: color 0.3s;">+ Show More</button>
+            </article>
+        </div>
+    </section>
     <section class="alt">
         <div class="container">
             <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified LG Hood Vent Repair</h2>
@@ -1381,6 +1426,23 @@
                             <li>Stainless Steel Finishes</li>
                             <li>QuietPower Operation</li>
                         </ul>
+                        <div id="expandable-content-undercabinet" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-undercabinet" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Under Cabinet Hood Motor Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG under cabinet range hood motor repair</strong> addresses the most common failure point in these space-saving ventilation systems. Under cabinet hoods mount beneath wall cabinets directly above your cooktop, making motor access challenging without proper expertise. Our technicians diagnose motor issues including complete failure, reduced suction power, unusual grinding or humming noises, and intermittent operation. We carry replacement motors for all LG under cabinet models and complete repairs without removing or damaging your existing cabinetry installation.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Under Cabinet Hood Control Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG under cabinet hood control panel repair</strong> fixes unresponsive buttons, erratic speed settings, and display malfunctions. Modern under cabinet hoods feature electronic touch controls, digital displays, and multiple fan speed options. When controls fail, your hood may run continuously, refuse to turn on, or operate at incorrect speeds. We repair control boards, replace touch panels, and restore full functionality to all control features including timers, delay-off functions, and lighting controls.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Under Cabinet Hood Filter Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG under cabinet hood filter maintenance</strong> ensures optimal grease capture and airflow. Clogged or damaged filters reduce ventilation efficiency and create fire hazards. We clean and replace aluminum mesh filters, baffle filters, and charcoal filters for ductless models. Our service includes inspecting filter housing, checking filter seals, and ensuring proper filter seating. Regular filter maintenance extends motor life and maintains effective kitchen ventilation throughout your Bergen County home.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Under Cabinet Hood Lighting Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG under cabinet hood lighting repair</strong> restores essential cooktop illumination. Under cabinet hoods provide critical task lighting for safe cooking. We repair LED light strips, replace halogen bulbs and sockets, fix dimmer controls, and troubleshoot wiring issues. Common lighting problems include flickering, partial illumination, and complete light failure. Our technicians restore full lighting functionality so you can cook safely with proper visibility in your Bergen County kitchen.</p>
+                            </div>
+                            <div id="expandable-fade-undercabinet" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-undercabinet" onclick="toggleExpand('undercabinet')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1397,6 +1459,23 @@
                             <li>Professional Series</li>
                             <li>Adjustable Chimney Extensions</li>
                         </ul>
+                        <div id="expandable-content-wallmount" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-wallmount" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Wall Mount Hood Blower Motor Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG wall mount range hood blower motor repair</strong> restores powerful ventilation to these striking kitchen centerpieces. Wall mount hoods feature chimney-style designs that make bold statements while providing superior air extraction. Our technicians diagnose motor failures, bearing wear, and electrical issues affecting blower performance. We service single and dual motor configurations, variable speed systems, and high-CFM professional models. Complete motor replacement includes testing all speed settings and verifying proper airflow throughout your Bergen County kitchen.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Wall Mount Hood Chimney Extension Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG wall mount hood chimney repair</strong> addresses the decorative flue covers that conceal ductwork and add visual appeal. Chimney sections can become misaligned, develop rattling from loose connections, or suffer cosmetic damage. We repair telescoping chimney mechanisms, secure loose sections, and replace damaged chimney covers. Our service ensures your wall mount hood maintains both functional ventilation and the sleek appearance that makes it a kitchen focal point.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Wall Mount Hood Glass Canopy Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG wall mount hood glass canopy repair</strong> fixes cracked, scratched, or broken glass panels common on contemporary hood designs. Glass canopy hoods combine modern aesthetics with effective ventilation. We source replacement glass panels, repair glass mounting hardware, and address seal failures around glass edges. Our technicians handle tempered glass components safely and ensure secure installation that maintains both appearance and safety standards.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Wall Mount Hood Ductwork Connection Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG wall mount hood duct connection repair</strong> ensures efficient exhaust through proper ductwork sealing. Wall mount hoods connect to ductwork running through walls to exterior vents. Loose connections, damaged transitions, and backdraft damper failures reduce ventilation efficiency and allow outside air infiltration. We inspect complete duct runs, repair connections, replace dampers, and seal joints. Proper ductwork connections maximize your wall mount hood's CFM rating and energy efficiency.</p>
+                            </div>
+                            <div id="expandable-fade-wallmount" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-wallmount" onclick="toggleExpand('wallmount')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1413,6 +1492,23 @@
                             <li>Multi-Motor Configurations</li>
                             <li>Premium Statement Pieces</li>
                         </ul>
+                        <div id="expandable-content-island" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-island" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Island Hood Ceiling Mount Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG island range hood ceiling mount repair</strong> addresses the unique suspension systems supporting these impressive kitchen centerpieces. Island hoods hang from ceiling structures above kitchen islands, requiring secure mounting for safety and stability. We repair mounting brackets, ceiling supports, suspension cables, and hardware that keeps your hood properly positioned. Vibration, settling, and installation issues can compromise mounting integrity. Our technicians ensure safe, level installation that maintains both function and appearance.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Island Hood Vertical Duct Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG island hood vertical ductwork repair</strong> fixes the challenging duct runs traveling straight up through ceilings and roof structures. Vertical ducting presents unique challenges including joint separation, condensation issues, and difficult access for service. We repair duct connections, seal joints, address condensation problems, and ensure proper airflow through vertical runs. Our technicians work safely in ceiling spaces and attics to maintain complete duct system integrity for optimal island hood performance.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Island Hood Remote Blower Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG island hood remote blower repair</strong> services external blower units mounted in attics or exterior locations for quieter operation. Remote blowers reduce noise in living spaces while providing powerful ventilation. We diagnose remote blower motor failures, electrical connection issues, and control communication problems between the hood and blower unit. Our service includes accessing remote locations, testing complete systems, and restoring proper coordination between hood controls and external blowers.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Island Hood Capture Efficiency Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG island hood capture optimization</strong> improves ventilation effectiveness for these open-exposure installations. Island hoods face inherent challenges—they lack walls to contain cooking fumes, requiring higher CFM ratings and proper positioning. We adjust hood height, optimize baffle positioning, and ensure maximum capture efficiency. When island hoods fail to adequately ventilate, we diagnose whether issues stem from motor performance, ductwork restrictions, or positioning problems, then implement appropriate solutions.</p>
+                            </div>
+                            <div id="expandable-fade-island" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-island" onclick="toggleExpand('island')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1429,6 +1525,23 @@
                             <li>Retractable Ventilation</li>
                             <li>Island Cooktop Compatible</li>
                         </ul>
+                        <div id="expandable-content-downdraft" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-downdraft" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Downdraft Rise Mechanism Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG downdraft rise mechanism repair</strong> fixes the motorized lift systems that raise ventilation panels from countertops or behind cooktops. These retractable systems use electric motors, gear assemblies, and track mechanisms to extend and retract smoothly. Common failures include motors that won't lift the vent, panels that stick partway up, uneven rising, and loud grinding during operation. Our technicians diagnose mechanical and electrical issues, repair or replace lift components, and restore smooth, reliable operation to your downdraft system.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Downdraft Blower Motor Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG downdraft blower motor repair</strong> addresses the powerful motors needed to pull cooking fumes downward against their natural tendency to rise. Downdraft ventilation inherently works against physics, requiring strong motors to effectively capture steam and smoke. We diagnose weak suction, motor noise, complete motor failure, and reduced ventilation performance. Our service includes motor replacement, blower wheel cleaning, and ductwork inspection to ensure your downdraft provides effective ventilation despite the challenging downward airflow direction.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Downdraft Ductwork Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG downdraft duct system repair</strong> services the under-floor or in-cabinet ductwork unique to downdraft installations. Unlike overhead hoods, downdrafts route exhaust beneath floors or through cabinet spaces to exterior vents. These runs often include multiple turns that can restrict airflow. We inspect complete duct systems, repair damaged sections, seal air leaks, and optimize airflow paths. Proper ductwork is critical for downdraft performance—restrictions that overhead hoods might tolerate can render downdrafts ineffective.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Downdraft Control System Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG downdraft control repair</strong> fixes electronic systems managing both the rise mechanism and blower operation. Modern downdrafts feature integrated controls that coordinate panel positioning with fan speeds. We repair control boards, touch panels, and the communication between lift and ventilation systems. Auto-rise features that activate ventilation when cooking starts require precise calibration. Our technicians restore full control functionality including multiple speed settings, timer functions, and automatic operation modes.</p>
+                            </div>
+                            <div id="expandable-fade-downdraft" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-downdraft" onclick="toggleExpand('downdraft')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1445,6 +1558,23 @@
                             <li>Professional Cleaning</li>
                             <li>Recirculation Systems</li>
                         </ul>
+                        <div id="expandable-content-filter" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-filter" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Aluminum Mesh Filter Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG aluminum mesh filter service</strong> maintains the primary grease capture system in most range hoods. These multi-layer aluminum filters trap grease particles before they reach the blower motor and ductwork. Clogged mesh filters reduce airflow, increase motor strain, and create fire hazards from grease buildup. We professionally clean mesh filters using commercial degreasers, inspect for damage or warping, and replace filters that no longer capture effectively. Regular mesh filter service extends hood life and maintains optimal ventilation.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Baffle Filter Cleaning & Replacement</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG baffle filter maintenance</strong> services the professional-grade stainless steel filters found in high-performance hoods. Baffle filters use angled channels to change airflow direction, causing grease to separate and drain into collection trays. These filters handle heavier cooking loads than mesh alternatives. We clean baffle filters, clear drainage channels, replace worn baffles, and ensure proper seating. Commercial kitchens and serious home cooks rely on baffle filter efficiency for effective ventilation.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Charcoal Filter Replacement</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG charcoal filter replacement</strong> restores odor removal in ductless and recirculating range hoods. Charcoal (activated carbon) filters absorb cooking odors that grease filters cannot capture. Unlike washable grease filters, charcoal filters require periodic replacement—typically every 3-6 months depending on cooking frequency. We supply genuine LG charcoal filters, remove spent filters, and install fresh replacements. Proper charcoal filter maintenance keeps your kitchen smelling fresh when exterior ducting isn't possible.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Filter Housing & Seal Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG filter housing repair</strong> fixes the frames, latches, and seals that secure filters in position. Damaged housing allows unfiltered air to bypass the filter system, reducing efficiency and depositing grease on internal components. We repair bent filter frames, replace broken latches, restore filter seals, and ensure airtight filter installation. Proper filter housing function is essential—even the best filter cannot work if air flows around it rather than through it.</p>
+                            </div>
+                            <div id="expandable-fade-filter" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-filter" onclick="toggleExpand('filter')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1461,6 +1591,23 @@
                             <li>Remote/Inline Blowers</li>
                             <li>Motor Controller Boards</li>
                         </ul>
+                        <div id="expandable-content-motor" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-motor" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Single Motor Blower Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG single motor blower repair</strong> addresses the primary ventilation component in most residential range hoods. Single motor systems power the fan that draws cooking fumes through filters and exhausts them outside or recirculates filtered air. We diagnose motor failures including burned windings, seized bearings, capacitor problems, and thermal overload issues. Our technicians replace motors with genuine LG parts, ensuring proper CFM ratings and quiet operation are restored to your Bergen County kitchen.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dual Motor System Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dual motor hood repair</strong> services high-performance hoods featuring two independent blower motors for maximum ventilation power. Dual motor systems provide higher CFM ratings for serious cooking and larger kitchens. When one motor fails, ventilation drops significantly even if the other continues running. We diagnose individual motor issues, repair motor synchronization problems, and replace failed motors while ensuring balanced airflow. Dual motor hoods require precise balancing for optimal performance.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Variable Speed Motor Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG variable speed motor repair</strong> fixes the electronically controlled motors that allow precise fan speed adjustment. Variable speed systems provide quiet low-speed operation for light cooking and powerful high-speed extraction for heavy frying or grilling. These motors use electronic speed controllers that can fail independently of the motor itself. We diagnose whether issues stem from motor failure or controller malfunction, repairing or replacing the appropriate component.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Remote Blower Motor Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG remote blower repair</strong> services external blower units mounted in attics, exterior walls, or rooftops for quieter kitchen operation. Remote blowers move the noise-generating motor away from living spaces while maintaining powerful ventilation. These installations involve longer duct runs and electrical connections between the hood controls and remote motor. We diagnose remote blower failures, repair control communication issues, and service motors in difficult-to-access locations throughout Bergen County homes.</p>
+                            </div>
+                            <div id="expandable-fade-motor" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-motor" onclick="toggleExpand('motor')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1477,6 +1624,23 @@
                             <li>Light Socket Repair</li>
                             <li>Transformer Replacement</li>
                         </ul>
+                        <div id="expandable-content-lighting" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-lighting" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">LED Lighting System Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG LED hood lighting repair</strong> fixes the energy-efficient lighting standard in modern range hoods. LED systems provide bright, cool illumination with minimal energy consumption and long life. When LEDs fail, issues can stem from individual LED elements, driver circuits, or wiring connections. We diagnose LED lighting problems, replace failed LED strips or modules, repair driver boards, and restore full illumination. LED repairs require understanding low-voltage circuits distinct from traditional bulb replacement.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Halogen Lighting Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG halogen hood light repair</strong> services the bright, warm lighting found in many range hoods. Halogen bulbs produce intense light ideal for cooking tasks but generate significant heat and require periodic replacement. Beyond bulb replacement, we repair socket corrosion, fix heat-damaged wiring, replace failed transformers, and address dimmer malfunctions. Halogen systems run hot—our technicians ensure all components handle the heat safely for reliable kitchen illumination.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Dimmer & Multi-Level Control Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG hood dimmer repair</strong> restores adjustable lighting control for task and ambient illumination. Modern hoods feature multi-level brightness settings, touch dimmers, and night light modes. Dimmer failures can cause flickering, stuck brightness levels, or complete light failure. We repair dimmer circuits, replace touch control panels, and restore full brightness range. Proper dimmer function lets you match lighting to cooking tasks and kitchen ambiance throughout your Bergen County home.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Light Socket & Wiring Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG hood light socket repair</strong> fixes the connections that deliver power to lighting elements. Sockets corrode from heat and grease exposure, causing intermittent or failed lighting. Wiring can degrade from heat near cooking surfaces. We replace corroded sockets, repair damaged wiring, ensure proper grounding, and restore reliable electrical connections. Safe socket and wiring repairs prevent fire hazards while restoring essential cooktop illumination.</p>
+                            </div>
+                            <div id="expandable-fade-lighting" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-lighting" onclick="toggleExpand('lighting')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1493,6 +1657,23 @@
                             <li>Timer Functions</li>
                             <li>Smart Connectivity Features</li>
                         </ul>
+                        <div id="expandable-content-control" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-control" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Touch Control Panel Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG touch control panel repair</strong> fixes the sleek electronic interfaces on modern range hoods. Touch panels eliminate physical buttons for easy cleaning but require specialized diagnosis when they malfunction. Issues include unresponsive areas, ghost touches, erratic behavior, and complete failure. We repair touch sensor assemblies, replace damaged panels, and recalibrate touch sensitivity. Grease and moisture can affect touch controls—our technicians address both the symptom and underlying cause.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Mechanical Button Panel Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG button control repair</strong> services traditional push-button and rocker switch controls. Mechanical controls offer reliable operation but wear over time, especially in greasy kitchen environments. We repair stuck buttons, replace worn switches, fix loose connections, and restore tactile feedback. Button panels connect to control boards—we diagnose whether issues stem from the buttons themselves or downstream electronics requiring different repairs.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Digital Display Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG hood display repair</strong> fixes LED and LCD readouts showing speed settings, timer countdowns, and status information. Display issues include blank screens, partial segments, flickering, and incorrect readings. We diagnose display driver failures, replace damaged screens, and repair connections between displays and control boards. Clear display function helps you monitor hood operation and timer settings while cooking in your Bergen County kitchen.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Smart Control & WiFi Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG smart hood control repair</strong> services WiFi-connected hoods with app control and smart home integration. Smart hoods connect to LG ThinQ for remote operation, cooking synchronization, and maintenance alerts. We diagnose connectivity issues, repair WiFi modules, update firmware, and restore smart features. When smart controls fail, basic hood operation should still work—we ensure both smart features and manual controls function properly.</p>
+                            </div>
+                            <div id="expandable-fade-control" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-control" onclick="toggleExpand('control')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1515,7 +1696,7 @@
                     <div class="sa-dropdown-content" id="saDropdownContent">
                         <div class="sa-slide">
                             <h2>All Bergen County NJ Towns We Service</h2>
-                            <ul class="sa-responsive-columns" id="townsList">
+                            <ul id="townsList">
                                 <li><a href="https://lgbergencounty.com/nj/allendale/"><h3>Allendale</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/alpine/"><h3>Alpine</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/bergenfield/"><h3>Bergenfield</h3></a></li>
@@ -2071,6 +2252,45 @@
                 url: "https://lgbergencounty.com/nj/wyckoff"
             }
         ].sort((a, b) => a.name.localeCompare(b.name));
+        
+        function toggleExpand(id) {
+            event.stopPropagation();
+            var text = document.getElementById('expandable-text-' + id);
+            var btn = document.getElementById('expandable-btn-' + id);
+            var fade = document.getElementById('expandable-fade-' + id);
+            var isCollapsed = !text.classList.contains('expanded');
+            if (isCollapsed) {
+                if (id === '1') {
+                    text.style.maxHeight = text.scrollHeight + 'px';
+                    text.style.overflowY = 'visible';
+                } else {
+                    text.style.maxHeight = '200px';
+                    text.style.overflowY = 'auto';
+                    text.style.paddingRight = '10px';
+                }
+                text.classList.add('expanded');
+                btn.innerHTML = '− Show Less';
+                btn.setAttribute('aria-expanded', 'true');
+                if (fade) fade.style.display = 'none';
+            } else {
+                var originalHeight = text.getAttribute('data-collapsed-height') || '110px';
+                text.style.maxHeight = originalHeight;
+                text.style.overflowY = 'hidden';
+                text.style.paddingRight = '0';
+                text.classList.remove('expanded');
+                btn.innerHTML = '+ Show More';
+                btn.setAttribute('aria-expanded', 'false');
+                if (fade) fade.style.display = 'block';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('[id^="expandable-text-"]').forEach(function(el) {
+                var height = el.style.maxHeight || '110px';
+                el.setAttribute('data-collapsed-height', height);
+            });
+        });
+        
         document.addEventListener('DOMContentLoaded', () => {
             console.log('DOM loaded at', new Date().toLocaleString());
             // Logo click logging
