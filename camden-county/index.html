@@ -730,6 +730,13 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
+            min-height: 280px;
+        }
+        .service h3 {
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .service:hover {
@@ -1445,7 +1452,7 @@
                             </div>
                             <div id="expandable-fade-washer" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
                         </div>
-                        <button id="expandable-btn-washer" onclick="toggleExpandCard('washer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                        <button id="expandable-btn-washer" onclick="toggleExpandCard('washer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1488,7 +1495,7 @@
                             </div>
                             <div id="expandable-fade-dryer" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
                         </div>
-                        <button id="expandable-btn-dryer" onclick="toggleExpandCard('dryer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                        <button id="expandable-btn-dryer" onclick="toggleExpandCard('dryer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1531,7 +1538,7 @@
                             </div>
                             <div id="expandable-fade-oven" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
                         </div>
-                        <button id="expandable-btn-oven" onclick="toggleExpandCard('oven')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                        <button id="expandable-btn-oven" onclick="toggleExpandCard('oven')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1574,7 +1581,7 @@
                             </div>
                             <div id="expandable-fade-fridge" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
                         </div>
-                        <button id="expandable-btn-fridge" onclick="toggleExpandCard('fridge')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                        <button id="expandable-btn-fridge" onclick="toggleExpandCard('fridge')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1617,7 +1624,7 @@
                             </div>
                             <div id="expandable-fade-dishwasher" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
                         </div>
-                        <button id="expandable-btn-dishwasher" onclick="toggleExpandCard('dishwasher')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                        <button id="expandable-btn-dishwasher" onclick="toggleExpandCard('dishwasher')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
                 <div class="service">
@@ -1660,7 +1667,7 @@
                             </div>
                             <div id="expandable-fade-microwave" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
                         </div>
-                        <button id="expandable-btn-microwave" onclick="toggleExpandCard('microwave')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                        <button id="expandable-btn-microwave" onclick="toggleExpandCard('microwave')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Show More</button>
                     </div>
                 </div>
             </div>
@@ -1804,7 +1811,6 @@
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
         function toggleExpandCard(id) {
             if (event) event.stopPropagation();
             var text = document.getElementById('expandable-text-' + id);
@@ -1813,11 +1819,11 @@
             if (!text || !btn) return;
             var isCollapsed = !text.classList.contains('expanded');
             if (isCollapsed) {
-                text.style.maxHeight = '300px';
+                text.style.maxHeight = '200px';
                 text.style.overflowY = 'auto';
                 text.style.paddingRight = '10px';
                 text.classList.add('expanded');
-                btn.textContent = '− Show Less';
+                btn.innerHTML = '− Show Less';
                 btn.setAttribute('aria-expanded', 'true');
                 if (fade) fade.style.display = 'none';
             } else {
@@ -1825,11 +1831,13 @@
                 text.style.overflowY = 'hidden';
                 text.style.paddingRight = '0';
                 text.classList.remove('expanded');
-                btn.textContent = '+ Read More';
+                btn.innerHTML = '+ Show More';
                 btn.setAttribute('aria-expanded', 'false');
                 if (fade) fade.style.display = 'block';
             }
         }
+        
+        document.addEventListener('DOMContentLoaded', function() {
 
 
             const servicesMenu = document.getElementById('servicesMenu');
