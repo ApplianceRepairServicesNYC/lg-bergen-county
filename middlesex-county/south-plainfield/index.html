@@ -744,14 +744,17 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
         .service-icon {
-            font-size: 52px;
+            height: 80px;
             margin-bottom: 20px;
-            color: var(--blue);
-            transition: color .3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .service-icon img {
-            width: 52px;
-            height: 52px;
+            max-width: 70px;
+            max-height: 70px;
+            width: auto;
+            height: auto;
             object-fit: contain;
         }
         .service:hover .service-icon {
