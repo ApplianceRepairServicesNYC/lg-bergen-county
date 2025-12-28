@@ -716,7 +716,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            align-items: start;
+            align-items: stretch;
         }
         .service {
             background: white;
@@ -744,15 +744,16 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
         }
         .service-icon {
-            height: 80px;
-            margin-bottom: 20px;
+            width: 100%;
+            height: 90px;
+            margin: 0 auto 20px;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: center;
         }
         .service-icon img {
-            max-width: 70px;
-            max-height: 70px;
+            max-width: 80px;
+            max-height: 80px;
             width: auto;
             height: auto;
             object-fit: contain;
@@ -1409,32 +1410,260 @@
                 <div class="service">
                     <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="LG Washer repair" loading="lazy"></div>
                     <h3>LG Washer Repair</h3>
-                    <p style="font-size: 14px; color: #555;">Front load, top load, and combo units. We fix spin issues, leaks, error codes, and drainage problems.</p>
+
+                    <div class="service-types">
+                        <h4>We Service All Types:</h4>
+                        <ul>
+                            <li>Front Load Washers</li>
+                            <li>Top Load Washers</li>
+                            <li>High-Efficiency Models</li>
+                            <li>Steam Washers</li>
+                            <li>Smart ThinQ Washers</li>
+                            <li>Stackable Units</li>
+                            <li>Washer/Dryer Combos</li>
+                            <li>Commercial Washers</li>
+                        </ul>
+                        <div id="expandable-content-washer" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-washer" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Front Load Washer Expertise</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG front load washer repair</strong> demands specialized knowledge of horizontal-axis drum systems and their unique mechanical requirements. Our technicians expertly diagnose door boot seal deterioration that causes water leaks, bearing assemblies that produce grinding noises during high-speed spins, and spider arm failures resulting from detergent buildup corrosion. We address door latch mechanisms preventing cycle initiation, drain pump failures triggering error codes, and shock absorber degradation causing excessive cabinet movement. Front-loading machines require precise leveling and load balancing—our factory-trained specialists ensure whisper-quiet operation and optimal cleaning performance using manufacturer-approved replacement components.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Top Load Washer Solutions</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG top load washer repair</strong> encompasses both conventional agitator designs and modern high-efficiency impeller systems. Our expertise covers lid switch malfunctions that interrupt cycles, transmission failures affecting agitation and spin functions, and water inlet valve problems causing fill irregularities. We remedy agitator coupling deterioration, worn drive belts causing slippage, and suspension system failures leading to off-balance conditions. From tub bearing replacements to motor coupler repairs and electronic control diagnostics, our technicians restore dependable operation to every top-loading configuration.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">High-Efficiency System Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG high-efficiency washer repair</strong> addresses the advanced water-saving and energy-efficient technologies built into modern machines. These units use precisely calibrated water levels and specialized wash motions requiring expert calibration. We repair pressure switches measuring water levels, recirculation pumps enhancing cleaning action, and sensors monitoring load size for automatic adjustments. Common high-efficiency issues include inadequate rinsing from incorrect water levels, extended cycle times from sensor malfunctions, and detergent residue buildup requiring specialized cleaning procedures our technicians perform expertly.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Steam Technology Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam washer repair</strong> covers TurboWash and Allergiene steam cycle technologies that enhance cleaning power and sanitization. We service steam generator assemblies, water injection systems, and temperature sensors controlling steam production. Steam features eliminate allergens, reduce wrinkles, and penetrate fabrics for deeper cleaning. When steam functions fail, we diagnose heating element issues, water supply valve problems, and control board malfunctions. Our technicians restore the premium steam cleaning capabilities that make LG washers exceptional performers.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Smart ThinQ Washer Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ThinQ smart washer repair</strong> includes WiFi connectivity diagnostics, smartphone app integration troubleshooting, and smart diagnosis features. Connected washers communicate with matching dryers, receive software updates, and enable remote monitoring. We resolve pairing failures, restore dropped connections, and interpret diagnostic codes transmitted through ThinQ technology. Beyond connectivity, our technicians address the mechanical and electrical issues that smart diagnostics identify, providing comprehensive service for both digital features and physical components.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Common Problems We Solve</h4>
+                                <p style="margin-bottom: 12px;">Our washer repair expertise covers every symptom homeowners encounter. <strong>Won't drain:</strong> We clear pump obstructions, replace failed drain pumps, and resolve control board drainage commands. <strong>Excessive vibration:</strong> We replace worn shock absorbers, balance suspension springs, and ensure proper leveling. <strong>Loud noises:</strong> We diagnose bearing failures, object obstructions, and motor mount deterioration. <strong>Won't spin:</strong> We repair lid switches, door latches, motor couplers, and drive systems. <strong>Water leaks:</strong> We replace door seals, tighten hose connections, and fix tub seal failures. <strong>Error codes:</strong> We interpret LG diagnostic codes and remedy the underlying failures they indicate.</p>
+
+                            </div>
+                            <div id="expandable-fade-washer" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-washer" onclick="toggleExpandCard('washer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                    </div>
                 </div>
                 <div class="service">
                     <div class="service-icon"><img src="/assets/images/appliances/dryer.webp" alt="LG Dryer repair" loading="lazy"></div>
                     <h3>LG Dryer Repair</h3>
-                    <p style="font-size: 14px; color: #555;">Gas and electric dryers. We repair heating elements, drum issues, and ventilation problems.</p>
+
+                    <div class="service-types">
+                        <h4>We Service All Types:</h4>
+                        <ul>
+                            <li>Gas Dryers</li>
+                            <li>Electric Dryers</li>
+                            <li>Ventless Dryers</li>
+                            <li>Heat Pump Dryers</li>
+                            <li>Steam Dryers</li>
+                            <li>Smart ThinQ Dryers</li>
+                            <li>Stackable Dryers</li>
+                            <li>Sensor Dry Models</li>
+                        </ul>
+                        <div id="expandable-content-dryer" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-dryer" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Gas Dryer Expertise</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas dryer repair</strong> requires certified expertise in gas combustion systems and safety protocols. Our technicians diagnose igniter failures where components glow but cannot reach temperatures sufficient to open gas valves, gas valve coil deterioration causing intermittent heating, and flame sensor malfunctions providing incorrect readings. We service burner assemblies, gas supply connections, and thermal safety systems. Gas dryer repairs require proper combustion testing and leak verification—our factory-trained specialists ensure safe, efficient operation while maintaining all manufacturer safety standards.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Electric Dryer Solutions</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric dryer repair</strong> addresses heating element failures, thermal fuse interruptions, and high-limit thermostat malfunctions. Electric dryers require proper 240-volt power supplies—we diagnose outlet problems, failed circuit breakers, and terminal block connection issues. Our technicians replace burned-out heating elements, blown thermal fuses from restricted airflow, and cycling thermostats causing temperature irregularities. We also repair power cord damage, timer malfunctions, and electronic control failures specific to electric configurations, restoring reliable drying performance.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Ventless Dryer Technology</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ventless dryer repair</strong> services condenser-based systems requiring no external exhaust ducting. These sophisticated units use heat exchangers to condense moisture from warm air, collecting water in reservoirs or pumping it to drains. We repair condenser coils requiring periodic cleaning, condensate pumps, water collection systems, and heat exchanger components. Common ventless issues include extended dry times from condenser contamination, tank full errors, and drainage problems. Our technicians understand the closed-loop systems that make ventless technology possible.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Heat Pump Dryer Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG heat pump dryer repair</strong> covers the most energy-efficient drying technology available, reducing energy consumption up to fifty percent compared to conventional dryers. Heat pump systems recycle warm air using refrigeration principles rather than venting heated air outside. We service compressors, evaporator coils, condenser assemblies, and refrigerant systems. When efficiency declines or error codes appear, our technicians diagnose refrigerant issues, sealed system problems, and the specialized components that make heat pump technology function properly.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Steam and Smart Features</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG steam dryer repair</strong> addresses TurboSteam technology for wrinkle reduction and fabric refreshing. We service steam generators, water supply systems, and steam injection components. <strong>ThinQ smart dryer repair</strong> includes WiFi diagnostics, app connectivity troubleshooting, and interpretation of remotely transmitted error codes. Smart dryers communicate with paired washers for optimized cycle selection. Our technicians resolve both connectivity issues and the mechanical problems smart diagnostics identify.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Common Problems We Solve</h4>
+                                <p style="margin-bottom: 12px;">Our dryer repair expertise resolves every common failure. <strong>No heat:</strong> We diagnose igniters, heating elements, thermal fuses, and gas valves. <strong>Won't tumble:</strong> We replace broken belts, worn rollers, and failed motors. <strong>Takes too long:</strong> We clear exhaust restrictions, clean lint buildup, and repair airflow systems. <strong>Noisy operation:</strong> We service drum bearings, support rollers, and blower wheels. <strong>Won't start:</strong> We repair door switches, thermal fuses, and control systems. <strong>Overheating:</strong> We restore proper airflow and replace failed thermostats. Every repair includes thorough testing and verification.</p>
+
+                            </div>
+                            <div id="expandable-fade-dryer" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-dryer" onclick="toggleExpandCard('dryer')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                    </div>
                 </div>
                 <div class="service">
                     <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="LG Oven repair" loading="lazy"></div>
-                    <h3>LG Oven Repair</h3>
-                    <p style="font-size: 14px; color: #555;">Ranges, wall ovens, and cooktops. We fix temperature issues, igniter problems, and control failures.</p>
+                    <h3>LG Oven & Range Repair</h3>
+
+                    <div class="service-types">
+                        <h4>We Service All Types:</h4>
+                        <ul>
+                            <li>Gas Ranges</li>
+                            <li>Electric Ranges</li>
+                            <li>Wall Ovens</li>
+                            <li>Convection Ovens</li>
+                            <li>Double Ovens</li>
+                            <li>Slide-In Ranges</li>
+                            <li>ProBake Models</li>
+                            <li>Smart Ranges</li>
+                        </ul>
+                        <div id="expandable-content-oven" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-oven" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Gas Oven Expertise</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG gas oven repair</strong> demands expertise in ignition systems and combustion safety. Our technicians diagnose weak igniters that glow but fail to reach temperatures necessary for opening safety valves, gas valve malfunctions preventing fuel flow, and flame sensor issues causing premature shutoffs. We service burner assemblies, oven thermostats, and safety systems controlling gas flow. Gas oven repairs require combustion efficiency testing and leak verification to ensure safe operation. Our factory-certified specialists maintain all safety standards while restoring optimal cooking performance.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Electric Oven Solutions</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG electric oven repair</strong> addresses bake element failures, broil element burnouts, and hidden element malfunctions. We diagnose which heating element has failed, repair high-voltage connections, and replace damaged components. Electric ovens experience temperature sensor failures causing inaccurate heating, control board malfunctions preventing operation, and selector switch problems. Our technicians test element resistance, sensor accuracy, and control signals to pinpoint failures precisely, completing most repairs same-day with commonly stocked parts.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Wall Oven Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG wall oven repair</strong> services built-in units installed at comfortable heights within cabinetry. Wall ovens present unique access challenges—we carefully extract units when necessary while protecting surrounding woodwork. Common wall oven issues include door hinge deterioration, convection fan failures, and electronic control malfunctions. We repair door gaskets preventing heat escape, replace burned-out oven lights, and calibrate temperature accuracy. Our technicians ensure proper reinstallation and verify all functions before completing service.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Convection Technology</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG convection oven repair</strong> services fan systems circulating heated air for faster, more uniform cooking results. We repair convection fan motors, replace damaged fan blades, and fix controls activating convection modes. When convection fans fail, cooking becomes uneven and requires extended times. Common issues include noisy fan bearings, motors that fail to run, and heating elements not functioning during convection cycles. Our technicians restore proper fan operation essential for achieving convection cooking benefits.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">ProBake and Smart Features</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ProBake Convection repair</strong> services ranges featuring rear-mounted heating elements for superior heat distribution. This professional-inspired design eliminates cold spots and produces bakery-quality results. We repair ProBake elements, specialized convection systems, and related controls. <strong>Smart range repair</strong> includes ThinQ WiFi connectivity, app control features, and remote monitoring capabilities. Our technicians troubleshoot connectivity issues and service all mechanical components while interpreting smart diagnostic data.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Common Problems We Solve</h4>
+                                <p style="margin-bottom: 12px;">Our oven repair expertise covers every cooking challenge. <strong>Won't heat:</strong> We diagnose igniters, elements, and gas valves. <strong>Uneven cooking:</strong> We calibrate temperatures and repair convection systems. <strong>Temperature inaccurate:</strong> We replace sensors and calibrate controls. <strong>Self-clean failures:</strong> We repair door locks, high-limit thermostats, and control systems. <strong>Burner problems:</strong> We service igniter switches, burner valves, and spark modules. <strong>Door issues:</strong> We replace hinges, gaskets, and glass panels. Comprehensive testing verifies every repair.</p>
+
+                            </div>
+                            <div id="expandable-fade-oven" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-oven" onclick="toggleExpandCard('oven')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                    </div>
                 </div>
                 <div class="service">
                     <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="LG Refrigerator repair" loading="lazy"></div>
                     <h3>LG Refrigerator Repair</h3>
-                    <p style="font-size: 14px; color: #555;">All styles including French door and side-by-side. Cooling, ice maker, and compressor service.</p>
+
+                    <div class="service-types">
+                        <h4>We Service All Types:</h4>
+                        <ul>
+                            <li>French Door Models</li>
+                            <li>Side-by-Side Units</li>
+                            <li>Top Freezer Models</li>
+                            <li>Bottom Freezer Models</li>
+                            <li>Counter-Depth Units</li>
+                            <li>InstaView Door-in-Door</li>
+                            <li>Smart ThinQ Models</li>
+                            <li>Built-In Refrigerators</li>
+                        </ul>
+                        <div id="expandable-content-fridge" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-fridge" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">French Door Expertise</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG French door refrigerator repair</strong> addresses the sophisticated systems in these premium units featuring side-by-side upper doors with bottom freezer drawers. We service linear compressor systems providing quiet, efficient cooling, multiple evaporator configurations maintaining optimal humidity, and air circulation systems ensuring uniform temperatures. Common French door issues include ice buildup in freezer sections, water dispenser malfunctions, and door seal deterioration. Our technicians repair ice maker assemblies, water filtration systems, and electronic controls managing temperature zones throughout these multi-compartment appliances.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Side-by-Side Solutions</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG side-by-side refrigerator repair</strong> covers vertical split configurations with freezer and refrigerator sections arranged adjacently. We diagnose cooling system failures affecting one or both compartments, defrost system malfunctions causing ice accumulation, and damper control problems affecting airflow between sections. Side-by-side units feature ice and water dispensers requiring specialized service—we repair dispensing mechanisms, water inlet valves, and ice maker components. Our technicians restore balanced cooling throughout both compartments while ensuring dispenser functionality.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Cooling System Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG refrigerator cooling repair</strong> encompasses compressor diagnostics, sealed system service, and refrigerant management. We identify failing compressors exhibiting symptoms like clicking sounds, warm temperatures, or continuous running. Our EPA-certified technicians handle refrigerant recovery, leak detection, and system recharging when necessary. We repair evaporator fan motors circulating cold air, condenser fan assemblies dissipating heat, and thermistors monitoring temperatures throughout compartments. Cooling system expertise ensures your refrigerator maintains safe food storage temperatures.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Ice Maker Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ice maker repair</strong> addresses both standard and Craft Ice spherical ice production systems. We service water inlet valves controlling fill cycles, ice mold heaters releasing harvested ice, and ejector mechanisms transferring ice to storage bins. Common ice maker problems include no ice production, small or hollow cubes, and ice with off-tastes from water quality issues. Our technicians diagnose water supply problems, frozen fill tubes, and control board malfunctions affecting ice production cycles, restoring reliable ice delivery for your household.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">InstaView and Smart Features</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG InstaView repair</strong> services the innovative knock-twice panel illuminating interior contents without opening doors. We repair LED lighting systems, panel glass, and knock sensors. <strong>ThinQ smart refrigerator repair</strong> includes WiFi connectivity, temperature monitoring apps, and smart diagnosis features. Our technicians troubleshoot connectivity issues, interpret diagnostic codes, and service the physical components smart systems monitor—providing comprehensive care for both technological features and cooling functionality.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Common Problems We Solve</h4>
+                                <p style="margin-bottom: 12px;">Our refrigerator repair expertise resolves every cooling concern. <strong>Not cooling:</strong> We diagnose compressors, fans, and sealed systems. <strong>Freezer cold, fridge warm:</strong> We repair dampers, evaporator fans, and defrost systems. <strong>Ice buildup:</strong> We fix defrost heaters, timers, and thermostats. <strong>Water leaks:</strong> We clear drain lines, replace water valves, and fix ice maker components. <strong>Noisy operation:</strong> We service fan motors, compressors, and ice maker mechanisms. <strong>Dispenser problems:</strong> We repair valves, switches, and control boards. Complete diagnostics ensure lasting repairs.</p>
+
+                            </div>
+                            <div id="expandable-fade-fridge" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-fridge" onclick="toggleExpandCard('fridge')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                    </div>
                 </div>
                 <div class="service">
                     <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="LG Dishwasher repair" loading="lazy"></div>
                     <h3>LG Dishwasher Repair</h3>
-                    <p style="font-size: 14px; color: #555;">Built-in and portable models. We repair drainage, cleaning, and drying issues.</p>
+
+                    <div class="service-types">
+                        <h4>We Service All Types:</h4>
+                        <ul>
+                            <li>Built-In Dishwashers</li>
+                            <li>QuadWash Models</li>
+                            <li>TrueSteam Dishwashers</li>
+                            <li>Third Rack Models</li>
+                            <li>Smart ThinQ Units</li>
+                            <li>Compact Dishwashers</li>
+                            <li>Panel-Ready Models</li>
+                            <li>Commercial Units</li>
+                        </ul>
+                        <div id="expandable-content-dishwasher" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-dishwasher" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">QuadWash Technology</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG QuadWash dishwasher repair</strong> services the innovative multi-motion spray arm system providing superior cleaning coverage. QuadWash technology uses four spray arms instead of two, with Multi-Motion arms that rotate while spinning to reach every dish surface. We repair spray arm motors, water distribution systems, and the mechanisms enabling multi-directional water coverage. When QuadWash performance declines, we diagnose clogged spray arm jets, motor failures, and water pressure problems affecting cleaning effectiveness. Our technicians restore the thorough cleaning that makes QuadWash technology exceptional.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">TrueSteam Cleaning</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG TrueSteam dishwasher repair</strong> addresses steam generation systems that eliminate water spots, reduce plastic deformation, and sanitize dishes. Steam loosens dried-on food before wash cycles begin, improving cleaning results. We service steam generators, water heating elements, and distribution components. Common TrueSteam issues include no steam production, mineral buildup blocking steam outlets, and error codes indicating steam system failures. Our technicians descale steam components and restore this premium feature that enhances cleaning and drying performance.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Drainage System Repair</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dishwasher drainage repair</strong> resolves standing water, incomplete draining, and backup problems. We service drain pumps, clear obstructions from drain paths, and repair check valves preventing backflow. Drainage issues often stem from food debris accumulation, failed pump motors, or kinked drain hoses. Our technicians inspect garbage disposal connections, air gaps, and drain configurations to identify restrictions. Proper drainage ensures clean dishes and prevents odors from standing water—we restore complete draining after every cycle.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Cleaning Performance</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG dishwasher cleaning repair</strong> addresses dishes emerging dirty, spotted, or filmed. We diagnose spray arm malfunctions, water temperature problems, and detergent dispensing failures. Water inlet valves not providing adequate fill, heating elements not reaching proper temperatures, and worn spray arms with clogged jets all affect cleaning results. Our technicians test water temperatures, verify fill levels, and ensure detergent dispensers operate correctly. We restore the sparkling results LG dishwashers deliver when functioning properly.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Smart Features and Controls</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG ThinQ smart dishwasher repair</strong> includes WiFi connectivity enabling remote cycle monitoring, push notifications, and smart diagnostics. We troubleshoot pairing failures, restore dropped connections, and interpret diagnostic codes transmitted through the app. Beyond connectivity, we service electronic control panels, touchpad interfaces, and cycle selection systems. Our technicians address both digital features and the physical components that smart monitoring tracks, providing complete repair coverage.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Common Problems We Solve</h4>
+                                <p style="margin-bottom: 12px;">Our dishwasher repair expertise handles every failure. <strong>Won't drain:</strong> We service pumps, clear clogs, and fix check valves. <strong>Not cleaning:</strong> We repair spray arms, heating elements, and water valves. <strong>Leaking:</strong> We replace door gaskets, fix pump seals, and repair inlet valves. <strong>Won't start:</strong> We diagnose door latches, control boards, and power connections. <strong>Noisy operation:</strong> We service pump motors, spray arms, and wash motors. <strong>Not drying:</strong> We repair heating elements, vents, and rinse aid dispensers. Thorough testing confirms every repair.</p>
+
+                            </div>
+                            <div id="expandable-fade-dishwasher" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-dishwasher" onclick="toggleExpandCard('dishwasher')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                    </div>
                 </div>
                 <div class="service">
                     <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="LG Microwave repair" loading="lazy"></div>
                     <h3>LG Microwave Repair</h3>
-                    <p style="font-size: 14px; color: #555;">Countertop and over-the-range units. Heating, turntable, and control panel repairs.</p>
+
+                    <div class="service-types">
+                        <h4>We Service All Types:</h4>
+                        <ul>
+                            <li>Over-the-Range Models</li>
+                            <li>Countertop Microwaves</li>
+                            <li>Built-In Microwaves</li>
+                            <li>Microwave Drawers</li>
+                            <li>Convection Microwaves</li>
+                            <li>Smart Microwaves</li>
+                            <li>ExtendaVent Models</li>
+                            <li>Commercial Units</li>
+                        </ul>
+                        <div id="expandable-content-microwave" style="position: relative; margin-top: 15px;">
+                            <div id="expandable-text-microwave" style="max-height: 80px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.7; color: #444; font-size: 14px;">
+                                
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Over-the-Range Expertise</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG over-the-range microwave repair</strong> services combination units providing both microwave cooking and range ventilation. These installations mount above cooktops, requiring service of ventilation systems alongside microwave components. We repair exhaust fans, grease filters, charcoal filters, and ductwork connections. Over-the-range microwaves feature built-in lighting illuminating cooking surfaces—we replace burned-out bulbs and repair light housings. Our technicians safely service wall-mounted units while protecting surrounding cabinetry, restoring both cooking and ventilation functionality.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Magnetron and Heating</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave heating repair</strong> addresses magnetron failures, high-voltage transformer problems, and capacitor malfunctions. The magnetron generates microwave energy—when it fails, food remains cold despite the unit running. We diagnose magnetron output, test high-voltage components, and verify diode functionality. Microwave repairs involve dangerous voltages requiring professional expertise. Our technicians safely discharge capacitors, test magnetron performance, and replace failed components. We restore proper heating power while ensuring safe operation throughout the appliance.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Turntable and Door Systems</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave turntable repair</strong> services rotation systems ensuring even cooking. We replace worn turntable motors, damaged roller rings, and cracked glass trays. <strong>Door system repair</strong> addresses latch failures preventing operation, interlock switches cutting power for safety, and door seal deterioration. Microwaves have multiple safety interlocks that must all function properly—if any interlock fails, the unit won't operate. Our technicians diagnose interlock problems, replace door components, and verify all safety systems function correctly.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Convection and Smart Features</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG convection microwave repair</strong> services combination units offering both microwave and convection cooking in single appliances. We repair convection heating elements, fan systems, and combination mode controls. Convection microwaves provide versatility for baking, roasting, and crisping. <strong>Smart microwave repair</strong> includes ThinQ connectivity, scan-to-cook features reading package barcodes, and Alexa or Google Assistant integration. Our technicians address both smart features and cooking components comprehensively.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Ventilation Service</h4>
+                                <p style="margin-bottom: 12px;"><strong>LG microwave ventilation repair</strong> addresses exhaust fans, recirculation systems, and ExtendaVent turbo functions. Over-the-range microwaves must effectively remove cooking smoke, steam, and odors. We service multi-speed fan motors, clean or replace grease-saturated filters, and repair damper assemblies directing airflow. ExtendaVent technology provides extended capture area for improved ventilation—we repair telescoping vent mechanisms and sensors activating automatic ventilation when cooking below generates smoke or heat.</p>
+
+                                <h4 style="color: var(--blue); margin: 15px 0 10px;">Common Problems We Solve</h4>
+                                <p style="margin-bottom: 12px;">Our microwave repair expertise covers every malfunction. <strong>Not heating:</strong> We diagnose magnetrons, diodes, capacitors, and transformers. <strong>Turntable stopped:</strong> We replace motors, couplers, and roller guides. <strong>Sparking inside:</strong> We repair waveguide covers, clean cavity buildup, and remove metal contact points. <strong>Display not working:</strong> We service control boards and touchpad membranes. <strong>Buttons unresponsive:</strong> We repair membrane switches and control panels. <strong>Fan not working:</strong> We replace fan motors and repair controls. Safety testing verifies every repair.</p>
+
+                            </div>
+                            <div id="expandable-fade-microwave" style="position: absolute; bottom: 0; left: 0; right: 0; height: 40px; background: linear-gradient(transparent, rgba(0,48,135,0.05)); pointer-events: none;" aria-hidden="true"></div>
+                        </div>
+                        <button id="expandable-btn-microwave" onclick="toggleExpandCard('microwave')" aria-expanded="false" style="display: block; margin: 10px auto 0; background: none; border: none; color: var(--blue); font-size: 14px; font-weight: 600; cursor: pointer; padding: 8px 15px;">+ Read More</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1563,6 +1792,32 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+        function toggleExpandCard(id) {
+            event.stopPropagation();
+            var text = document.getElementById('expandable-text-' + id);
+            var btn = document.getElementById('expandable-btn-' + id);
+            var fade = document.getElementById('expandable-fade-' + id);
+            var isCollapsed = !text.classList.contains('expanded');
+            if (isCollapsed) {
+                text.style.maxHeight = '250px';
+                text.style.overflowY = 'auto';
+                text.style.paddingRight = '10px';
+                text.classList.add('expanded');
+                btn.innerHTML = '− Show Less';
+                btn.setAttribute('aria-expanded', 'true');
+                if (fade) fade.style.display = 'none';
+            } else {
+                text.style.maxHeight = '80px';
+                text.style.overflowY = 'hidden';
+                text.style.paddingRight = '0';
+                text.classList.remove('expanded');
+                btn.innerHTML = '+ Read More';
+                btn.setAttribute('aria-expanded', 'false');
+                if (fade) fade.style.display = 'block';
+            }
+        }
+
+
             const servicesMenu = document.getElementById('servicesMenu');
             const servicesToggle = document.getElementById('servicesToggle');
             const dropdownCloseBtn = document.getElementById('dropdownCloseBtn');
@@ -1740,6 +1995,8 @@
         }
         
         document.addEventListener('DOMContentLoaded', function() {
+
+
             document.querySelectorAll('[id^="expandable-text-"]').forEach(function(el) {
                 var height = el.style.maxHeight || '110px';
                 el.setAttribute('data-collapsed-height', height);
