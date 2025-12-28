@@ -47,14 +47,16 @@
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
         .logo-link {
-            font-size: 26px;
-            font-weight: 700;
-            color: white;
+            display: inline-flex;
+            align-items: center;
             text-decoration: none;
-            display: inline-block;
+        }
+        .logo-link img {
+            height: 45px;
+            width: auto;
         }
         .logo-link:hover {
-            color: #ddd;
+            opacity: 0.9;
         }
         .nav-wrapper {
             display: flex;
@@ -517,7 +519,9 @@
 <body>
     <header>
         <div class="container nav-wrapper">
-            <a href="https://lgbergencounty.com/" class="logo-link" aria-label="Return to LG Appliance Repair Bergen County Homepage">LG Appliance Repair Bergen County</a>
+            <a href="https://lgbergencounty.com/" class="logo-link" aria-label="Return to LG Appliance Repair Bergen County Homepage">
+                <img src="/assets/images/lg-logo.png" alt="LG Appliance Repair Bergen County" height="45">
+            </a>
             <div class="nav-right">
                 <div class="services-menu" id="servicesMenu">
                     <div class="services-btn" id="servicesToggle">Services</div>
