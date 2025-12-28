@@ -731,14 +731,7 @@
             display: flex;
             flex-direction: column;
         }
-        .service-types {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .service-types > div[id^="expandable-content-"] {
-            margin-top: auto;
-        }
+
         .service:hover {
             transform: translateY(-12px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
@@ -766,16 +759,21 @@
             padding: 20px;
             background: rgba(0, 48, 135, 0.05);
             border-radius: 10px;
+            box-sizing: border-box;
             max-height: 0;
             overflow: hidden;
             opacity: 0;
-            transition: max-height 0.5s ease, opacity 0.5s ease;
-            box-sizing: border-box;
+            padding: 0 20px;
+            transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
         }
         .service.active .service-types {
-            max-height: 2000px;
+            max-height: 3000px;
             overflow: visible;
             opacity: 1;
+            padding: 20px;
+        }
+        .service-types > div[id^="expandable-content-"] {
+            margin-top: auto;
         }
         .service-types h4 {
             margin: 0 0 15px;
@@ -1796,17 +1794,18 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
         function toggleExpandCard(id) {
-            event.stopPropagation();
+            if (event) event.stopPropagation();
             var text = document.getElementById('expandable-text-' + id);
             var btn = document.getElementById('expandable-btn-' + id);
             var fade = document.getElementById('expandable-fade-' + id);
+            if (!text || !btn) return;
             var isCollapsed = !text.classList.contains('expanded');
             if (isCollapsed) {
-                text.style.maxHeight = '250px';
+                text.style.maxHeight = '300px';
                 text.style.overflowY = 'auto';
                 text.style.paddingRight = '10px';
                 text.classList.add('expanded');
-                btn.innerHTML = '− Show Less';
+                btn.textContent = '− Show Less';
                 btn.setAttribute('aria-expanded', 'true');
                 if (fade) fade.style.display = 'none';
             } else {
@@ -1814,7 +1813,7 @@
                 text.style.overflowY = 'hidden';
                 text.style.paddingRight = '0';
                 text.classList.remove('expanded');
-                btn.innerHTML = '+ Read More';
+                btn.textContent = '+ Read More';
                 btn.setAttribute('aria-expanded', 'false');
                 if (fade) fade.style.display = 'block';
             }
