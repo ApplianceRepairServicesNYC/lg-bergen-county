@@ -2,7 +2,7 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <link rel="preload" as="image" href="https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/images/appliances/hero-appliances.webp" fetchpriority="high">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LG Appliance Repair Bergen County NJ - Authorized</title>
     <meta name="description" content="LG Appliance Repair in Bergen County NJ. Washer, Dryer, Oven, Dishwasher, Microwave, Cooktop, Refrigerator Repair.">
@@ -390,14 +390,16 @@
             box-sizing: border-box;
         }
         .logo-link {
-            font-size: 26px;
-            font-weight: 700;
-            color: white;
+            display: inline-flex;
+            align-items: center;
             text-decoration: none;
-            display: inline-block;
+        }
+        .logo-link img {
+            height: 45px;
+            width: auto;
         }
         .logo-link:hover {
-            color: #ddd;
+            opacity: 0.9;
         }
         .nav-wrapper {
             display: flex;
@@ -626,7 +628,7 @@
             text-align: center;
             padding: 160px 20px 120px;
             margin-top: 80px;
-            background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('https://cdn.avbportal.com/magento-media/website-themes/service-repair/homepage-hero-products-no-logo.png') center center/cover no-repeat;
+            background: linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.78)), url('/assets/images/appliances/hero-appliances.webp') center center/cover no-repeat;
             background-attachment: scroll;
             min-height: 70vh;
             display: flex;
@@ -728,6 +730,13 @@
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
+            min-height: 280px;
+        }
+        .service h3 {
+            min-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         .service-types {
             flex: 1;
@@ -746,6 +755,11 @@
             margin-bottom: 20px;
             color: var(--blue);
             transition: color .3s;
+        }
+        .service-icon img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
         }
         .service:hover .service-icon {
             color: var(--red);
@@ -1261,7 +1275,9 @@
 <body>
     <header>
         <div class="container nav-wrapper">
-            <a href="https://lgbergencounty.com/" class="logo-link" aria-label="Return to LG Appliance Repair Bergen County Homepage">LG Appliance Repair Bergen County</a>
+            <a href="https://lgbergencounty.com/" class="logo-link" aria-label="Return to LG Appliance Repair Bergen County Homepage">
+                <img src="/assets/images/lg-logo.png" alt="LG Appliance Repair Bergen County" width="73" height="50">
+            </a>
             <div class="nav-right">
                 <div class="services-menu" id="servicesMenu">
                     <div class="services-btn" id="servicesToggle">Services</div>
@@ -1294,78 +1310,78 @@
                         </div>
                         <li class="submenu-toggle" id="serviceAreasToggle">Service Areas</li>
                         <div class="service-areas-submenu" id="serviceAreasSubmenu">
-                            <li><a href="https://lgbergencounty.com/nj/allendale/">Allendale</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/alpine/">Alpine</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/bergenfield/">Bergenfield</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/bogota/">Bogota</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/carlstadt/">Carlstadt</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/cliffside-park/">Cliffside Park</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/closter/">Closter</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/cresskill/">Cresskill</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/demarest/">Demarest</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/dumont/">Dumont</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/east-rutherford/">East Rutherford</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/edgewater/">Edgewater</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/elmwood-park/">Elmwood Park</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/emerson/">Emerson</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/englewood/">Englewood</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/englewood-cliffs/">Englewood Cliffs</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/fair-lawn/">Fair Lawn</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/fairview/">Fairview</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/fort-lee/">Fort Lee</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/franklin-lakes/">Franklin Lakes</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/garfield/">Garfield</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/glen-rock/">Glen Rock</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/hackensack/">Hackensack</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/harrington-park/">Harrington Park</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/hasbrouck-heights/">Hasbrouck Heights</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/haworth/">Haworth</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/hillsdale/">Hillsdale</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/ho-ho-kus/">Ho-Ho-Kus</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/jersey-city/">Jersey City</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/leonia/">Leonia</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/little-ferry/">Little Ferry</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/lodi/">Lodi</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/lyndhurst/">Lyndhurst</a></li>
                             <li><a href="https://lgbergencounty.com/nj/mahwah/">Mahwah</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/maywood/">Maywood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ramsey/">Ramsey</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/upper-saddle-river/">Upper Saddle River</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/saddle-river/">Saddle River</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/allendale/">Allendale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/waldwick/">Waldwick</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ho-ho-kus/">Ho-Ho-Kus</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/wyckoff/">Wyckoff</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/franklin-lakes/">Franklin Lakes</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/oakland/">Oakland</a></li>
                             <li><a href="https://lgbergencounty.com/nj/midland-park/">Midland Park</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/montvale/">Montvale</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/moonachie/">Moonachie</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/new-milford/">New Milford</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/newark/">Newark</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/north-arlington/">North Arlington</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/alpine/">Alpine</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/closter/">Closter</a></li>
                             <li><a href="https://lgbergencounty.com/nj/northvale/">Northvale</a></li>
                             <li><a href="https://lgbergencounty.com/nj/norwood/">Norwood</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/oakland/">Oakland</a></li>
                             <li><a href="https://lgbergencounty.com/nj/old-tappan/">Old Tappan</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/oradell/">Oradell</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/palisades-park/">Palisades Park</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/paramus/">Paramus</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/rockleigh/">Rockleigh</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/demarest/">Demarest</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/haworth/">Haworth</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/harrington-park/">Harrington Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/river-vale/">River Vale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/washington-township/">Washington Township</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/woodcliff-lake/">Woodcliff Lake</a></li>
                             <li><a href="https://lgbergencounty.com/nj/park-ridge/">Park Ridge</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/ramsey/">Ramsey</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/montvale/">Montvale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hillsdale/">Hillsdale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/westwood/">Westwood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/emerson/">Emerson</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/oradell/">Oradell</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/river-edge/">River Edge</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/new-milford/">New Milford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/bergenfield/">Bergenfield</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/dumont/">Dumont</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/cresskill/">Cresskill</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/tenafly/">Tenafly</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/englewood-cliffs/">Englewood Cliffs</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/englewood/">Englewood</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/leonia/">Leonia</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fort-lee/">Fort Lee</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/edgewater/">Edgewater</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/cliffside-park/">Cliffside Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fairview/">Fairview</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/palisades-park/">Palisades Park</a></li>
                             <li><a href="https://lgbergencounty.com/nj/ridgefield/">Ridgefield</a></li>
                             <li><a href="https://lgbergencounty.com/nj/ridgefield-park/">Ridgefield Park</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/ridgewood/">Ridgewood</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/river-edge/">River Edge</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/river-vale/">River Vale</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/paramus/">Paramus</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/maywood/">Maywood</a></li>
                             <li><a href="https://lgbergencounty.com/nj/rochelle-park/">Rochelle Park</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/rockleigh/">Rockleigh</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/rutherford/">Rutherford</a></li>
                             <li><a href="https://lgbergencounty.com/nj/saddle-brook/">Saddle Brook</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/saddle-river/">Saddle River</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/south-hackensack/">South Hackensack</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/fair-lawn/">Fair Lawn</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/glen-rock/">Glen Rock</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/ridgewood/">Ridgewood</a></li>
                             <li><a href="https://lgbergencounty.com/nj/teaneck/">Teaneck</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/tenafly/">Tenafly</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/teterboro/">Teterboro</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/upper-saddle-river/">Upper Saddle River</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/waldwick/">Waldwick</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/wallington/">Wallington</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/washington-township/">Washington Township</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/westwood/">Westwood</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/woodcliff-lake/">Woodcliff Lake</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/bogota/">Bogota</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hackensack/">Hackensack</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/hasbrouck-heights/">Hasbrouck Heights</a></li>
                             <li><a href="https://lgbergencounty.com/nj/wood-ridge/">Wood-Ridge</a></li>
-                            <li><a href="https://lgbergencounty.com/nj/wyckoff/">Wyckoff</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/moonachie/">Moonachie</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/teterboro/">Teterboro</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/little-ferry/">Little Ferry</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/south-hackensack/">South Hackensack</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/carlstadt/">Carlstadt</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/east-rutherford/">East Rutherford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/rutherford/">Rutherford</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/lyndhurst/">Lyndhurst</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/north-arlington/">North Arlington</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/wallington/">Wallington</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/garfield/">Garfield</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/lodi/">Lodi</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/elmwood-park/">Elmwood Park</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/jersey-city/">Jersey City</a></li>
+                            <li><a href="https://lgbergencounty.com/nj/newark/">Newark</a></li>
                         </div>
                     </ul>
                 </div>
@@ -1386,7 +1402,7 @@
             <article itemscope itemtype="https://schema.org/Service">
                 <meta itemprop="serviceType" content="LG Appliance Repair">
                 <meta itemprop="areaServed" content="Bergen County, New Jersey">
-                <h2 id="about-section-heading" itemprop="name" style="text-align:center; font-size:32px; margin-bottom:30px; color: var(--blue);">Expert LG Appliance Repair in Bergen County</h2>
+                <h2 id="about-section-heading" itemprop="name" style="text-align:center; font-size:32px; margin-bottom:30px; color: var(--blue);">Factory-Certified LG Appliance Service in Bergen County, New Jersey</h2>
                 <div id="expandable-content-1" style="position: relative;">
                     <div id="expandable-text-1" itemprop="description" style="max-height: 110px; overflow: hidden; transition: max-height 0.4s ease; line-height: 1.8; color: #444; font-size: 16px;">
                         <p style="margin-bottom: 15px;">When your <strong>LG appliance</strong> stops working, you deserve a repair service that delivers results. Our <strong>factory-certified technicians</strong> focus exclusively on LG appliances, bringing specialized expertise to every service call across <strong>Bergen County, New Jersey</strong>. We know how frustrating a broken washer, dryer, refrigerator, or dishwasher can be to your household.</p>
@@ -1463,10 +1479,10 @@
     </section>
     <section class="alt">
         <div class="container">
-            <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Factory Certified LG Service</h2>
+            <h2 style="text-align:center; font-size:36px; margin-bottom:50px;">Authorized LG Service Technicians Serving Bergen County</h2>
             <div class="services-grid">
                 <div class="service">
-                    <div class="service-icon">🧺</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/washer.webp" alt="LG Washer repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Washer Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1526,7 +1542,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">💨</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dryer.webp" alt="LG Dryer repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Dryer Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1586,7 +1602,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">🔥</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/oven.webp" alt="LG Oven repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Oven & Range Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1646,7 +1662,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">❄️</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/refrigerator.webp" alt="LG Refrigerator repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Refrigerator Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1705,7 +1721,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">🍽️</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/dishwasher.webp" alt="LG Dishwasher repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Dishwasher Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1765,7 +1781,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">🔥</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/cooktop.webp" alt="LG Cooktop repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Cooktop Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1825,7 +1841,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">📡</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/microwave.webp" alt="LG Microwave repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Microwave Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1885,7 +1901,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">🍷</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/wine-cooler.webp" alt="LG Wine Cooler repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Wine Cooler Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -1945,7 +1961,7 @@
                     </div>
                 </div>
                 <div class="service">
-                    <div class="service-icon">🌬️</div>
+                    <div class="service-icon"><img src="/assets/images/appliances/hood-vent.webp" alt="LG Vent Hood repair" width="80" height="80" loading="lazy"></div>
                     <h3>LG Hood Vent Repair</h3>
                     <div class="service-types">
                         <h4>We Service All Types:</h4>
@@ -2010,86 +2026,86 @@
     <section class="alt" id="contact">
         <div class="container">
             <section id="sa-service-areas">
-                <h2>Service Areas – All of Bergen County, NJ</h2>
+                <h2>LG Factory-Trained Appliance Repair Specialists</h2>
                 <p>We proudly serve <strong>every single town and municipality</strong> in Bergen County with fast, reliable, same-day LG appliance repair.</p>
                 <div class="sa-dropdown-container">
                     <button class="sa-dropdown-button" id="saToggleBtn">View All Bergen County Service Areas</button>
                     <div class="sa-dropdown-content" id="saDropdownContent">
                         <div class="sa-slide">
-                            <h2>All Bergen County NJ Towns We Service</h2>
+                            <h2>Why Bergen County Homeowners Trust Our Factory-Certified LG Service</h2>
                             <ul id="townsList">
-                                <li><a href="https://lgbergencounty.com/nj/allendale/"><h3>Allendale</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/alpine/"><h3>Alpine</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/bergenfield/"><h3>Bergenfield</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/bogota/"><h3>Bogota</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/carlstadt/"><h3>Carlstadt</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/cliffside-park/"><h3>Cliffside Park</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/closter/"><h3>Closter</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/cresskill/"><h3>Cresskill</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/demarest/"><h3>Demarest</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/dumont/"><h3>Dumont</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/east-rutherford/"><h3>East Rutherford</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/edgewater/"><h3>Edgewater</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/elmwood-park/"><h3>Elmwood Park</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/emerson/"><h3>Emerson</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/englewood/"><h3>Englewood</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/englewood-cliffs/"><h3>Englewood Cliffs</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/fair-lawn/"><h3>Fair Lawn</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/fairview/"><h3>Fairview</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/fort-lee/"><h3>Fort Lee</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/franklin-lakes/"><h3>Franklin Lakes</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/garfield/"><h3>Garfield</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/glen-rock/"><h3>Glen Rock</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/hackensack/"><h3>Hackensack</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/harrington-park/"><h3>Harrington Park</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/hasbrouck-heights/"><h3>Hasbrouck Heights</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/haworth/"><h3>Haworth</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/hillsdale/"><h3>Hillsdale</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/ho-ho-kus/"><h3>Ho-Ho-Kus</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/jersey-city/"><h3>Jersey City</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/leonia/"><h3>Leonia</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/little-ferry/"><h3>Little Ferry</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/lodi/"><h3>Lodi</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/lyndhurst/"><h3>Lyndhurst</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/mahwah/"><h3>Mahwah</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/maywood/"><h3>Maywood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ramsey/"><h3>Ramsey</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/upper-saddle-river/"><h3>Upper Saddle River</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/saddle-river/"><h3>Saddle River</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/allendale/"><h3>Allendale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/waldwick/"><h3>Waldwick</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ho-ho-kus/"><h3>Ho-Ho-Kus</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/wyckoff/"><h3>Wyckoff</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/franklin-lakes/"><h3>Franklin Lakes</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/oakland/"><h3>Oakland</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/midland-park/"><h3>Midland Park</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/montvale/"><h3>Montvale</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/moonachie/"><h3>Moonachie</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/new-milford/"><h3>New Milford</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/newark/"><h3>Newark</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/north-arlington/"><h3>North Arlington</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/alpine/"><h3>Alpine</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/closter/"><h3>Closter</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/northvale/"><h3>Northvale</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/norwood/"><h3>Norwood</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/oakland/"><h3>Oakland</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/old-tappan/"><h3>Old Tappan</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/oradell/"><h3>Oradell</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/palisades-park/"><h3>Palisades Park</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/paramus/"><h3>Paramus</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/rockleigh/"><h3>Rockleigh</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/demarest/"><h3>Demarest</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/haworth/"><h3>Haworth</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/harrington-park/"><h3>Harrington Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/river-vale/"><h3>River Vale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/washington-township/"><h3>Washington Township</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/woodcliff-lake/"><h3>Woodcliff Lake</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/park-ridge/"><h3>Park Ridge</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/ramsey/"><h3>Ramsey</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/montvale/"><h3>Montvale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hillsdale/"><h3>Hillsdale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/westwood/"><h3>Westwood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/emerson/"><h3>Emerson</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/oradell/"><h3>Oradell</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/river-edge/"><h3>River Edge</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/new-milford/"><h3>New Milford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/bergenfield/"><h3>Bergenfield</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/dumont/"><h3>Dumont</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/cresskill/"><h3>Cresskill</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/tenafly/"><h3>Tenafly</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/englewood-cliffs/"><h3>Englewood Cliffs</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/englewood/"><h3>Englewood</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/leonia/"><h3>Leonia</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fort-lee/"><h3>Fort Lee</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/edgewater/"><h3>Edgewater</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/cliffside-park/"><h3>Cliffside Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fairview/"><h3>Fairview</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/palisades-park/"><h3>Palisades Park</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/ridgefield/"><h3>Ridgefield</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/ridgefield-park/"><h3>Ridgefield Park</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/ridgewood/"><h3>Ridgewood</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/river-edge/"><h3>River Edge</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/river-vale/"><h3>River Vale</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/paramus/"><h3>Paramus</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/maywood/"><h3>Maywood</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/rochelle-park/"><h3>Rochelle Park</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/rockleigh/"><h3>Rockleigh</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/rutherford/"><h3>Rutherford</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/saddle-brook/"><h3>Saddle Brook</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/saddle-river/"><h3>Saddle River</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/south-hackensack/"><h3>South Hackensack</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/fair-lawn/"><h3>Fair Lawn</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/glen-rock/"><h3>Glen Rock</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/ridgewood/"><h3>Ridgewood</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/teaneck/"><h3>Teaneck</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/tenafly/"><h3>Tenafly</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/teterboro/"><h3>Teterboro</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/upper-saddle-river/"><h3>Upper Saddle River</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/waldwick/"><h3>Waldwick</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/wallington/"><h3>Wallington</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/washington-township/"><h3>Washington Township</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/westwood/"><h3>Westwood</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/woodcliff-lake/"><h3>Woodcliff Lake</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/bogota/"><h3>Bogota</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hackensack/"><h3>Hackensack</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/hasbrouck-heights/"><h3>Hasbrouck Heights</h3></a></li>
                                 <li><a href="https://lgbergencounty.com/nj/wood-ridge/"><h3>Wood-Ridge</h3></a></li>
-                                <li><a href="https://lgbergencounty.com/nj/wyckoff/"><h3>Wyckoff</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/moonachie/"><h3>Moonachie</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/teterboro/"><h3>Teterboro</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/little-ferry/"><h3>Little Ferry</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/south-hackensack/"><h3>South Hackensack</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/carlstadt/"><h3>Carlstadt</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/east-rutherford/"><h3>East Rutherford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/rutherford/"><h3>Rutherford</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/lyndhurst/"><h3>Lyndhurst</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/north-arlington/"><h3>North Arlington</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/wallington/"><h3>Wallington</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/garfield/"><h3>Garfield</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/lodi/"><h3>Lodi</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/elmwood-park/"><h3>Elmwood Park</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/jersey-city/"><h3>Jersey City</h3></a></li>
+                                <li><a href="https://lgbergencounty.com/nj/newark/"><h3>Newark</h3></a></li>
                             </ul>
                         </div>
                     </div>
@@ -2130,7 +2146,7 @@
                     Before scheduling service, check our <a href="https://lgbergencounty.com/troubleshooting/lg-appliance-troubleshooting/" style="color: var(--blue); font-weight: 500;">LG appliance troubleshooting guide</a> for diagnostic steps, error code explanations, and DIY fixes for common issues across all LG appliances.
                 </p>
                 <p style="line-height: 1.8; color: #444; margin-bottom: 15px;">
-                    Refrigerator not cooling? LG's linear compressors can fail over time. Our <a href="https://lgbergencounty.com/repairs/lg-refrigerator-compressor-replacement//" style="color: var(--blue); font-weight: 500;">compressor replacement service</a> includes sealed system repair with warranty coverage for Bergen County homeowners.
+                    Refrigerator not cooling? LG's linear compressors can fail over time. Our <a href="https://lgbergencounty.com/repairs/lg-refrigerator-compressor-replacement/" style="color: var(--blue); font-weight: 500;">compressor replacement service</a> includes sealed system repair with warranty coverage for Bergen County homeowners.
                 </p>
                 <p style="line-height: 1.8; color: #555; margin-bottom: 0; padding-top: 15px; border-top: 1px solid #eee;">
                     <strong>Serving all Bergen County communities</strong> including 
@@ -2147,96 +2163,6 @@
 
     </main>
         <!-- Internal Link Mesh - SEO Crawl Optimization -->
-    <nav aria-hidden="true" style="position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;">
-        <a href="https://lgbergencounty.com/">Home</a>
-        <a href="https://lgbergencounty.com/appliances/cooktop-repair/">Cooktop Repair</a>
-        <a href="https://lgbergencounty.com/appliances/dishwasher-repair/">Dishwasher Repair</a>
-        <a href="https://lgbergencounty.com/appliances/dryer-repair/">Dryer Repair</a>
-        <a href="https://lgbergencounty.com/appliances/installation-maintenance/">Installation Maintenance</a>
-        <a href="https://lgbergencounty.com/appliances/microwave-repair/">Microwave Repair</a>
-        <a href="https://lgbergencounty.com/appliances/oven-repair/">Oven Repair</a>
-        <a href="https://lgbergencounty.com/appliances/refrigerator-repair/">Refrigerator Repair</a>
-        <a href="https://lgbergencounty.com/appliances/vent-hood-repair/">Vent Hood Repair</a>
-        <a href="https://lgbergencounty.com/appliances/washer-repair/">Washer Repair</a>
-        <a href="https://lgbergencounty.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a>
-        <a href="https://lgbergencounty.com/repairs/lg-refrigerator-compressor-replacement/">LG Refrigerator Compressor Replacement</a>
-        <a href="https://lgbergencounty.com/troubleshooting/lg-appliance-troubleshooting/">LG Appliance Troubleshooting</a>
-        <a href="https://lgbergencounty.com/nj/">New Jersey Service Areas</a>
-        <a href="https://lgbergencounty.com/nj/allendale/">Allendale</a>
-        <a href="https://lgbergencounty.com/nj/alpine/">Alpine</a>
-        <a href="https://lgbergencounty.com/nj/bergenfield/">Bergenfield</a>
-        <a href="https://lgbergencounty.com/nj/bogota/">Bogota</a>
-        <a href="https://lgbergencounty.com/nj/carlstadt/">Carlstadt</a>
-        <a href="https://lgbergencounty.com/nj/cliffside-park/">Cliffside Park</a>
-        <a href="https://lgbergencounty.com/nj/closter/">Closter</a>
-        <a href="https://lgbergencounty.com/nj/cresskill/">Cresskill</a>
-        <a href="https://lgbergencounty.com/nj/demarest/">Demarest</a>
-        <a href="https://lgbergencounty.com/nj/dumont/">Dumont</a>
-        <a href="https://lgbergencounty.com/nj/east-rutherford/">East Rutherford</a>
-        <a href="https://lgbergencounty.com/nj/edgewater/">Edgewater</a>
-        <a href="https://lgbergencounty.com/nj/elmwood-park/">Elmwood Park</a>
-        <a href="https://lgbergencounty.com/nj/emerson/">Emerson</a>
-        <a href="https://lgbergencounty.com/nj/englewood/">Englewood</a>
-        <a href="https://lgbergencounty.com/nj/englewood-cliffs/">Englewood Cliffs</a>
-        <a href="https://lgbergencounty.com/nj/fair-lawn/">Fair Lawn</a>
-        <a href="https://lgbergencounty.com/nj/fairview/">Fairview</a>
-        <a href="https://lgbergencounty.com/nj/fort-lee/">Fort Lee</a>
-        <a href="https://lgbergencounty.com/nj/franklin-lakes/">Franklin Lakes</a>
-        <a href="https://lgbergencounty.com/nj/garfield/">Garfield</a>
-        <a href="https://lgbergencounty.com/nj/glen-rock/">Glen Rock</a>
-        <a href="https://lgbergencounty.com/nj/hackensack/">Hackensack</a>
-        <a href="https://lgbergencounty.com/nj/harrington-park/">Harrington Park</a>
-        <a href="https://lgbergencounty.com/nj/hasbrouck-heights/">Hasbrouck Heights</a>
-        <a href="https://lgbergencounty.com/nj/haworth/">Haworth</a>
-        <a href="https://lgbergencounty.com/nj/hillsdale/">Hillsdale</a>
-        <a href="https://lgbergencounty.com/nj/ho-ho-kus/">Ho-Ho-Kus</a>
-        <a href="https://lgbergencounty.com/nj/jersey-city/">Jersey City</a>
-        <a href="https://lgbergencounty.com/nj/leonia/">Leonia</a>
-        <a href="https://lgbergencounty.com/nj/little-ferry/">Little Ferry</a>
-        <a href="https://lgbergencounty.com/nj/lodi/">Lodi</a>
-        <a href="https://lgbergencounty.com/nj/lyndhurst/">Lyndhurst</a>
-        <a href="https://lgbergencounty.com/nj/mahwah/">Mahwah</a>
-        <a href="https://lgbergencounty.com/nj/maywood/">Maywood</a>
-        <a href="https://lgbergencounty.com/nj/midland-park/">Midland Park</a>
-        <a href="https://lgbergencounty.com/nj/montvale/">Montvale</a>
-        <a href="https://lgbergencounty.com/nj/moonachie/">Moonachie</a>
-        <a href="https://lgbergencounty.com/nj/new-milford/">New Milford</a>
-        <a href="https://lgbergencounty.com/nj/newark/">Newark</a>
-        <a href="https://lgbergencounty.com/nj/north-arlington/">North Arlington</a>
-        <a href="https://lgbergencounty.com/nj/northvale/">Northvale</a>
-        <a href="https://lgbergencounty.com/nj/norwood/">Norwood</a>
-        <a href="https://lgbergencounty.com/nj/oakland/">Oakland</a>
-        <a href="https://lgbergencounty.com/nj/old-tappan/">Old Tappan</a>
-        <a href="https://lgbergencounty.com/nj/oradell/">Oradell</a>
-        <a href="https://lgbergencounty.com/nj/palisades-park/">Palisades Park</a>
-        <a href="https://lgbergencounty.com/nj/paramus/">Paramus</a>
-        <a href="https://lgbergencounty.com/nj/park-ridge/">Park Ridge</a>
-        <a href="https://lgbergencounty.com/nj/ramsey/">Ramsey</a>
-        <a href="https://lgbergencounty.com/nj/ridgefield/">Ridgefield</a>
-        <a href="https://lgbergencounty.com/nj/ridgefield-park/">Ridgefield Park</a>
-        <a href="https://lgbergencounty.com/nj/ridgewood/">Ridgewood</a>
-        <a href="https://lgbergencounty.com/nj/river-edge/">River Edge</a>
-        <a href="https://lgbergencounty.com/nj/river-vale/">River Vale</a>
-        <a href="https://lgbergencounty.com/nj/rochelle-park/">Rochelle Park</a>
-        <a href="https://lgbergencounty.com/nj/rockleigh/">Rockleigh</a>
-        <a href="https://lgbergencounty.com/nj/rutherford/">Rutherford</a>
-        <a href="https://lgbergencounty.com/nj/saddle-brook/">Saddle Brook</a>
-        <a href="https://lgbergencounty.com/nj/saddle-river/">Saddle River</a>
-        <a href="https://lgbergencounty.com/nj/south-hackensack/">South Hackensack</a>
-        <a href="https://lgbergencounty.com/nj/teaneck/">Teaneck</a>
-        <a href="https://lgbergencounty.com/nj/tenafly/">Tenafly</a>
-        <a href="https://lgbergencounty.com/nj/teterboro/">Teterboro</a>
-        <a href="https://lgbergencounty.com/nj/upper-saddle-river/">Upper Saddle River</a>
-        <a href="https://lgbergencounty.com/nj/waldwick/">Waldwick</a>
-        <a href="https://lgbergencounty.com/nj/wallington/">Wallington</a>
-        <a href="https://lgbergencounty.com/nj/washington-township/">Washington Township</a>
-        <a href="https://lgbergencounty.com/nj/westwood/">Westwood</a>
-        <a href="https://lgbergencounty.com/nj/wood-ridge/">Wood Ridge</a>
-        <a href="https://lgbergencounty.com/nj/woodcliff-lake/">Woodcliff Lake</a>
-        <a href="https://lgbergencounty.com/nj/wyckoff/">Wyckoff</a>
-        <a href="https://lgbergencounty.com/privacy-policy">Privacy Policy</a>
-        <a href="https://lgbergencounty.com/terms-of-service">Terms of Service</a>
-    </nav>
 
 <footer>
         <div class="footer-main">
@@ -2271,7 +2197,7 @@
                         <li><a href="https://lgbergencounty.com/appliances/wine-cooler-repair/">Wine Cooler Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/vent-hood-repair/">Vent Hood Repair</a></li>
                         <li><a href="https://lgbergencounty.com/appliances/installation-maintenance/">Installation & Maintenance</a></li>
-                        <li><a href="https://lgbergencounty.com/">All Appliances</a></li>
+                        <li><a href="https://lgbergencounty.com/repairs/lg-refrigerator-compressor-replacement/">Compressor Replacement</a></li>
                     </ul>
                 </div>
                 
@@ -2280,9 +2206,10 @@
                     <ul>
                         <li><a href="https://lgbergencounty.com/">Home</a></li>
                         <li><a href="https://lgbergencounty.com/nj/">Service Areas</a></li>
+                        <li><a href="https://lgbergencounty.com/sitemap/">Sitemap</a></li>
                         <li><a href="#contact">Schedule Service</a></li>
-                        <li><a href="https://lgbergencounty.com/privacy-policy">Privacy Policy</a></li>
-                        <li><a href="https://lgbergencounty.com/terms-of-service">Terms of Service</a></li>
+                        <li><a href="https://lgbergencounty.com/privacy-policy.html">Privacy Policy</a></li>
+                        <li><a href="https://lgbergencounty.com/terms-of-service.html">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
@@ -2290,13 +2217,6 @@
         
         <div class="footer-bottom">
             <div class="footer-bottom-content">
-                <div class="footer-bottom-links">
-                    <a href="https://lgbergencounty.com/">Home</a>
-                    <a href="https://lgbergencounty.com/nj/">Service Areas</a>
-                    <a href="#contact">Schedule Service</a>
-                    <a href="https://lgbergencounty.com/privacy-policy">Privacy Policy</a>
-                    <a href="https://lgbergencounty.com/terms-of-service">Terms of Service</a>
-                </div>
                 <p>© 2025 LG Appliance Repair Bergen County. All Rights Reserved.</p>
                 <p>Licensed & Insured • Factory Certified Technicians • Same-Day Service Available</p>
             </div>
