@@ -2499,8 +2499,19 @@
 
             setupCallButton(document.getElementById('navCallNow'));
             setupCallButton(document.getElementById('formCallNow'));
-            setupCallButton(document.getElementById('heroCallNow'));
             setupCallButton(document.getElementById('reviewsCallBtn'));
+
+            // Hero button scrolls to and opens contact form
+            var heroBtn = document.getElementById('heroCallNow');
+            if (heroBtn) {
+                heroBtn.addEventListener('click', function() {
+                    var formSection = document.getElementById('cfContactFormSection');
+                    if (formSection) {
+                        formSection.classList.add('active');
+                        formSection.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            }
 
             // Reviews Modal functionality
             var elfsightLoaded = false;
